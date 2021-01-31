@@ -1,5 +1,5 @@
 $today = Get-Date
-$cursorDate = ($today).AddYears(-1)
+$cursorDate = ($today).AddDays(-637)
 
 Set-Location ~/Projects/ethang-turborepo
 
