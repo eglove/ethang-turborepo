@@ -1,0 +1,47 @@
+{
+  "name": "website-admin",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "package.json",
+  "author": "Ethan Glover <hello@ethang.email>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "sanity start",
+    "start": "sanity start",
+    "build": "sanity build",
+    "lint": "eslint"
+  },
+  "keywords": [
+    "sanity"
+  ],
+  "xo": {
+    "space": true
+  },
+  "dependencies": {
+    "@babel/core": "^7.19.6",
+    "@sanity/base": "^2.35.0",
+    "@sanity/code-input": "^2.35.0",
+    "@sanity/color": "^2.1.16",
+    "@sanity/core": "^2.35.0",
+    "@sanity/data-aspects": "^2.33.2",
+    "@sanity/default-layout": "^2.35.0",
+    "@sanity/default-login": "^2.35.0",
+    "@sanity/desk-tool": "^2.35.0",
+    "@sanity/eslint-config-studio": "^2.0.0",
+    "@sanity/form-builder": "^2.35.0",
+    "@sanity/orderable-document-list": "^0.0.10",
+    "@sanity/vision": "^2.35.0",
+    "caniuse-lite": "^1.0.30001425",
+    "eslint": "^8.26.0",
+    "eslint-config-ethang": "workspace:*",
+    "prop-types": "^15.7",
+    "react": "^17.0",
+    "react-dom": "^17.0",
+    "react-is": "^18.2.0",
+    "styled-components": "^5.2.0",
+    "tsconfig": "workspace:*",
+    "typescript": "^4.8.4",
+    "webpack": "^5.74.0"
+  }
+}
