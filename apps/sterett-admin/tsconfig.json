@@ -1,5 +1,5 @@
 {
   "extends": "tsconfig/base.json",
   "include": ["./node_modules/@sanity/base/types/**/*.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules"],
 }
