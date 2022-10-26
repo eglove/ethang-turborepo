@@ -8,7 +8,7 @@ export const portableTextComponents = {
   types: {
     image(properties: {
       value?: { altText?: string; asset: SanityAsset };
-    }): JSX.Element {
+    }): JSX.Element | null {
       if (typeof properties.value?.asset !== 'undefined') {
         return (
           <SanityPortableImage
@@ -18,7 +18,7 @@ export const portableTextComponents = {
         );
       }
 
-      return <span />;
+      return null;
     },
   },
 };

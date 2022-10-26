@@ -30,13 +30,20 @@ export function GalleryLayout({
         }}
       >
         {images?.map(image => {
+          const blurWidth =
+            image.image.asset.metadata.dimensions.width <= 64
+              ? image.image.asset.metadata.dimensions.width / 2
+              : 64;
+
           return (
             <div className={styles.MasonryColumn} key={image._id}>
               <Image
                 alt={image.description}
+                blurDataURL={`${image.image.asset.url}?w=${blurWidth}&blur=50&quality=30&fit=clip&auto=format`}
                 height={image.image.asset.metadata.dimensions.height}
+                placeholder="blur"
                 src={image.image.asset.url}
-                style={{ objectFit: 'cover' }}
+                style={{ objectFit: 'contain' }}
                 width={image.image.asset.metadata.dimensions.width}
               />
             </div>

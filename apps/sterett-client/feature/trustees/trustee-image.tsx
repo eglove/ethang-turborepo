@@ -1,4 +1,4 @@
-import Image from 'next/future/image';
+import Image from 'next/image';
 import type { HTMLAttributes } from 'react';
 
 type SanityNextImageType = {
@@ -40,12 +40,12 @@ export function TrusteeImage({
       }}
     >
       <Image
-        fill
         alt={altText}
         blurDataURL={`${image.asset.url}?w=${blurWidth}&blur=50&quality=30&fit=clip&auto=format`}
+        layout="fill"
+        objectFit="contain"
         placeholder="blur"
         src={`${image.asset.url}?auto=format`}
-        style={{ objectFit: 'contain' }}
       />
     </div>
   );
