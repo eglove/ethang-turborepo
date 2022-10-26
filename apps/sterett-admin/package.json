@@ -10,8 +10,7 @@
     "dev": "sanity start",
     "start": "sanity start",
     "build": "sanity build",
-    "lint": "eslint",
-    "buildDist": "sanity build dist"
+    "lint": "eslint"
   },
   "keywords": [
     "sanity"
