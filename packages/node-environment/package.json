@@ -10,7 +10,7 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "@types/node": "^18.11.5",
+    "@types/node": "^18.11.6",
     "tsconfig": "workspace:*"
   }
 }
