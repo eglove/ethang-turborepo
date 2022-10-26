@@ -31,6 +31,7 @@ const queryClient = new QueryClient();
 function App({ Component, pageProps }: AppProps): JSX.Element {
   return (
     <QueryClientProvider client={queryClient}>
+      {/* @ts-expect-error this is fine */}
       <Hydrate state={pageProps?.dehydratedState as unknown}>
         <Head>
           <title>Sterett Creek Village Trustee Admin</title>
