@@ -200,6 +200,7 @@ importers:
     specifiers:
       '@babel/core': ^7.19.6
       '@sanity/base': ^2.35.0
+      '@sanity/cli': ^2.35.0
       '@sanity/code-input': ^2.35.0
       '@sanity/color': ^2.1.16
       '@sanity/core': ^2.35.0
@@ -225,6 +226,7 @@ importers:
     dependencies:
       '@babel/core': 7.19.6
       '@sanity/base': 2.35.0_bwxfu7rqq4eaa2vvw2qs2zx2sa
+      '@sanity/cli': 2.35.0
       '@sanity/code-input': 2.35.0_bwxfu7rqq4eaa2vvw2qs2zx2sa
       '@sanity/color': 2.1.16
       '@sanity/core': 2.35.0_zsjt2szbfantgzjzr4qzhsokm4
