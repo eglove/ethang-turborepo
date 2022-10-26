@@ -1,0 +1,24 @@
+.NavigationList {
+  display: grid;
+  grid-template-columns: auto;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.NavigationList > header {
+  margin-top: 16px;
+  background-color: hsl(0deg 0% 99%);
+  border-radius: 20px;
+  box-shadow: 4px 6px 11px -1px hsl(0deg 0% 60%);
+}
+
+.NavigationList > header:hover,
+.NavigationList > header:focus {
+  box-shadow: 4px 6px 11px -1px hsl(0deg 0% 65%);
+}
+
+@media only screen and (max-width: 1023px) {
+  .NavigationList > header {
+    border-radius: unset;
+  }
+}

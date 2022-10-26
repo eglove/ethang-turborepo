@@ -1,0 +1,28 @@
+:root {
+  --primary-color: hsl(207deg 94% 39%);
+  --cloud-blue: hsl(202deg 71% 90%);
+}
+
+* {
+  font-size: 1.3rem;
+}
+
+main {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, hsl(204deg 64% 44%), hsl(196deg 93% 70%), hsl(0deg 0% 100%));
+}
+
+/* stylelint-disable */
+/* Truss Overrides */
+.usa-link {
+  font-size: 1.3rem !important;
+}
+
+/* React Calendar Overrides */
+.rbc-btn-group {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center;
+}
+/* stylelint-enable */
+

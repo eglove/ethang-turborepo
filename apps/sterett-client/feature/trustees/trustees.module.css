@@ -1,0 +1,14 @@
+.TrusteeContainer {
+  display: grid;
+  max-width: 600px;
+}
+
+.TrusteeGrid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 16px;
+  width: 100%;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid hsl(0deg 0% 0%);
+}

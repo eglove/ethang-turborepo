@@ -1,0 +1,26 @@
+.Container {
+  display: grid;
+  gap: 16px;
+  place-items: center;
+  padding: 1rem;
+  margin: 1rem 0;
+  background-color: hsl(0deg 0% 99%);
+  border-radius: 20px;
+  box-shadow: 4px 6px 11px -1px hsl(0deg 0% 60%);
+}
+
+.Container:hover,
+.Container:focus {
+  box-shadow: 4px 6px 11px -1px hsl(0deg 0% 65%);
+}
+
+@media only screen and (max-width: 1023px) {
+  .Container {
+    border-radius: unset;
+  }
+}
+
+
+
+
+
