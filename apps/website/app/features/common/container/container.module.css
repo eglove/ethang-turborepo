@@ -1,0 +1,10 @@
+.Container {
+  padding: 1rem;
+  margin: 1rem;
+  background: var(--background-color);
+  box-shadow: var(--box-shadow);
+}
+
+.Container:hover, .Container:focus {
+  box-shadow: var(--box-shadow-hover);
+}

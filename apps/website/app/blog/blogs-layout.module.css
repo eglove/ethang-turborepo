@@ -1,0 +1,15 @@
+.BlogContent * {
+    padding: var(--small-space);
+    color: hsl(0deg 0% 100%);
+    background: var(--primary-color);
+    opacity: 80%;
+}
+
+.BlogLink {
+    text-decoration: none;
+}
+
+.BlogLink:hover, .BlogLink:focus {
+    text-decoration: underline;
+    text-decoration-color: var(--white);
+}

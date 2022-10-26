@@ -1,4 +1,7 @@
 module.exports = {
   root: true,
-  extends: ["custom"],
-};
+  extends: ['ethang', 'plugin:@next/next/recommended'],
+  parserOptions: {
+    project: './tsconfig.json',
+  }
+}

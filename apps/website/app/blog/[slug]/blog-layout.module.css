@@ -1,0 +1,27 @@
+.BlogInfo {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--large-space);
+    align-items: center;
+}
+
+.Title {
+  color: var(--primary-color);
+}
+
+
+.Article p:first-of-type {
+  margin-top: 0;
+}
+
+@media (max-width: 425px) {
+    .BlogInfo {
+        grid-template-columns: auto;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+  .Title {
+    color: var(--font-color);
+  }
+}

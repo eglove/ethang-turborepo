@@ -1,0 +1,80 @@
+:root {
+  --black: hsl(0deg 0% 0%);
+  --dark-grey: hsl(0deg 0% 83%);
+  --dark-gray: var(--dark-grey);
+  --white: hsl(0deg 0% 96%);
+  --primary-color: hsl(207deg 94% 39%);
+  --background-color: hsl(0deg 0% 96%);
+  --success-color: hsl(120deg 100% 25%);
+  --fail-color: hsl(0deg 100% 50%);
+  --item-background-color: hsl(0deg 0% 100%);
+  --font-color: hsl(0deg 0% 0%);
+  --header-color: hsl(222deg 45% 63%);
+  --header-font-color: hsl(0deg 0% 100%);
+  --box-shadow: 0 3px 3px hsla(0deg 0% 0% / 20%);
+  --box-shadow-hover: 0 3px 3px hsla(0deg 0% 0% / 10%);
+  --border-color: var(--dark-grey);
+  --large-space: 1rem;
+  --medium-space: 0.5rem;
+  --small-space: 0.3rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: hsl(215deg 68% 27%);
+    --item-background-color: hsl(215deg 68% 27%);
+    --header-color: hsl(216deg 97% 15%);
+    --box-shadow: 0 3px 3px hsla(0deg 0% 100% / 20%);
+    --font-color: hsl(0deg 0% 100%);
+    --border-color: hsl(206deg 9% 15%);
+  }
+}
+
+html {
+  max-width: 1250px;
+  margin: 0 auto calc(1rem + 50px) auto;
+  font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir, "segoe ui", "helvetica neue", helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+  color: var(--font-color);
+  word-break: break-word;
+  background-color: hsl(215deg 62% 19%);
+}
+
+body {
+  margin: 1rem 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+a {
+  color: var(--font-color);
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+}
+
+blockquote {
+  padding: 0.5em 10px;
+  margin: 1.5em 10px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  border: none;
+}
+
+/* Override Google search styles */
+/* stylelint-disable */
+.gsc-control-cse {
+  border: none !important;
+  background-color: var(--background-color) !important;
+  margin: 0 1rem;
+}
+/* stylelint-enable */

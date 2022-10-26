@@ -1,0 +1,45 @@
+.CourseContainer {
+  background-color: hsl(217deg 83% 73% / 20%);
+  padding: 8px 16px;
+  margin-bottom: 16px;
+  border-bottom: 2px solid hsl(206deg 86% 46%);
+}
+
+.CourseContainer > summary {
+  cursor: pointer;
+  list-style-type: none;
+}
+
+.SummaryGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.CourseTitle {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.YearUpdated {
+  font-weight: bold;
+  text-align: right;
+}
+
+
+.ReviewUrl {
+  text-align: right;
+}
+
+.ReviewUrl a {
+  font-size: 1.1rem;
+}
+
+.Summary {
+  cursor: auto;
+}
+
+.CourseLinks {
+  display: flex;
+  font-weight: bold;
+}

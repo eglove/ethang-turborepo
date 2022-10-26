@@ -1,0 +1,21 @@
+{
+  "name": "util-typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^17.0.12",
+    "@types/validator": "^13.7.9",
+    "tsconfig": "workspace:*"
+  },
+  "dependencies": {
+    "uuid": "^9.0.0",
+    "validator": "^13.7.0"
+  }
+}

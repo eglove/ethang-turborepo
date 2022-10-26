@@ -1,0 +1,7 @@
+export const environmentVariablesDevelopment = {
+  ETHANG_SANITY_DATASET: process.env['ETHANG_SANITY_DATASET'],
+  ETHANG_SANITY_EDITOR_TOKEN: process.env['ETHANG_SANITY_EDITOR_TOKEN'],
+  ETHANG_SANITY_PROJECT_ID: process.env['ETHANG_SANITY_PROJECT_ID'],
+  ETHANG_SANITY_VIEWER_TOKEN: process.env['ETHANG_SANITY_VIEWER_TOKEN'],
+  MODE: 'production',
+};
