@@ -45,7 +45,8 @@ const isValidEmailLocalPart = (localPart: string): boolean => {
     cleanedLocalPart = cleanedLocalPart.replace(')', '');
   }
 
-  for (const [index, char] of [...cleanedLocalPart].entries()) {
+  for (let index = 0; index < cleanedLocalPart.length; index++) {
+    const char = cleanedLocalPart[index];
     const alphaNumeric = isAlphaNumeric(char);
     const charIsAllowed = allowedSpecialCharacters.includes(char);
     const spaceAndIsQuoted = localPartIsQuoted && char === ' ';
