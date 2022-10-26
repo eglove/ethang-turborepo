@@ -56,7 +56,7 @@ export const portableTextComponents = {
   },
   types: {
     code(properties: { value: { code: string; language: string } }): string {
-      return `<code>${properties.value.code}</code>`;
+      return `<pre class=language-${properties.value.language}><code>${properties.value.code}</code></pre>`;
     },
     gist(properties: { value: { id: string } }): string {
       return `<iframe frameborder=0
