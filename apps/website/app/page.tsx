@@ -1,8 +1,8 @@
 import { NextLink, SanityNextImage } from 'next-components';
 import { use } from 'react';
 
+import { Container } from './components';
 import { getHomeImages } from './data';
-import { Container } from './features/common';
 import styles from './page.module.css';
 
 export default function Home(): JSX.Element {

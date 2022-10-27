@@ -1,11 +1,7 @@
 import { NextLink } from 'next-components';
 import { use } from 'react';
 
-import {
-  Breadcrumbs,
-  Container,
-  PortableTextWrapper,
-} from '../features/common';
+import { Breadcrumbs, Container, PortableTextWrapper } from '../components';
 import { GetCourse } from './components/get-course';
 import { getCourses } from './data';
 

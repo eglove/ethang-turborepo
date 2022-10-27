@@ -1,6 +1,7 @@
 import './globals.css';
+import '../public/prism/prism.css';
 
-import { Header } from './features/common';
+import { Header } from './components';
 import styles from './page.module.css';
 
 export default function RootLayout({
@@ -11,7 +12,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <title>EthanG</title>
         <link href="/favicon.ico" rel="icon" />
         <meta content="$ilp.uphold.com/XqPZ8mnNyprk" name="monetization" />
         <link
@@ -32,8 +32,7 @@ export default function RootLayout({
           type="image/png"
         />
         <link href="/site.webmanifest" rel="manifest" />
-        <link href="/prism/prism.css" rel="stylesheet" />
-        <script src="/prism/prism.js" />
+        <script async src="/prism/prism.js" />
       </head>
       <body className={styles.ContentContainer}>
         <Header />

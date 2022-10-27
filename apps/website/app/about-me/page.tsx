@@ -1,10 +1,6 @@
 import { use } from 'react';
 
-import {
-  Breadcrumbs,
-  Container,
-  PortableTextWrapper,
-} from '../features/common';
+import { Breadcrumbs, Container, PortableTextWrapper } from '../components';
 import { getAboutMePage } from './data';
 
 export default function AboutMe(): JSX.Element {

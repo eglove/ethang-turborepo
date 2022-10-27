@@ -2,7 +2,7 @@ import { NextLink } from 'next-components';
 import { use } from 'react';
 import { formatList, humanReadableLocalDateTime } from 'util-typescript';
 
-import { Breadcrumbs, Container } from '../features/common';
+import { Breadcrumbs, Container } from '../components';
 import styles from './blogs-layout.module.css';
 import { getBlogs } from './data';
 

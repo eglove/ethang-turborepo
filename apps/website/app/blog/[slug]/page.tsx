@@ -1,3 +1,4 @@
+import Script from 'next/script';
 import { SanityNextImage } from 'next-components';
 import { use } from 'react';
 import { JsonLd, jsonLdScriptProps } from 'react-schemaorg';
@@ -5,11 +6,7 @@ import type { Blog as BlogSchema, Review } from 'schema-dts';
 import { humanReadableLocalDateTime } from 'util-typescript';
 
 import { ethangSanityClient } from '../../../util/sanity';
-import {
-  Breadcrumbs,
-  Container,
-  PortableTextWrapper,
-} from '../../features/common';
+import { Breadcrumbs, Container, PortableTextWrapper } from '../../components';
 import styles from './blog-layout.module.css';
 import { getBlog } from './data';
 
@@ -38,7 +35,7 @@ export default function Blog({
 
   return (
     <Container>
-      <script
+      <Script
         {...jsonLdScriptProps<BlogSchema>({
           '@context': 'https://schema.org',
           '@type': 'Blog',
