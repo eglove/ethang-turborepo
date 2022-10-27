@@ -19,17 +19,17 @@ export function SanityPortableImage({
     <div
       style={{
         display: 'grid',
+        margin: 'auto',
         placeItems: 'center',
+        width: '80%',
       }}
     >
-      <div style={{ width: '80%' }}>
-        <Image
-          alt={altText}
-          height={imageProperties.height}
-          src={imageProperties.src}
-          width={imageProperties.width}
-        />
-      </div>
+      <Image
+        alt={altText}
+        height={imageProperties.height}
+        src={imageProperties.src}
+        width={imageProperties.width}
+      />
     </div>
   );
 }
