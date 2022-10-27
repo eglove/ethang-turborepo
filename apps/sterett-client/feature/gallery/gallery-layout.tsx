@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from 'next/future/image';
 import Masonry from 'react-masonry-css';
 
 import { Container } from '../common/container/container';
@@ -43,8 +43,12 @@ export function GalleryLayout({
                 height={image.image.asset.metadata.dimensions.height}
                 placeholder="blur"
                 src={image.image.asset.url}
-                style={{ objectFit: 'contain' }}
                 width={image.image.asset.metadata.dimensions.width}
+                style={{
+                  height: 'auto',
+                  objectFit: 'contain',
+                  position: 'relative',
+                }}
               />
             </div>
           );

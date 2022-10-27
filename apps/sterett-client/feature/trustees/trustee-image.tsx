@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from 'next/future/image';
 import type { HTMLAttributes } from 'react';
 
 type SanityNextImageType = {
@@ -33,19 +33,17 @@ export function TrusteeImage({
     <div
       {...containerProperties}
       style={{
-        height: '100%',
-        position: 'relative',
-        width: '100%',
         ...containerProperties?.style,
       }}
     >
       <Image
         alt={altText}
         blurDataURL={`${image.asset.url}?w=${blurWidth}&blur=50&quality=30&fit=clip&auto=format`}
-        layout="fill"
-        objectFit="contain"
+        height={image.asset.metadata.dimensions.height}
         placeholder="blur"
         src={`${image.asset.url}?auto=format`}
+        style={{ height: 'auto', objectFit: 'contain', position: 'relative' }}
+        width={image.asset.metadata.dimensions.width}
       />
     </div>
   );
