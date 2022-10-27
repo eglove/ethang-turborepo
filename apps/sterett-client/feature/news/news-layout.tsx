@@ -44,7 +44,6 @@ export function NewsLayout(): JSX.Element {
         return (
           <div className={styles.EventContainer} key={event._id}>
             <strong>
-              {/* @ts-expect-error this is a svg */}
               <Icon.CalendarToday />
               <span>{humanReadableLocalDateTime(event.startsAt)}</span>
               <span>

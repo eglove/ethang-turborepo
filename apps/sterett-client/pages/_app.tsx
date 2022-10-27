@@ -38,7 +38,6 @@ function App({ Component, pageProps }: AppProps): JSX.Element {
         </Head>
         <main>
           <ToastContainer />
-          {/* @ts-expect-error use as Element */}
           <Component {...pageProps} />
         </main>
       </Hydrate>
