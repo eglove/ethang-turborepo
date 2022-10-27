@@ -1,30 +1,26 @@
-import type { SanityAsset } from '@sanity/image-url/lib/types/types';
 import Image from 'next/future/image';
-import { useNextSanityImage } from 'next-sanity-image';
 
-import { sterettSanityClient } from '../../util/groq/sterett-sanity-client';
+import type { ImageAsset } from '../../util/groq/page-groq';
 
 type SanityPortableImageProperties = {
   altText: string;
-  image: SanityAsset;
+  image: ImageAsset;
 };
 
 export function SanityPortableImage({
   altText,
   image,
 }: SanityPortableImageProperties): JSX.Element {
-  const imageProperties = useNextSanityImage(sterettSanityClient, image);
-
   return (
     <div style={{ display: 'grid', placeItems: 'center' }}>
       <Image
         alt={altText}
-        height={imageProperties.height}
+        height={image.metadata.dimensions.height}
         placeholder="blur"
-        src={imageProperties.src}
-        width={imageProperties.width}
+        src={image.url}
+        width={image.metadata.dimensions.width}
         blurDataURL={`${
-          imageProperties.src
+          image.url ?? ''
         }?w=${64}&blur=50&quality=30&fit=clip&auto=format`}
         style={{
           height: 'auto',

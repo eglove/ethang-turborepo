@@ -95,7 +95,6 @@ importers:
       eslint-config-next: ^13.0.0
       next: 12.3.1
       next-components: workspace:*
-      next-sanity-image: ^4.1.0
       next-transpile-modules: ^9.1.0
       node-environment: workspace:*
       normalize.css: ^8.0.1
@@ -118,7 +117,6 @@ importers:
       date-fns: 2.29.3
       next: 12.3.1_biqbaboplfbrettd7655fr4n2y
       next-components: link:../../packages/next-components
-      next-sanity-image: 4.1.0_yn4i7wuoydcdzx7evibvatyq3e
       node-environment: link:../../packages/node-environment
       normalize.css: 8.0.1
       nprogress: 0.2.0
@@ -4647,9 +4645,6 @@ packages:
       lodash.uniq: 4.5.0
     dev: false
 
-  /caniuse-lite/1.0.30001425:
-    resolution: {integrity: sha512-/pzFv0OmNG6W0ym80P3NtapU0QEiDS3VuYAZMGoLLqiC7f6FJFe1MjpQDREGApeenD9wloeytmVDj+JLXPC6qw==}
-
   /caniuse-lite/1.0.30001426:
     resolution: {integrity: sha512-n7cosrHLl8AWt0wwZw/PJZgUg3lV0gk9LMI7ikGJwhyhgsd2Nb65vKvmSexCqq/J7rbH3mFG6yZZiPR5dLPW5A==}
 
@@ -5699,7 +5694,7 @@ packages:
     hasBin: true
     dependencies:
       browserslist: 4.21.4
-      caniuse-lite: 1.0.30001425
+      caniuse-lite: 1.0.30001426
       css-rule-stream: 1.1.0
       duplexer2: 0.0.2
       ldjson-stream: 1.2.1
@@ -9080,19 +9075,6 @@ packages:
     resolution: {integrity: sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==}
     dev: false
 
-  /next-sanity-image/4.1.0_yn4i7wuoydcdzx7evibvatyq3e:
-    resolution: {integrity: sha512-DOKqiVJjGQb/FGPA5e5ezVK326w1GFx28J0XFt8XMtaaWzRfYdPQlkUhJdTDIAPIMMwQQwAmSxxA0r2rQpKigg==}
-    peerDependencies:
-      '@sanity/client': ^3.0.0
-      next: ^11.0.0 || ^12.0.0
-      react: ^17.0.0 || ^18.0.0
-    dependencies:
-      '@sanity/client': 3.4.1
-      '@sanity/image-url': 1.0.1
-      next: 12.3.1_biqbaboplfbrettd7655fr4n2y
-      react: 18.2.0
-    dev: false
-
   /next-tick/1.1.0:
     resolution: {integrity: sha512-CXdUiJembsNjuToQvxayPZF9Vqht7hewsvy2sOWafLvi2awflj9mOC6bHIg50orX8IJvWKY9wYQ/zB2kogPslQ==}
     dev: false
@@ -9124,7 +9106,7 @@ packages:
     dependencies:
       '@next/env': 12.3.1
       '@swc/helpers': 0.4.11
-      caniuse-lite: 1.0.30001425
+      caniuse-lite: 1.0.30001426
       postcss: 8.4.14
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
@@ -9169,7 +9151,7 @@ packages:
     dependencies:
       '@next/env': 13.0.0
       '@swc/helpers': 0.4.11
-      caniuse-lite: 1.0.30001425
+      caniuse-lite: 1.0.30001426
       postcss: 8.4.14
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0

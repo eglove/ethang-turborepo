@@ -17,7 +17,6 @@
     "date-fns": "^2.29.3",
     "next": "12.3.1",
     "next-components": "workspace:*",
-    "next-sanity-image": "^4.1.0",
     "node-environment": "workspace:*",
     "normalize.css": "^8.0.1",
     "nprogress": "^0.2.0",

@@ -1,26 +1,17 @@
 import { shuffleArray } from 'util-typescript';
 
+import type { ImageAsset } from '../../util/groq/page-groq';
 import {
   NO_DRAFTS,
   sterettSanityClient,
 } from '../../util/groq/sterett-sanity-client';
 
-export type ImageAsset = {
-  asset: {
-    metadata: {
-      dimensions: {
-        height: number;
-        width: number;
-      };
-    };
-    url: string;
-  };
-};
-
 export type GetGalleryImagesReturn = Array<{
   _id: string;
   description: string;
-  image: ImageAsset;
+  image: {
+    asset: ImageAsset;
+  };
 }>;
 
 export const getGalleryImagesKey = (): string[] => {

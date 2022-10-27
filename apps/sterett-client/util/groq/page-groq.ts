@@ -6,14 +6,41 @@ export const getPageKey = (slug: string): string[] => {
   return ['getPage', slug];
 };
 
+export type ImageAsset = {
+  metadata: {
+    dimensions: {
+      height: number;
+      width: number;
+    };
+  };
+  url: string;
+};
+
 export type GetPageReturn = {
   _id: string;
-  content: TypedObject;
+  content: TypedObject & {
+    asset: ImageAsset;
+  };
   title: string;
 };
 
 export const getPage = async (slug: string): Promise<GetPageReturn> => {
-  const pageQuery = `*[_type == "page" && slug.current == $slug && ${NO_DRAFTS}]{_id, title, content}`;
+  const pageQuery = `*[_type == "page" && slug.current == $slug && ${NO_DRAFTS}]{
+    _id, 
+    title, 
+    content[] {
+      ...,
+      asset-> {
+        url,
+        metadata {
+          dimensions {
+            height,
+            width,
+          }
+        }
+      }
+    }
+  }`;
   const pages = await sterettSanityClient.fetch<GetPageReturn[]>(pageQuery, {
     slug,
   });
