@@ -1,5 +1,5 @@
 import type { SanityAsset } from '@sanity/image-url/lib/types/types';
-import Image from 'next/future/image';
+import Image from 'next/image';
 import { useNextSanityImage } from 'next-sanity-image';
 
 import { sterettSanityClient } from '../../util/groq/sterett-sanity-client';
@@ -22,19 +22,12 @@ export function SanityPortableImage({
         placeItems: 'center',
       }}
     >
-      <div
-        style={{
-          height: imageProperties.height,
-          maxHeight: '500px',
-          position: 'relative',
-          width: imageProperties.width,
-        }}
-      >
+      <div style={{ width: '80%' }}>
         <Image
-          fill
           alt={altText}
+          height={imageProperties.height}
           src={imageProperties.src}
-          style={{ objectFit: 'contain' }}
+          width={imageProperties.width}
         />
       </div>
     </div>
