@@ -1,13 +1,13 @@
 import { PortableText } from '@portabletext/react';
 import type { TypedObject } from '@portabletext/types';
-import type { SanityAsset } from '@sanity/image-url/lib/types/types';
 
+import type { ImageAsset } from '../../util/groq/page-groq';
 import { SanityPortableImage } from './sanity-portable-image';
 
 export const portableTextComponents = {
   types: {
     image(properties: {
-      value?: { altText?: string; asset: SanityAsset };
+      value?: { altText?: string; asset: ImageAsset };
     }): JSX.Element | null {
       if (typeof properties.value?.asset !== 'undefined') {
         return (
