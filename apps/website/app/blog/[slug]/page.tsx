@@ -10,11 +10,6 @@ import { Breadcrumbs, Container, PortableTextWrapper } from '../../components';
 import styles from './blog-layout.module.css';
 import { getBlog } from './data';
 
-type SearchParams = {
-  params: { slug: string };
-  searchParams?: { id: string };
-};
-
 export async function generateStaticParams(): Promise<Array<{ slug: string }>> {
   const paths = await ethangSanityClient.fetch<
     Array<{ slug: { current: string } }>
@@ -27,7 +22,11 @@ export async function generateStaticParams(): Promise<Array<{ slug: string }>> {
   });
 }
 
-export default function Blog({ params }: SearchParams): JSX.Element {
+export default function Blog({
+  params,
+}: {
+  params: { slug: string };
+}): JSX.Element {
   const blog = use(getBlog(params.slug));
 
   const authors = blog.authors.map(blogAuthor => {
