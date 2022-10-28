@@ -22,7 +22,7 @@ export default function Courses(): JSX.Element {
           This page changes often, lock in your plan by{' '}
           <NextLink
             linkProperties={{
-              href: '/public/files/course-curriculum.pdf',
+              href: '/files/course-curriculum.pdf',
             }}
           >
             downloading the October 2022 snapshot
