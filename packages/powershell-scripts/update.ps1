@@ -1,5 +1,5 @@
 choco upgrade all
-npm i -g blitz corepack npm pnpm yarn
+npm i -g blitz corepack npm pnpm yarn turbo
 
 $commit = Read-Host "Update Repo? (y/n)"
 
