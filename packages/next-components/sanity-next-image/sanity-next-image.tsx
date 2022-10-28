@@ -16,13 +16,17 @@ type SanityNextImageType = {
 type SanityImageProperties = {
   altText: string;
   containerProperties?: HTMLAttributes<HTMLDivElement>;
+  heightOverride?: number;
   image: SanityNextImageType;
+  widthOverride?: number;
 };
 
 export function SanityNextImage({
   containerProperties,
   image,
   altText,
+  widthOverride,
+  heightOverride,
 }: SanityImageProperties): JSX.Element {
   const blurWidth =
     image.asset.metadata.dimensions.width <= 64
@@ -30,15 +34,22 @@ export function SanityNextImage({
       : 64;
 
   return (
-    <div {...containerProperties}>
+    <div
+      {...containerProperties}
+      style={{
+        display: 'grid',
+        placeItems: 'center',
+        ...containerProperties?.style,
+      }}
+    >
       <Image
         alt={altText}
         blurDataURL={`${image.asset.url}?w=${blurWidth}&blur=50&quality=30&fit=clip&auto=format`}
-        height={image.asset.metadata.dimensions.height}
+        height={heightOverride ?? image.asset.metadata.dimensions.height}
         placeholder="blur"
         src={`${image.asset.url}?auto=format`}
         style={{ height: 'auto', objectFit: 'contain', position: 'relative' }}
-        width={image.asset.metadata.dimensions.width}
+        width={widthOverride ?? image.asset.metadata.dimensions.width}
       />
     </div>
   );

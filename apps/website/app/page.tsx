@@ -24,13 +24,9 @@ export default function Home(): JSX.Element {
               <div className={styles.LogoContainer} key={logo._id}>
                 <SanityNextImage
                   altText={logo.description}
+                  heightOverride={100}
                   image={logo.image}
-                  containerProperties={{
-                    style: {
-                      height: 100,
-                      width: 100,
-                    },
-                  }}
+                  widthOverride={100}
                 />
               </div>
             );
