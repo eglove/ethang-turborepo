@@ -30,22 +30,15 @@ export function SanityNextImage({
       : 64;
 
   return (
-    <div
-      {...containerProperties}
-      style={{
-        height: '100%',
-        position: 'relative',
-        width: '100%',
-        ...containerProperties?.style,
-      }}
-    >
+    <div {...containerProperties}>
       <Image
-        fill
         alt={altText}
         blurDataURL={`${image.asset.url}?w=${blurWidth}&blur=50&quality=30&fit=clip&auto=format`}
+        height={image.asset.metadata.dimensions.height}
         placeholder="blur"
         src={`${image.asset.url}?auto=format`}
-        style={{ objectFit: 'contain' }}
+        style={{ height: 'auto', objectFit: 'contain', position: 'relative' }}
+        width={image.asset.metadata.dimensions.width}
       />
     </div>
   );
