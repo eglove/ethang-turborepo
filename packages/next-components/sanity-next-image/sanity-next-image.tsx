@@ -38,7 +38,9 @@ export function SanityNextImage({
       {...containerProperties}
       style={{
         display: 'grid',
+        height: '100%',
         placeItems: 'center',
+        width: '100%',
         ...containerProperties?.style,
       }}
     >
