@@ -1,12 +1,11 @@
 import { NextLink } from 'next-components';
-import { use } from 'react';
 
 import { Breadcrumbs, Container, PortableTextWrapper } from '../components';
 import { GetCourse } from './components/get-course';
 import { getCourses } from './data';
 
-export default function Courses(): JSX.Element {
-  const courses = use(getCourses());
+export default async function Courses(): Promise<JSX.Element> {
+  const courses = await getCourses();
 
   return (
     <Container>

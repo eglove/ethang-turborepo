@@ -1,14 +1,12 @@
-import { use } from 'react';
-
 import { HeadTag } from '../../components/head-tag/head-tag';
 import { getBlog } from './data';
 
-export default function Head({
+export default async function Head({
   params,
 }: {
   params: { slug: string };
-}): JSX.Element {
-  const blog = use(getBlog(params.slug));
+}): Promise<JSX.Element> {
+  const blog = await getBlog(params.slug);
 
   return <HeadTag title={blog.title} />;
 }

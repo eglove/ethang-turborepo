@@ -1,13 +1,12 @@
 import { NextLink } from 'next-components';
-import { use } from 'react';
 import { formatList, humanReadableLocalDateTime } from 'util-typescript';
 
 import { Breadcrumbs, Container } from '../components';
 import styles from './blogs-layout.module.css';
 import { getBlogs } from './data';
 
-export default function Blogs(): JSX.Element {
-  const blogs = use(getBlogs());
+export default async function Blogs(): Promise<JSX.Element> {
+  const blogs = await getBlogs();
 
   return (
     <Container>

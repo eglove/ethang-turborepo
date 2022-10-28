@@ -1,10 +1,8 @@
-import { use } from 'react';
-
 import { Breadcrumbs, Container, PortableTextWrapper } from '../components';
 import { getAboutMePage } from './data';
 
-export default function AboutMe(): JSX.Element {
-  const aboutMe = use(getAboutMePage());
+export default async function AboutMe(): Promise<JSX.Element> {
+  const aboutMe = await getAboutMePage();
 
   return (
     <Container>

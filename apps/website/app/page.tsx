@@ -1,13 +1,12 @@
 import Image from 'next/image';
 import { NextLink } from 'next-components';
-import { use } from 'react';
 
 import { Container } from './components';
 import { getHomeImages } from './data';
 import styles from './page.module.css';
 
-export default function Home(): JSX.Element {
-  const images = use(getHomeImages());
+export default async function Home(): Promise<JSX.Element> {
+  const images = await getHomeImages();
 
   return (
     <Container>

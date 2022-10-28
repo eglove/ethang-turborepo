@@ -1,6 +1,5 @@
 import Script from 'next/script';
 import { SanityNextImage } from 'next-components';
-import { use } from 'react';
 import { JsonLd, jsonLdScriptProps } from 'react-schemaorg';
 import type { Blog as BlogSchema, Review } from 'schema-dts';
 import { humanReadableLocalDateTime } from 'util-typescript';
@@ -23,8 +22,8 @@ export async function generateStaticParams() {
   });
 }
 
-export default function Blog({ params }: any): JSX.Element {
-  const blog = use(getBlog(params.slug));
+export default async function Blog({ params }: any): Promise<JSX.Element> {
+  const blog = await getBlog(params.slug);
 
   const authors = blog.authors.map(blogAuthor => {
     return blogAuthor.name;
