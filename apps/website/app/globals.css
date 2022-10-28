@@ -34,15 +34,11 @@ html {
   max-width: 1250px;
   margin: 0 auto calc(1rem + 50px) auto;
   font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir, "segoe ui", "helvetica neue", helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
   color: var(--font-color);
   word-break: break-word;
   background-color: hsl(215deg 62% 19%);
-}
-
-body {
-  margin: 1rem 0;
-  font-size: 1rem;
-  line-height: 1.5;
 }
 
 a {

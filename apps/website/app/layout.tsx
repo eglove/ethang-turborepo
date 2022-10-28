@@ -36,10 +36,10 @@ export default function RootLayout({
         <link href="/site.webmanifest" rel="manifest" />
         <Script src="/prism/prism.js" />
       </head>
-      <body className={styles.ContentContainer}>
+      <main className={styles.ContentContainer}>
         <Header />
         {children}
-      </body>
+      </main>
     </html>
   );
 }
