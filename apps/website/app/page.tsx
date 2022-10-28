@@ -1,4 +1,5 @@
-import { NextLink, SanityNextImage } from 'next-components';
+import Image from 'next/image';
+import { NextLink } from 'next-components';
 import { use } from 'react';
 
 import { Container } from './components';
@@ -22,11 +23,11 @@ export default function Home(): JSX.Element {
           {images?.map(logo => {
             return (
               <div className={styles.LogoContainer} key={logo._id}>
-                <SanityNextImage
-                  altText={logo.description}
-                  heightOverride={100}
-                  image={logo.image}
-                  widthOverride={100}
+                <Image
+                  alt={logo.description}
+                  height={100}
+                  src={logo.image.asset.url}
+                  width={100}
                 />
               </div>
             );
