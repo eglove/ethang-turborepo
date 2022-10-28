@@ -8,7 +8,7 @@ if (!$args)
 Set-Location ~/Projects/ethang-turborepo
 git add .
 git commit -m "$commitMessage"
-npx --yes pnpm browserslist --update-db
+npx --yes browserslist@latest --update-db
 npx turbo lint
 npx stylelint "**/*.module.css" --fix
 
