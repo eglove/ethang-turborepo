@@ -34,7 +34,7 @@ export default function RootLayout({
           type="image/png"
         />
         <link href="/site.webmanifest" rel="manifest" />
-        <Script src="../public/prism/prism.js" />
+        <Script src="/prism/prism.js" />
       </head>
       <body className={styles.ContentContainer}>
         <Header />
