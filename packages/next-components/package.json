@@ -7,7 +7,7 @@
   "author": "",
   "license": "MIT",
   "scripts": {
-    "lint": "next lint"
+    "lint": "eslint"
   },
   "dependencies": {
     "eslint-config-ethang": "workspace:*",

@@ -7,7 +7,7 @@
   "author": "",
   "license": "MIT",
   "scripts": {
-    "lint": "next lint"
+    "lint": "eslint"
   },
   "dependencies": {
     "@trussworks/react-uswds": "^3.2.0",
