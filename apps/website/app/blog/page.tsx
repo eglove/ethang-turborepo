@@ -2,6 +2,9 @@ import { NextLink } from 'next-components';
 import { formatList, humanReadableLocalDateTime } from 'util-typescript';
 
 import { Breadcrumbs, Container } from '../components';
+// Next 13 Beta, styles in components don't always work if not imported on a page
+// eslint-disable-next-line @typescript-eslint/no-unused-vars,unused-imports/no-unused-imports
+import betaStyles from '../components/header/header.module.css';
 import styles from './blogs-layout.module.css';
 import { getBlogs } from './data';
 
