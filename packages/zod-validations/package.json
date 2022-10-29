@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint",
-    "test": "jest"
+    "lint": "eslint"
   },
   "keywords": [],
   "author": "",
