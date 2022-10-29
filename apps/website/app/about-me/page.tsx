@@ -1,7 +1,4 @@
 import { Breadcrumbs, Container, PortableTextWrapper } from '../components';
-// Next 13 Beta, styles in components don't always work if not imported on a page
-// eslint-disable-next-line @typescript-eslint/no-unused-vars,unused-imports/no-unused-imports
-import betaStyles from '../components/header/header.module.css';
 import { getAboutMePage } from './data';
 
 export default async function AboutMe(): Promise<JSX.Element> {
