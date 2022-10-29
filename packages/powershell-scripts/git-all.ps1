@@ -11,6 +11,7 @@ git commit -m "$commitMessage"
 npx --yes browserslist@latest --update-db
 npx turbo lint
 npx stylelint "**/*.module.css" --fix
+npx turbo test
 
 if ($?) {
   git add .

@@ -1,0 +1,19 @@
+{
+  "name": "util-prisma-graphql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@paljs/plugins": "^4.1.0",
+    "@prisma/generator-helper": "^4.5.0",
+    "graphql": "^16.6.0",
+    "util-typescript": "workspace:*"
+  },
+  "devDependencies": {
+    "eslint-config-ethang": "workspace:*",
+    "tsconfig": "workspace:*"
+  }
+}

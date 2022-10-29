@@ -1,0 +1,39 @@
+.ButtonElement {
+  font-size: 1rem;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 2px;
+}
+
+.ButtonElement:hover, .ButtonElement:focus {
+  filter: brightness(110%);
+}
+
+.ButtonElement:focus {
+  outline-color: hsl(207deg 94% 39%);
+  outline-offset: 4px;
+}
+
+.Fill {
+  color: hsl(0deg 0% 96%);
+  background-color: hsl(207deg 94% 39%);
+}
+
+.Outline {
+  color: hsl(207deg 94% 39%);
+  background-color: hsl(0deg 0% 96%);
+  border-color: hsl(207deg 94% 39%);
+}
+
+.Ghost {
+  color: hsl(0deg 0% 100%);
+  background-color: hsl(0deg 0% 96%);
+}
+
+.Ghost:hover, .Ghost:focus {
+  background-color: hsl(0deg 0% 83%);
+}
+
+.Ghost:focus {
+  outline-color: hsl(0deg 0% 83%);
+}

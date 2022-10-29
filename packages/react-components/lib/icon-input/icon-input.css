@@ -1,0 +1,31 @@
+.IconInputContainer {
+  position: relative;
+  display: block;
+  color: hsl(0deg 0% 40%);
+}
+
+.IconInputContainer:hover,
+.IconInputContainer:focus {
+  color: hsl(0deg 0% 0%);
+}
+
+.TextInput {
+  font-weight: bold;
+  color: inherit;
+  background-color: var(--background-color);
+  border: none;
+  border-bottom: 1px solid var(--black);
+  outline-offset: 2px;
+}
+
+.TextInput::placeholder {
+  font-weight: normal;
+  color: hsl(0deg 0% 50%);
+}
+
+.IconContainer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+}
