@@ -6,6 +6,9 @@
   "keywords": [],
   "author": "",
   "license": "MIT",
+  "scripts": {
+    "lint": "eslint"
+  },
   "dependencies": {
     "@apollo/client": "^3.7.1",
     "apollo3-cache-persist": "^0.14.1",

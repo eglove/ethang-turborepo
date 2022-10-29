@@ -6,6 +6,9 @@
   "keywords": [],
   "author": "",
   "license": "MIT",
+  "scripts": {
+    "lint": "eslint"
+  },
   "devDependencies": {
     "@types/node": "^18.11.7",
     "@types/uuid": "^8.3.4",

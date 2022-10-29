@@ -6,6 +6,9 @@
   "keywords": [],
   "author": "",
   "license": "MIT",
+  "scripts": {
+    "lint": "next lint"
+  },
   "dependencies": {
     "eslint-config-ethang": "workspace:*",
     "next": "13.0.0",

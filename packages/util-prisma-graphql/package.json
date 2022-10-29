@@ -6,6 +6,9 @@
   "keywords": [],
   "author": "",
   "license": "MIT",
+  "scripts": {
+    "lint": "eslint"
+  },
   "dependencies": {
     "@paljs/plugins": "^4.1.0",
     "@prisma/generator-helper": "^4.5.0",

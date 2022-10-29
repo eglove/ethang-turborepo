@@ -6,6 +6,9 @@
   "keywords": [],
   "author": "",
   "license": "MIT",
+  "scripts": {
+    "lint": "eslint"
+  },
   "devDependencies": {
     "@types/node": "^18.11.7",
     "eslint-config-ethang": "workspace:*",
