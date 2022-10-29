@@ -32,7 +32,7 @@ export default async function Courses(): Promise<JSX.Element> {
           This page is my attempt to put the best coding courses out there in
           one list. They are put in an order so that someone new to coding can
           start at the top, learn from scratch and end up knowing more than a
-          college degree could ever provide. This list can take 2-3 years to
+          college degree could ever provide. This list can take few years to
           complete and will cost money, but I believe there is nothing that
           brings so much quality together in one place.
         </p>
