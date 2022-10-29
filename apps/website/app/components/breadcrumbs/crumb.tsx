@@ -1,4 +1,4 @@
-import { NextLink } from 'next-components/next-link/next-link';
+import { NextLink } from 'next-components';
 
 import type { LinkProperties } from './breadcrumbs';
 import styles from './breadcrumbs.module.css';
