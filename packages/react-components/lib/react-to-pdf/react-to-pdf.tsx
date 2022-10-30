@@ -41,6 +41,7 @@ export function ReactToPdf<ContainerType, TargetType>({
     }
 
     const pdf = new JsPdf(jsPdfOptions);
+    // @ts-expect-error this is an array
     for (const [index, targetReference] of targetReferences.entries()) {
       // eslint-disable-next-line no-await-in-loop
       const canvasElement = await html2canvas(
