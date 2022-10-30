@@ -27,25 +27,26 @@
   place-items: center;
 }
 
-.NavigationLink {
+.Navigation li {
   box-sizing: border-box;
   width: 100%;
-  min-width: 248px;
-  padding: 1rem;
   text-align: center;
-  text-decoration: none;
+  list-style-type: none;
   background-color: var(--background-color);
   border: 1px solid var(--border-color);
 }
 
-.NavigationLink:visited {
-  color: var(--font-color);
+.Navigation li a {
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  text-decoration: none;
 }
 
-.NavigationLink:hover, .NavigationLink:focus {
-  cursor: pointer;
-  filter: brightness(95%);
-  box-shadow: var(--box-shadow-hover);
+.Navigation li:hover,
+.Navigation li:focus {
+    filter: brightness(95%);
+    box-shadow: var(--box-shadow-hover);
 }
 
 .SocialLinks {
@@ -57,12 +58,8 @@
   background-color: var(--background-color);
 }
 
-@media (max-width: 780px) {
+ @media (max-width: 780px) {
   .Navigation {
     display: grid;
   }
-
-  .NavigationLink {
-    min-width: 0;
-  }
-}
+ }
