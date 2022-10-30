@@ -1,6 +1,3 @@
-'use client';
-
-import * as NavigationMenu from '@radix-ui/react-navigation-menu';
 import { NextLink } from 'next-components';
 
 import styles from './header.module.css';
@@ -22,20 +19,20 @@ export function Navigation(): JSX.Element {
   ];
 
   return (
-    <NavigationMenu.Root className={styles.Navigation}>
+    <nav className={styles.Navigation}>
       {navLinks.map(navLink => {
         return (
-          <NavigationMenu.Item key={navLink.link}>
-            <NextLink
-              linkProperties={{
-                href: navLink.link,
-              }}
-            >
-              {navLink.title}
-            </NextLink>
-          </NavigationMenu.Item>
+          <NextLink
+            key={navLink.title}
+            linkProperties={{
+              className: styles.NavigationLink,
+              href: navLink.link,
+            }}
+          >
+            {navLink.title}
+          </NextLink>
         );
       })}
-    </NavigationMenu.Root>
+    </nav>
   );
 }
