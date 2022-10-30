@@ -97,6 +97,29 @@ export const portableTextComponents = {
         </div>
       );
     },
+    quote(properties: {
+      value: { citationText: string; citationUrl: string; quote: string };
+    }): JSX.Element {
+      return (
+        <figure>
+          <blockquote>{properties.value.quote}</blockquote>
+          <figcaption>
+            <cite>
+              &mdash;{' '}
+              {typeof properties.value.citationUrl === 'undefined' ? (
+                properties.value.citationText
+              ) : (
+                <NextLink
+                  linkProperties={{ href: properties.value.citationUrl }}
+                >
+                  {properties.value.citationText}
+                </NextLink>
+              )}
+            </cite>
+          </figcaption>
+        </figure>
+      );
+    },
     youtubeId(properties: YouTubeEmbed): JSX.Element {
       return (
         <div style={{ margin: '16px 0' }}>

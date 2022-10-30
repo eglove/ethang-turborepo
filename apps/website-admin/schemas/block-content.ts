@@ -53,6 +53,28 @@ export default {
     {
       fields: [
         {
+          name: 'citationText',
+          title: 'Text',
+          type: 'string',
+        },
+        {
+          name: 'citationUrl',
+          title: 'URL',
+          type: 'url',
+        },
+        {
+          name: 'quote',
+          title: 'Quote',
+          type: 'string',
+        },
+      ],
+      name: 'quote',
+      title: 'Quote',
+      type: 'document',
+    },
+    {
+      fields: [
+        {
           name: 'id',
           title: 'ID',
           type: 'string',
