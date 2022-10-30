@@ -35,10 +35,7 @@ export default function RootLayout({
         />
         <link href="/site.webmanifest" rel="manifest" />
         <meta charSet="UTF-8" />
-        <meta
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-          name="viewport"
-        />
+        <meta content="width=device-width" name="viewport" />
       </head>
       <main className={styles.ContentContainer}>
         <Header />
