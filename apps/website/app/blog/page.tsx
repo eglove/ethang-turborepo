@@ -1,7 +1,7 @@
-import { Breadcrumbs, NextLink } from 'next-components';
+import { NextLink } from 'next-components';
 import { formatList, humanReadableLocalDateTime } from 'util-typescript';
 
-import { Container } from '../components';
+import { Breadcrumbs, Container } from '../components';
 import styles from './blogs-layout.module.css';
 import { getBlogs } from './data';
 

@@ -1,11 +1,11 @@
 import Script from 'next/script';
-import { Breadcrumbs, SanityNextImage } from 'next-components';
+import { SanityNextImage } from 'next-components';
 import { JsonLd, jsonLdScriptProps } from 'react-schemaorg';
 import type { Blog as BlogSchema, Review } from 'schema-dts';
 import { humanReadableLocalDateTime } from 'util-typescript';
 
 import { ethangSanityClient } from '../../../util/sanity';
-import { Container } from '../../components';
+import { Breadcrumbs, Container } from '../../components';
 import PortableTextWrapper from '../../components/portable-text/portable-text-wrapper';
 import styles from './blog-layout.module.css';
 import { getBlog } from './data';

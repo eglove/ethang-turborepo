@@ -1,6 +1,4 @@
-import { Breadcrumbs } from 'next-components';
-
-import { Container } from '../components';
+import { Breadcrumbs, Container } from '../components';
 import PortableTextWrapper from '../components/portable-text/portable-text-wrapper';
 import { getAboutMePage } from './data';
 

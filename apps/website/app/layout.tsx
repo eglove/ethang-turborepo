@@ -1,5 +1,4 @@
 import './globals.css';
-import 'next-components/lib/breadcrumbs/breadcrumbs.css';
 
 import Script from 'next/script';
 
