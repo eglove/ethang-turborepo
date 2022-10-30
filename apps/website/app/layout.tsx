@@ -1,7 +1,5 @@
 import './globals.css';
 
-import Script from 'next/script';
-
 import { Header } from './components';
 import { AnalyticsWrapper } from './components/analytics/analytics';
 import { HeadTag } from './components/head-tag/head-tag';
@@ -36,7 +34,11 @@ export default function RootLayout({
           type="image/png"
         />
         <link href="/site.webmanifest" rel="manifest" />
-        <Script src="/prism/prism.js" />
+        <meta charSet="UTF-8" />
+        <meta
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport"
+        />
       </head>
       <main className={styles.ContentContainer}>
         <Header />
