@@ -1,4 +1,4 @@
-import type { InferGetServerSidePropsType } from 'next';
+import type { InferGetStaticPropsType } from 'next';
 
 import { PageLayout } from '../feature/common/page-layout/page-layout';
 import type { GetGalleryImagesReturn } from '../feature/gallery/gallery-groq';
@@ -7,7 +7,7 @@ import { GalleryLayout } from '../feature/gallery/gallery-layout';
 
 export default function Gallery({
   images,
-}: InferGetServerSidePropsType<typeof getServerSideProps>): JSX.Element {
+}: InferGetStaticPropsType<typeof getStaticProps>): JSX.Element {
   return (
     <PageLayout>
       <GalleryLayout images={images} />
@@ -15,8 +15,9 @@ export default function Gallery({
   );
 }
 
-export async function getServerSideProps(): Promise<{
+export async function getStaticProps(): Promise<{
   props: { images: GetGalleryImagesReturn };
+  revalidate: number;
 }> {
   const images = await getGalleryImages();
 
@@ -24,5 +25,6 @@ export async function getServerSideProps(): Promise<{
     props: {
       images,
     },
+    revalidate: 60,
   };
 }

@@ -13,8 +13,9 @@ export function Index(): JSX.Element {
   );
 }
 
-export async function getServerSideProps(): Promise<{
+export async function getStaticProps(): Promise<{
   props: { dehydratedState: DehydratedState };
+  revalidate: number;
 }> {
   const queryClient = new QueryClient();
 
@@ -26,6 +27,7 @@ export async function getServerSideProps(): Promise<{
     props: {
       dehydratedState: dehydrate(queryClient),
     },
+    revalidate: 60,
   };
 }
 
