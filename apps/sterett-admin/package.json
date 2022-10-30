@@ -30,7 +30,7 @@
     "@sanity/validation": "^2.35.0",
     "@sanity/vision": "^2.35.0",
     "browserslist-config-google": "^3.0.1",
-    "caniuse-lite": "1.0.30001426",
+    "caniuse-lite": "1.0.30001427",
     "eslint": "^8.26.0",
     "express": "^4.18.2",
     "express-history-api-fallback": "^2.2.1",
