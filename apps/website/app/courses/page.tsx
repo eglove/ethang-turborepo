@@ -22,7 +22,7 @@ export default async function Courses(): Promise<JSX.Element> {
           This page changes often, lock in your plan by{' '}
           <NextLink
             linkProperties={{
-              href: '/files/course-curriculum.pdf',
+              href: './files/course-curriculum.pdf',
             }}
           >
             downloading the November 2022 snapshot
