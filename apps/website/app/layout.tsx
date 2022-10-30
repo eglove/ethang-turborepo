@@ -1,4 +1,5 @@
 import './globals.css';
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 import { Header } from './components';
 import { AnalyticsWrapper } from './components/analytics/analytics';

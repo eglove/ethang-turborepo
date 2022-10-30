@@ -1,5 +1,4 @@
 'use client';
-import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 import { PortableText } from '@portabletext/react';
 import type { TypedObject } from '@portabletext/types';
