@@ -84,10 +84,17 @@ export const portableTextComponents = {
     },
     imageEmbed(properties: ImageEmbed): JSX.Element {
       return (
-        <SanityNextImage
-          altText={properties.value.image.description}
-          image={properties.value.image.image}
-        />
+        <div
+          style={{
+            margin: 'auto',
+            maxWidth: '500px',
+          }}
+        >
+          <SanityNextImage
+            altText={properties.value.image.description}
+            image={properties.value.image.image}
+          />
+        </div>
       );
     },
     youtubeId(properties: YouTubeEmbed): JSX.Element {
