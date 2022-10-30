@@ -1,5 +1,5 @@
 import './globals.css';
-import '../public/prism/prism.css';
+import 'next-components/lib/breadcrumbs/breadcrumbs.css';
 
 import Script from 'next/script';
 
