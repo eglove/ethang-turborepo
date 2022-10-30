@@ -144,7 +144,6 @@ importers:
   apps/website:
     specifiers:
       '@portabletext/react': ^1.0.6
-      '@portabletext/to-html': ^1.0.4
       '@portabletext/types': ^2.0.0
       '@sanity/client': ^3.4.1
       '@types/node': ^18.11.7
@@ -170,7 +169,6 @@ importers:
       util-typescript: workspace:*
     dependencies:
       '@portabletext/react': 1.0.6_react@18.2.0
-      '@portabletext/to-html': 1.0.4
       '@sanity/client': 3.4.1
       '@vercel/analytics': 0.1.3_react@18.2.0
       next: 13.0.1-canary.2_biqbaboplfbrettd7655fr4n2y
@@ -2593,13 +2591,6 @@ packages:
       '@portabletext/toolkit': 1.0.6
       '@portabletext/types': 1.0.3
       react: 18.2.0
-    dev: false
-
-  /@portabletext/to-html/1.0.4:
-    resolution: {integrity: sha512-SOb/20OYEI5Tqy0St8mAGPqQuQ8uzJPpG4YQxusrQKby05NdD7vnPqDo6lkniD5kutevVoMbYrix0Kt0s6t6Nw==}
-    dependencies:
-      '@portabletext/toolkit': 1.0.6
-      '@portabletext/types': 1.0.3
     dev: false
 
   /@portabletext/toolkit/1.0.6:
