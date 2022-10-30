@@ -1,4 +1,7 @@
-import { Breadcrumbs, Container, PortableTextWrapper } from '../components';
+import { Breadcrumbs } from 'next-components';
+
+import { Container } from '../components';
+import PortableTextWrapper from '../components/portable-text/portable-text-wrapper';
 import { getAboutMePage } from './data';
 
 export default async function AboutMe(): Promise<JSX.Element> {

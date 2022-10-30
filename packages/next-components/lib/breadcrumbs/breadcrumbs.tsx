@@ -1,7 +1,6 @@
 import './breadcrumbs.css';
 
 import type { AnchorHTMLAttributes } from 'react';
-import { uuid } from 'util-typescript';
 
 import { Crumb } from './crumb';
 
@@ -23,7 +22,7 @@ export function Breadcrumbs({ links }: BreadcrumbsProperties): JSX.Element {
         itemType="https://schema.org/BreadcrumbList"
       >
         {links.map((link, index) => {
-          return <Crumb key={uuid()} link={link} position={index} />;
+          return <Crumb key={link.href} link={link} position={index} />;
         })}
       </ol>
     </nav>

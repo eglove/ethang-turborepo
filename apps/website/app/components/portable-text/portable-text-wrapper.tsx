@@ -1,6 +1,12 @@
-import { toHTML } from '@portabletext/to-html';
+'use client';
+import { PortableText } from '@portabletext/react';
 import type { TypedObject } from '@portabletext/types';
+import { NextLink, SanityNextImage } from 'next-components';
 import React from 'react';
+import { GistEmbed } from 'react-components';
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { a11yLight } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 
 type ImageEmbed = {
   index: number;
@@ -50,48 +56,57 @@ type YouTubeEmbed = {
 
 export const portableTextComponents = {
   marks: {
-    link(properties: Link): string {
-      return `<a href="${properties.value.href}">${properties.text}</a>`;
+    link(properties: Link): JSX.Element {
+      return (
+        <NextLink linkProperties={{ href: properties.value.href }}>
+          {properties.text}
+        </NextLink>
+      );
     },
   },
   types: {
-    code(properties: { value: { code: string; language: string } }): string {
-      return `<pre class=language-${properties.value.language}><code>${properties.value.code}</code></pre>`;
+    code(properties: {
+      value: { code: string; language: string };
+    }): JSX.Element {
+      return (
+        <SyntaxHighlighter
+          wrapLongLines
+          language={properties.value.language}
+          style={a11yLight}
+        >
+          {properties.value.code}
+        </SyntaxHighlighter>
+      );
     },
-    gist(properties: { value: { id: string } }): string {
-      return `<iframe frameborder=0
-        style="min-width: 200px; width: 100%; height: 600px; margin: auto;"
-        srcdoc='<html><body><style type="text/css">.gist .gist-data { width: 100%; height: 500px; margin: auto; }</style><script src="https://gist.github.com/${properties.value.id}.js"></script></body></html>'
-        ></iframe>`;
+    gist(properties: { value: { id: string } }): JSX.Element {
+      return <GistEmbed id={properties.value.id} />;
     },
-    imageEmbed(properties: ImageEmbed): string {
-      return `<div
-          style="display: grid; height: ${properties.value.image.image.asset.metadata.dimensions.height}; place-items: center;">
-          <img
-            alt="${properties.value.image.description}"
-            src="${properties.value.image.image.asset.url}"
-            width="80%"
-            height="auto"
+    imageEmbed(properties: ImageEmbed): JSX.Element {
+      return (
+        <SanityNextImage
+          altText={properties.value.image.description}
+          image={properties.value.image.image}
+        />
+      );
+    },
+    youtubeId(properties: YouTubeEmbed): JSX.Element {
+      return (
+        <div style={{ margin: '16px 0' }}>
+          <LiteYouTubeEmbed
+            id={properties.value.id}
+            title={properties.value.title}
           />
-        </div>`;
-    },
-    youtubeId(properties: YouTubeEmbed): string {
-      return `<div style="display: grid; place-items: center; margin-bottom: 16px">
-          <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/${properties.value.id}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-        `;
+        </div>
+      );
     },
   },
 };
 
-export function PortableTextWrapper({
+export default function PortableTextWrapper({
   value,
 }: {
   value: TypedObject[];
 }): JSX.Element {
   // @ts-expect-error custom components
-  const html = toHTML(value, { components: portableTextComponents });
-
-  // eslint-disable-next-line react/no-danger
-  return <div dangerouslySetInnerHTML={{ __html: html }} />;
+  return <PortableText components={portableTextComponents} value={value} />;
 }

@@ -1,6 +1,7 @@
-import { NextLink } from 'next-components';
+import { Breadcrumbs, NextLink } from 'next-components';
 
-import { Breadcrumbs, Container, PortableTextWrapper } from '../components';
+import { Container } from '../components';
+import PortableTextWrapper from '../components/portable-text/portable-text-wrapper';
 import { GetCourse } from './components/get-course';
 import { getCourses } from './data';
 

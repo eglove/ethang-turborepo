@@ -12,6 +12,7 @@ const nextConfig = {
     ]
   },
   experimental: {
+    transpilePackages: ['next-components', 'react-components'],
     appDir: true,
   },
 }

@@ -1,5 +1,3 @@
-export * from './lib/breadcrumbs/breadcrumbs';
-export * from './lib/breadcrumbs/crumb';
 export * from './lib/button/button';
 export * from './lib/gist-embed/gist-embed';
 export * from './lib/icon-component/icon';

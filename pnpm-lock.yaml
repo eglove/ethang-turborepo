@@ -322,13 +322,13 @@ importers:
       react-dom: 18.2.0
       tsconfig: workspace:*
     dependencies:
-      eslint-config-ethang: link:../eslint-config-ethang
       next: 13.0.0_biqbaboplfbrettd7655fr4n2y
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
-      tsconfig: link:../tsconfig
     devDependencies:
       '@types/react': 18.0.24
+      eslint-config-ethang: link:../eslint-config-ethang
+      tsconfig: link:../tsconfig
 
   packages/node-environment:
     specifiers:
