@@ -3,7 +3,6 @@ import { Icon } from '@trussworks/react-uswds';
 import { humanReadableLocalDateTime } from 'util-typescript';
 
 import { Container } from '../common/container/container';
-import { NoContent } from '../common/no-content';
 import { PortableTextWrapper } from '../common/portable-text';
 import styles from './news.module.css';
 import type {
@@ -18,10 +17,6 @@ export function NewsLayout(): JSX.Element {
     [getNewsAndEventsKey],
     getNewsAndEvents
   );
-
-  if (newsAndEvents?.length === 0) {
-    return <NoContent />;
-  }
 
   return (
     <Container>

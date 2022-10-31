@@ -20,7 +20,7 @@ export function SanityPortableImage({
         src={image.url}
         width={image.metadata.dimensions.width}
         blurDataURL={`${
-          image.url ?? ''
+          image.url
         }?w=${64}&blur=50&quality=30&fit=clip&auto=format`}
         style={{
           height: 'auto',

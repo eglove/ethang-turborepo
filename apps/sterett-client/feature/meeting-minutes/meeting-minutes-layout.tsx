@@ -2,7 +2,6 @@ import { useQuery } from '@tanstack/react-query';
 import { TrussNextLink } from 'trussworks-next-components';
 
 import { Container } from '../common/container/container';
-import { NoContent } from '../common/no-content';
 import {
   getMeetingMinutes,
   getMeetingMinutesKey,
@@ -10,10 +9,6 @@ import {
 
 export function MeetingMinutesLayout(): JSX.Element {
   const { data } = useQuery(getMeetingMinutesKey(), getMeetingMinutes);
-
-  if (data?.length === 0) {
-    return <NoContent />;
-  }
 
   return (
     <Container>

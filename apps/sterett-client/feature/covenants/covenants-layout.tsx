@@ -2,7 +2,6 @@ import { useQuery } from '@tanstack/react-query';
 import { TrussNextLink } from 'trussworks-next-components';
 
 import { Container } from '../common/container/container';
-import { NoContent } from '../common/no-content';
 import type { GetCovenantsReturn } from './covenants-groq';
 import { getCovenants, getCovenantsKey } from './covenants-groq';
 
@@ -11,10 +10,6 @@ export function CovenantsLayout(): JSX.Element {
     getCovenantsKey(),
     getCovenants
   );
-
-  if (data?.length === 0) {
-    return <NoContent />;
-  }
 
   return (
     <Container>

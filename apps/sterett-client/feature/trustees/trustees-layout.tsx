@@ -2,17 +2,12 @@ import { useQuery } from '@tanstack/react-query';
 import { TrussNextLink } from 'trussworks-next-components';
 
 import { Container } from '../common/container/container';
-import { NoContent } from '../common/no-content';
 import { TrusteeImage } from './trustee-image';
 import styles from './trustees.module.css';
 import { getTrustees, getTrusteesKey } from './trustees-groq';
 
 export function TrusteesLayout(): JSX.Element {
   const { data } = useQuery(getTrusteesKey(), getTrustees);
-
-  if (data?.length === 0) {
-    return <NoContent />;
-  }
 
   return (
     <Container>

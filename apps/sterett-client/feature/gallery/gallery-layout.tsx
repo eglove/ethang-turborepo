@@ -2,7 +2,6 @@ import Image from 'next/future/image';
 import Masonry from 'react-masonry-css';
 
 import { Container } from '../common/container/container';
-import { NoContent } from '../common/no-content';
 import styles from './gallery.module.css';
 import type { GetGalleryImagesReturn } from './gallery-groq';
 
@@ -13,10 +12,6 @@ type GalleryLayoutProperties = {
 export function GalleryLayout({
   images,
 }: GalleryLayoutProperties): JSX.Element {
-  if (images?.length === 0) {
-    return <NoContent />;
-  }
-
   return (
     <Container>
       <Masonry
