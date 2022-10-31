@@ -10,7 +10,7 @@
     "lint": "eslint"
   },
   "devDependencies": {
-    "@types/node": "^18.11.7",
+    "@types/node": "^18.11.8",
     "@types/uuid": "^8.3.4",
     "@types/validator": "^13.7.10",
     "tsconfig": "workspace:*"
