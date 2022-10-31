@@ -1,5 +1,3 @@
-import './breadcrumbs.css';
-
 import { NextLink } from '../next-link/next-link';
 import type { LinkProperties } from './breadcrumbs';
 

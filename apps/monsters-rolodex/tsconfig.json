@@ -1,0 +1,13 @@
+{
+  "extends": "tsconfig/nextjs.json",
+  "compilerOptions": {
+    "types": ["node", "jest", "@test-library/jest-dom"],
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

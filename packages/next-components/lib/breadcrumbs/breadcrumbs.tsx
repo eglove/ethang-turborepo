@@ -1,5 +1,3 @@
-import './breadcrumbs.css';
-
 import type { AnchorHTMLAttributes } from 'react';
 
 import { Crumb } from './crumb';

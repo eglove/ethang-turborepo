@@ -1,12 +1,13 @@
-const withTM = require("next-transpile-modules")([
-  "next-components",
-  "node-environment",
-  "trussworks-next-components",
-  "util-typescript"
-]);
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  experimental: {
+    transpilePackages: [
+      "next-components",
+      "node-environment",
+      "trussworks-next-components",
+      "util-typescript"
+    ],
+  },
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -37,4 +38,4 @@ const nextConfig = {
   swcMinify: true,
 }
 
-module.exports = withTM(nextConfig);
+module.exports = nextConfig
