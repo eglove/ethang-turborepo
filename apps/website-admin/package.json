@@ -30,7 +30,7 @@
     "@sanity/form-builder": "^2.35.0",
     "@sanity/orderable-document-list": "^0.0.10",
     "@sanity/vision": "^2.35.0",
-    "caniuse-lite": "^1.0.30001427",
+    "caniuse-lite": "^1.0.30001429",
     "eslint": "^8.26.0",
     "eslint-config-ethang": "workspace:*",
     "prop-types": "^15.7",
