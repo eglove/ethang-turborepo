@@ -2,6 +2,7 @@
 .dccache
 .fleet
 .turbo
+.vscode
 ### DO NOT REPLACE WHEN REGENERATING GITIGNORE ###
 
 # Created by https://www.toptal.com/developers/gitignore/api/rust,node,macos,windows,jetbrains+all,visualstudiocode,vercel,nextjs
