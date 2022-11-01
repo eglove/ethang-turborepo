@@ -10,8 +10,7 @@ import PortableTextWrapper from '../../components/portable-text/portable-text-wr
 import styles from './blog-layout.module.css';
 import { getBlog } from './data';
 
-// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-export async function generateStaticParams() {
+export async function generateStaticParams(): Promise<Array<{ slug: string }>> {
   const paths = await ethangSanityClient.fetch<
     Array<{ slug: { current: string } }>
   >('*[_type == "blog"]{slug}');
@@ -23,7 +22,11 @@ export async function generateStaticParams() {
   });
 }
 
-export default async function Blog({ params }: any): Promise<JSX.Element> {
+export default async function Blog({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<JSX.Element> {
   const blog = await getBlog(params.slug);
 
   const authors = blog.authors.map(blogAuthor => {

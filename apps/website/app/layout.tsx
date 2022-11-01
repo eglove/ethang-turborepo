@@ -3,7 +3,6 @@ import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 import { Header } from './components';
 import { AnalyticsWrapper } from './components/analytics/analytics';
-import { HeadTag } from './components/head-tag/head-tag';
 import styles from './page.module.css';
 
 export default function RootLayout({
@@ -14,7 +13,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <HeadTag title="Home" />
         <link href="/favicon.ico" rel="icon" />
         <meta content="$ilp.uphold.com/XqPZ8mnNyprk" name="monetization" />
         <link
