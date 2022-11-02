@@ -3,7 +3,7 @@ module.exports = {
     'project': './packages/tsconfig/base.json',
   },
   extends: [
-    // 'plugin:unicorn/recommended',
+    'plugin:unicorn/recommended',
     'xo',
     'xo-space',
     'xo-typescript/space',
