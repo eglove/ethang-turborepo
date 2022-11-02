@@ -193,7 +193,7 @@ importers:
       eslint: 8.26.0
       eslint-config-ethang: workspace:*
       eslint-config-next: ^13.0.1
-      next: ^13.0.1
+      next: 13.0.1
       next-components: workspace:*
       node-environment: workspace:*
       react: 18.2.0

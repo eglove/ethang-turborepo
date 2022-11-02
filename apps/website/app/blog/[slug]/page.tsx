@@ -10,6 +10,7 @@ import PortableTextWrapper from '../../components/portable-text/portable-text-wr
 import styles from './blog-layout.module.css';
 import { getBlog } from './data';
 
+// eslint-disable-next-line unicorn/prevent-abbreviations
 export async function generateStaticParams(): Promise<Array<{ slug: string }>> {
   const paths = await ethangSanityClient.fetch<
     Array<{ slug: { current: string } }>
