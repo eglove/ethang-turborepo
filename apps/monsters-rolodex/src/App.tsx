@@ -1,8 +1,9 @@
 import './App.css';
 
-import type { ChangeEvent } from 'react';
 import React, { useEffect, useState } from 'react';
 
+import { CardList } from './components/card-list/card-list';
+import { SearchBar } from './components/search-bar/search-bar';
 import type { Monster } from './types/monsters';
 
 export function App(): JSX.Element {
@@ -31,18 +32,12 @@ export function App(): JSX.Element {
 
   return (
     <div className="App">
-      <input
-        className="searchBox"
-        placeholder="Search Monsters"
-        type="search"
-        value={search}
-        onChange={(event: ChangeEvent<HTMLInputElement>): void => {
-          setSearch(event.target.value);
-        }}
+      <SearchBar
+        inputProperties={{ className: 'searchBox' }}
+        search={search}
+        setSearch={setSearch}
       />
-      {monsters.map(monster => {
-        return <h1 key={monster.id}>{monster.name}</h1>;
-      })}
+      <CardList monsters={monsters} />
     </div>
   );
 }
