@@ -1,4 +1,4 @@
-import { delay } from './util';
+import { delay } from '../util';
 
 export const revalidate = 0;
 
