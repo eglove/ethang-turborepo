@@ -14,13 +14,12 @@ export default async function Messages(): Promise<JSX.Element> {
 
   return (
     <div>
+      <div>Chat:</div>
       <ul>
         {initialServerMessages.map(message => {
           return <li key={message}>{message}</li>;
         })}
       </ul>
-      <div>Send Message:</div>
-      <input type="text" />
     </div>
   );
 }

@@ -7,9 +7,8 @@ const getUser = (id: string): { name: string } => {
   return { name: 'John' };
 };
 
-export async function generateStaticParameters(): Promise<
-  Array<{ user: string }>
-> {
+// eslint-disable-next-line unicorn/prevent-abbreviations
+export async function generateStaticParams(): Promise<Array<{ user: string }>> {
   const users = ['userOne', 'userTwo', 'userThree'];
 
   return users.map(user => {
