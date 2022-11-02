@@ -1,6 +1,9 @@
 import client from 'part:@sanity/base/client';
 
-export function isSlugUnique(slug, options) {
+export function isSlugUnique(
+  slug: string,
+  options: { document: { _id: string } }
+): boolean {
   const { document } = options;
 
   const id: string = document._id.replace(/^drafts\./, '');

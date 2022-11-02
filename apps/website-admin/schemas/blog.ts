@@ -1,4 +1,5 @@
 import { isSlugUnique } from '../util/is-slug-unique';
+import { isRequired, slugify } from './validations';
 
 export default {
   fields: [
@@ -6,24 +7,18 @@ export default {
       name: 'title',
       title: 'Title',
       type: 'string',
-      validation(Rule) {
-        return Rule.required();
-      },
+      validation: isRequired,
     },
     {
       name: 'slug',
       options: {
         isUnique: isSlugUnique,
-        slugify(input) {
-          return input.toLowerCase().replace(/\s+/g, '-').slice(0, 200);
-        },
+        slugify,
         source: 'title',
       },
       title: 'Slug',
       type: 'slug',
-      validation(Rule) {
-        return Rule.required();
-      },
+      validation: isRequired,
     },
     {
       name: 'reviews',
@@ -32,7 +27,7 @@ export default {
       type: 'reference',
     },
     {
-      initialValue() {
+      initialValue(): { date: Date } {
         return {
           date: new Date(),
         };
@@ -40,12 +35,10 @@ export default {
       name: 'publishedAt',
       title: 'Published At',
       type: 'datetime',
-      validation(Rule) {
-        return Rule.required();
-      },
+      validation: isRequired,
     },
     {
-      initialValue() {
+      initialValue(): { date: Date } {
         return {
           date: new Date(),
         };
@@ -53,9 +46,7 @@ export default {
       name: 'updatedAt',
       title: 'Updated At',
       type: 'datetime',
-      validation(Rule) {
-        return Rule.required();
-      },
+      validation: isRequired,
     },
     {
       name: 'authors',

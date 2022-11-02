@@ -8,6 +8,7 @@ import courseUrl from './course-url';
 import imageUpload from './image-upload';
 import page from './page';
 import person from './person';
+import quote from './quote';
 import school from './school';
 
 export default createSchema({
@@ -21,6 +22,7 @@ export default createSchema({
     school,
     person,
     imageUpload,
+    quote,
 
     blockContent,
   ],
