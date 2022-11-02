@@ -4,7 +4,7 @@ export const revalidate = 0;
 
 export default async function Messages(): Promise<JSX.Element> {
   // eslint-disable-next-line @typescript-eslint/no-empty-function
-  await delay(10_000, () => {});
+  await delay(3000, () => {});
   const initialServerMessages = [
     'Hey dude',
     'Wanna hear a good quote?',

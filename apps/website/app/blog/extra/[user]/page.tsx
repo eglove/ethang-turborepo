@@ -24,7 +24,7 @@ export default async function UserDemo({
   params: { user: string };
 }): Promise<JSX.Element> {
   // eslint-disable-next-line @typescript-eslint/no-empty-function
-  await delay(30_000, () => {});
+  await delay(10_000, () => {});
   const john = getUser(params.user);
 
   return (
