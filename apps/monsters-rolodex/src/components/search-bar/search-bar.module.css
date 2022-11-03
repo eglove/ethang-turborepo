@@ -1,0 +1,9 @@
+.SearchBar {
+    width: 150px;
+    padding: 10px;
+    margin-bottom: 30px;
+    line-height: 30px;
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+}

@@ -1,7 +1,6 @@
-import './App.css';
-
 import React, { useEffect, useState } from 'react';
 
+import styles from './app.module.css';
 import { CardList } from './components/card-list/card-list';
 import { SearchBar } from './components/search-bar/search-bar';
 import type { Monster } from './types/monsters';
@@ -32,11 +31,8 @@ export function App(): JSX.Element {
 
   return (
     <div className="App">
-      <SearchBar
-        inputProperties={{ className: 'searchBox' }}
-        search={search}
-        setSearch={setSearch}
-      />
+      <h1 className={styles.AppTitle}>Monsters Rolodex</h1>
+      <SearchBar search={search} setSearch={setSearch} />
       <CardList monsters={monsters} />
     </div>
   );

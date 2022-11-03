@@ -6,6 +6,8 @@ import type {
   SetStateAction,
 } from 'react';
 
+import styles from './search-bar.module.css';
+
 type SearchBarProperties = {
   inputProperties?: DetailedHTMLProps<
     InputHTMLAttributes<HTMLInputElement>,
@@ -29,6 +31,7 @@ export function SearchBar({
         setSearch(event.target.value);
       }}
       {...inputProperties}
+      className={`${styles.SearchBar} ${inputProperties?.className ?? ''}`}
     />
   );
 }
