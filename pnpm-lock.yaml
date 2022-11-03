@@ -199,7 +199,7 @@ importers:
       react: 18.2.0
       react-components: workspace:*
       react-dom: 18.2.0
-      react-lite-youtube-embed: ^2.3.1
+      react-lite-youtube-embed: ^2.3.52
       react-schemaorg: ^2.0.0
       react-syntax-highlighter: ^15.5.0
       schema-dts: ^1.1.0
@@ -216,7 +216,7 @@ importers:
       react: 18.2.0
       react-components: link:../../packages/react-components
       react-dom: 18.2.0_react@18.2.0
-      react-lite-youtube-embed: 2.3.1_biqbaboplfbrettd7655fr4n2y
+      react-lite-youtube-embed: 2.3.52_biqbaboplfbrettd7655fr4n2y
       react-schemaorg: 2.0.0_2w7h6qeg2rncqnecijazkzv3ba
       react-syntax-highlighter: 15.5.0_react@18.2.0
       schema-dts: 1.1.0_typescript@4.8.4
@@ -16199,8 +16199,8 @@ packages:
     resolution: {integrity: sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==}
     dev: false
 
-  /react-lite-youtube-embed/2.3.1_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-14YlE6iZPHwqaQqSmwfI614qumdVAICU9PFmk34vcGnOfiixFjaATGkOfUd2TA6pFpVMP8DT2/l9ebu5/aKeag==}
+  /react-lite-youtube-embed/2.3.52_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-G010PvCavA4EqL8mZ/Sv9XXiHnjMfONW+lmNeCRnSEPluPdptv2lZ0cNlngrj7K9j7luc8pbpyrmNpKbD9VMmw==}
     peerDependencies:
       react: '>=16.0.8'
       react-dom: '>=16.0.8'
