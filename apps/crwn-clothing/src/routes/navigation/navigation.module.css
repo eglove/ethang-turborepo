@@ -1,0 +1,27 @@
+.Navigation {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 70px;
+    margin-bottom: 25px;
+}
+
+.Navigation .LogoContainer {
+    width: 70px;
+    height: 100%;
+    padding: 25px;
+}
+
+.Navigation .NavLinksContainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 50%;
+    height: 100%;
+}
+
+.Navigation .NavLinksContainer .NavLink {
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
