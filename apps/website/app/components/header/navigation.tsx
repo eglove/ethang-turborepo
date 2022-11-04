@@ -12,10 +12,10 @@ export function Navigation(): JSX.Element {
       link: '/courses',
       title: 'Courses',
     },
-    // {
-    //   link: '/resume',
-    //   title: 'Resume',
-    // },
+    {
+      link: './files/Ethan-Glover-Resume.pdf',
+      title: 'Resume',
+    },
   ];
 
   return (
