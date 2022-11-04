@@ -1,3 +1,5 @@
+'use client';
+
 import './select.css';
 
 import type { ChangeEvent, SelectHTMLAttributes } from 'react';

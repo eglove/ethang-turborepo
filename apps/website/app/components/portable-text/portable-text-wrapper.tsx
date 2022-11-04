@@ -1,5 +1,4 @@
 'use client';
-
 import { PortableText } from '@portabletext/react';
 import type { TypedObject } from '@portabletext/types';
 import { NextLink, SanityNextImage } from 'next-components';
