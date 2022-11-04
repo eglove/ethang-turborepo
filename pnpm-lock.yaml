@@ -43,7 +43,6 @@ importers:
       react-scripts: 5.0.1
       tsconfig: workspace:*
       typescript: ^4.8.4
-      web-vitals: ^3.0.4
     dependencies:
       '@testing-library/jest-dom': 5.16.5
       '@testing-library/react': 13.4.0_biqbaboplfbrettd7655fr4n2y
@@ -57,7 +56,6 @@ importers:
       react-router-dom: 6.4.3_biqbaboplfbrettd7655fr4n2y
       react-scripts: 5.0.1_uqvmreaiyeoclate435itmzle4
       typescript: 4.8.4
-      web-vitals: 3.0.4
     devDependencies:
       eslint-config-ethang: link:../../packages/eslint-config-ethang
       identity-obj-proxy: 3.0.0
@@ -81,7 +79,6 @@ importers:
       ts-node: ^10.9.1
       tsconfig: workspace:*
       typescript: ^4.8.4
-      web-vitals: ^3.0.4
     dependencies:
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
@@ -100,7 +97,6 @@ importers:
       ts-node: 10.9.1_cbe7ovvae6zqfnmtgctpgpys54
       tsconfig: link:../../packages/tsconfig
       typescript: 4.8.4
-      web-vitals: 3.0.4
 
   apps/sterett-admin:
     specifiers:
@@ -19681,9 +19677,6 @@ packages:
     dependencies:
       minimalistic-assert: 1.0.1
     dev: false
-
-  /web-vitals/3.0.4:
-    resolution: {integrity: sha512-Yau8qf1AJ/dm6MY180Bi0qpCIuWmAfKAnOqmxLecGfIHn0+ND3H4JOhXeY73Pyi9zjSF5J4SNUewHLNUzU7mmA==}
 
   /webidl-conversions/3.0.1:
     resolution: {integrity: sha512-2JAn3z8AR6rjK8Sm8orRC0h/bcl/DqL7tRPdGZ4I1CjdF+EaMLmYxBHyXuKL849eucPFhvBoxMsflfOb8kxaeQ==}
