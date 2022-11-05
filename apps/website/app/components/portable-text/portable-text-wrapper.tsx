@@ -1,12 +1,10 @@
-'use client';
 import { PortableText } from '@portabletext/react';
 import type { TypedObject } from '@portabletext/types';
-import { NextLink, SanityNextImage } from 'next-components';
+import { Blockquote, NextLink, SanityNextImage } from 'next-components';
+import { SyntaxHighlight } from 'next-components/lib/syntax-highlighter/syntax-highlighter';
 import React from 'react';
 import { GistEmbed } from 'react-components';
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
-import SyntaxHighlighter from 'react-syntax-highlighter';
-import { a11yLight } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 
 type ImageEmbed = {
   index: number;
@@ -69,13 +67,10 @@ export const portableTextComponents = {
       value: { code: string; language: string };
     }): JSX.Element {
       return (
-        <SyntaxHighlighter
-          wrapLongLines
+        <SyntaxHighlight
+          code={properties.value.code}
           language={properties.value.language}
-          style={a11yLight}
-        >
-          {properties.value.code}
-        </SyntaxHighlighter>
+        />
       );
     },
     gist(properties: { value: { id: string } }): JSX.Element {
@@ -100,23 +95,11 @@ export const portableTextComponents = {
       value: { citationText: string; citationUrl: string; quote: string };
     }): JSX.Element {
       return (
-        <figure>
-          <blockquote>{properties.value.quote}</blockquote>
-          <figcaption>
-            <cite>
-              &mdash;{' '}
-              {typeof properties.value.citationUrl === 'undefined' ? (
-                properties.value.citationText
-              ) : (
-                <NextLink
-                  linkProperties={{ href: properties.value.citationUrl }}
-                >
-                  {properties.value.citationText}
-                </NextLink>
-              )}
-            </cite>
-          </figcaption>
-        </figure>
+        <Blockquote
+          citationText={properties.value.citationText}
+          citationUrl={properties.value.citationUrl}
+          quote={properties.value.quote}
+        />
       );
     },
     youtubeId(properties: YouTubeEmbed): JSX.Element {

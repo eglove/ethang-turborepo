@@ -20,7 +20,6 @@
     "react-dom": "18.2.0",
     "react-lite-youtube-embed": "^2.3.52",
     "react-schemaorg": "^2.0.0",
-    "react-syntax-highlighter": "^15.5.0",
     "schema-dts": "^1.1.0",
     "util-typescript": "workspace:*"
   },
@@ -29,7 +28,6 @@
     "@types/node": "^18.11.9",
     "@types/react": "18.0.25",
     "@types/react-dom": "^18.0.8",
-    "@types/react-syntax-highlighter": "^15.5.5",
     "eslint": "8.26.0",
     "eslint-config-ethang": "workspace:*",
     "eslint-config-next": "^13.0.2",
