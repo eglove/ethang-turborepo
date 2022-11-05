@@ -231,7 +231,6 @@ importers:
       react: 18.2.0
       react-components: workspace:*
       react-dom: 18.2.0
-      react-lite-youtube-embed: ^2.3.52
       react-schemaorg: ^2.0.0
       schema-dts: ^1.1.0
       tsconfig: workspace:*
@@ -247,7 +246,6 @@ importers:
       react: 18.2.0
       react-components: link:../../packages/react-components
       react-dom: 18.2.0_react@18.2.0
-      react-lite-youtube-embed: 2.3.52_biqbaboplfbrettd7655fr4n2y
       react-schemaorg: 2.0.0_2w7h6qeg2rncqnecijazkzv3ba
       schema-dts: 1.1.0_typescript@4.8.4
       util-typescript: link:../../packages/util-typescript
@@ -387,12 +385,14 @@ importers:
       next: 13.0.2
       react: ^18.2.0
       react-dom: 18.2.0
+      react-lite-youtube-embed: ^2.3.52
       react-syntax-highlighter: ^15.5.0
       tsconfig: workspace:*
     dependencies:
       next: 13.0.2_biqbaboplfbrettd7655fr4n2y
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
+      react-lite-youtube-embed: 2.3.52_biqbaboplfbrettd7655fr4n2y
       react-syntax-highlighter: 15.5.0_react@18.2.0
     devDependencies:
       '@types/react': 18.0.25

@@ -2,9 +2,9 @@ import { PortableText } from '@portabletext/react';
 import type { TypedObject } from '@portabletext/types';
 import { Blockquote, NextLink, SanityNextImage } from 'next-components';
 import { SyntaxHighlight } from 'next-components/lib/syntax-highlighter/syntax-highlighter';
+import { YoutubeEmbed } from 'next-components/lib/youtube-embed/youtube-embed';
 import React from 'react';
 import { GistEmbed } from 'react-components';
-import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 
 type ImageEmbed = {
   index: number;
@@ -104,12 +104,7 @@ export const portableTextComponents = {
     },
     youtubeId(properties: YouTubeEmbed): JSX.Element {
       return (
-        <div style={{ margin: '16px 0' }}>
-          <LiteYouTubeEmbed
-            id={properties.value.id}
-            title={properties.value.title}
-          />
-        </div>
+        <YoutubeEmbed id={properties.value.id} title={properties.value.title} />
       );
     },
   },
