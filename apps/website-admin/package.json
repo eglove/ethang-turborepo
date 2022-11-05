@@ -16,7 +16,7 @@
     "sanity"
   ],
   "dependencies": {
-    "@babel/core": "^7.19.6",
+    "@babel/core": "^7.20.2",
     "@sanity/base": "^2.35.0",
     "@sanity/cli": "^2.35.0",
     "@sanity/code-input": "^2.35.0",
