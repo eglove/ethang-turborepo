@@ -1,8 +1,13 @@
+'use client';
 import { PortableText } from '@portabletext/react';
 import type { TypedObject } from '@portabletext/types';
-import { Blockquote, NextLink, SanityNextImage } from 'next-components';
-import { SyntaxHighlight } from 'next-components/lib/syntax-highlighter/syntax-highlighter';
-import { YoutubeEmbed } from 'next-components/lib/youtube-embed/youtube-embed';
+import {
+  Blockquote,
+  NextLink,
+  SanityNextImage,
+  SyntaxHighlight,
+  YoutubeEmbed,
+} from 'next-components';
 import React from 'react';
 import { GistEmbed } from 'react-components';
 
