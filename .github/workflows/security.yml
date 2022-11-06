@@ -6,11 +6,6 @@ on:
   pull_request:
     types: [ opened, synchronize, reopened ]
 jobs:
-  dependency-review:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/dependency-review-action@v2
   codeql:
     runs-on: ubuntu-latest
     permissions:
@@ -20,7 +15,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        language: [ 'javascript', 'typescript' ]
+        language: [ 'typescript' ]
     steps:
       - uses: actions/checkout@v3
       - uses: github/codeql-action/init@v2
