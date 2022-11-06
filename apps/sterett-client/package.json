@@ -35,7 +35,7 @@
     "@types/react": "18.0.25",
     "@types/react-big-calendar": "^0.38.2",
     "@types/react-dom": "^18.0.8",
-    "eslint": "8.26.0",
+    "eslint": "8.27.0",
     "eslint-config-ethang": "workspace:*",
     "eslint-config-next": "^13.0.2",
     "next-transpile-modules": "^10.0.0",
