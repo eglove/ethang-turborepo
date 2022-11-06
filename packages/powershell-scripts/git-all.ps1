@@ -34,15 +34,6 @@ else
 
 if ($?)
 {
-    npx --yes snyk test --all-projects
-}
-else
-{
-    Break
-}
-
-if ($?)
-{
     git push
 }
 else
