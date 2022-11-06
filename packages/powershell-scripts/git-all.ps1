@@ -9,6 +9,7 @@ Set-Location ~/Projects/ethang-turborepo
 git add .
 git commit -m "$commitMessage"
 npx --yes browserslist@latest --update-db
+pnpm i --no-frozen-lockfile
 npx turbo lint
 
 if ($?)
