@@ -10,11 +10,6 @@ const initialState = {
   password: '',
 };
 
-export const signInWithGoogle = async (): Promise<void> => {
-  const { user } = await firebase.signInWithGooglePopup();
-  await firebase.createUserDocumentFromAuth(user);
-};
-
 export function SignIn(): JSX.Element {
   const [formState, setFormState] = useState(initialState);
   const [formError, setFormError] = useState('');
@@ -29,6 +24,10 @@ export function SignIn(): JSX.Element {
         [name]: value,
       };
     });
+  };
+
+  const signInWithGoogle = async (): Promise<void> => {
+    await firebase.signInWithGooglePopup();
   };
 
   const handleSubmit = async (
@@ -54,6 +53,7 @@ export function SignIn(): JSX.Element {
       handleChange={handleChange}
       handleSubmit={handleSubmit}
       password={password}
+      signInWithGoogle={signInWithGoogle}
     />
   );
 }

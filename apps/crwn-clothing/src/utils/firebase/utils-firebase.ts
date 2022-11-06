@@ -1,14 +1,22 @@
 // https://firebase.google.com/docs/web/setup#available-libraries
 import type { FirebaseApp } from 'firebase/app';
 import { initializeApp } from 'firebase/app';
-import type { Auth, User, UserCredential } from 'firebase/auth';
+import type {
+  Auth,
+  NextOrObserver,
+  Unsubscribe,
+  User,
+  UserCredential,
+} from 'firebase/auth';
 import {
   createUserWithEmailAndPassword,
   getAuth,
   GoogleAuthProvider,
+  onAuthStateChanged,
   signInWithEmailAndPassword,
   signInWithPopup,
   signInWithRedirect,
+  signOut,
 } from 'firebase/auth';
 import type { DocumentData, Firestore } from 'firebase/firestore';
 import { doc, getDoc, getFirestore, setDoc } from 'firebase/firestore';
@@ -37,6 +45,12 @@ export class Firebase {
     this.googleAuthProvider.setCustomParameters({
       prompt: 'select_account',
     });
+  }
+
+  public async authStateChangedListener(
+    callback: NextOrObserver<User>
+  ): Promise<Unsubscribe> {
+    return onAuthStateChanged(this.auth, callback);
   }
 
   public async createUserDocumentFromAuth(
@@ -85,6 +99,10 @@ export class Firebase {
 
   public async signInWithGoogleRedirect(): Promise<never> {
     return signInWithRedirect(this.auth, this.googleAuthProvider);
+  }
+
+  public async signOutUser(): Promise<void> {
+    return signOut(this.auth);
   }
 }
 

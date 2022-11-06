@@ -7,6 +7,7 @@ on:
     types: [ opened, synchronize, reopened ]
 jobs:
   codeql:
+    name: CodeQL
     runs-on: ubuntu-latest
     permissions:
       actions: read

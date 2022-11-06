@@ -2,7 +2,6 @@ import type { ChangeEvent, FormEvent } from 'react';
 
 import { Button } from '../button/button';
 import { FormInput } from '../form-input/form-input';
-import { signInWithGoogle } from './sign-in';
 import styles from './sign-in-view.module.css';
 
 type SignUpViewProperties = {
@@ -11,6 +10,7 @@ type SignUpViewProperties = {
   handleChange: (event: ChangeEvent<HTMLInputElement>) => void;
   handleSubmit: (event: FormEvent<HTMLFormElement>) => void;
   password: string;
+  signInWithGoogle: () => Promise<void>;
 };
 
 export function SignInView({
@@ -19,6 +19,7 @@ export function SignInView({
   handleSubmit,
   handleChange,
   email,
+  signInWithGoogle,
 }: SignUpViewProperties): JSX.Element {
   return (
     <div className={styles.SignInContainer}>

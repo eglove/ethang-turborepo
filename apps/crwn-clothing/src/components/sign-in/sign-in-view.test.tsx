@@ -12,6 +12,7 @@ describe('SignUpView', () => {
         handleChange={(): void => {}}
         handleSubmit={(): void => {}}
         password=""
+        signInWithGoogle={async (): Promise<void> => {}}
       />
     );
 
@@ -42,6 +43,7 @@ describe('SignUpView', () => {
         handleChange={(): void => {}}
         handleSubmit={(): void => {}}
         password={password}
+        signInWithGoogle={async (): Promise<void> => {}}
       />
     );
 
