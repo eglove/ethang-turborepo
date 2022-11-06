@@ -1,0 +1,46 @@
+.ButtonContainer {
+    display: flex;
+    justify-content: center;
+    width: auto;
+    min-width: 165px;
+    height: 50px;
+    padding: 0 8px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 15px;
+    font-weight: bolder;
+    line-height: 50px;
+    color: hsl(0deg 0% 100%);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    background-color: hsl(0deg 0% 0%);
+    border: none;
+}
+
+.ButtonContainer:hover, .ButtonContainer:focus {
+    color: hsl(0deg 0% 0%);
+    background-color: hsl(0deg 0% 100%);
+    border: 1px solid hsl(0deg 0% 0%);
+}
+
+.ButtonContainer.GoogleSignIn {
+    color: hsl(0deg 0% 100%);
+    background-color: hsl(217deg 89% 61%);
+}
+
+.ButtonContainer.GoogleSignIn:hover, .ButtonContainer.GoogleSignIn:focus {
+    background-color: hsl(217deg 80% 56%);
+    border: none;
+}
+
+.ButtonContainer.Inverted {
+    color: hsl(0deg 0% 0%);
+    background-color: hsl(0deg 0% 100%);
+    border: 1px solid hsl(0deg 0% 0%);
+}
+
+.ButtonContainer.Inverted:hover, .ButtonContainer.Inverted:focus {
+    color: hsl(0deg 0% 100%);
+    background-color: hsl(0deg 0% 0%);
+    border: none;
+}

@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 
 import { Directory } from './components/directory/directory';
+import { Authentication } from './routes/authentication/authentication';
 import { Navigation } from './routes/navigation/navigation';
 
 function Shop(): JSX.Element {
@@ -18,6 +19,7 @@ function App(): JSX.Element {
       <Route element={<Navigation />} path="/">
         <Route index element={<Directory />} />
         <Route element={<Shop />} path="shop" />
+        <Route element={<Authentication />} path="auth" />
       </Route>
     </Routes>
   );

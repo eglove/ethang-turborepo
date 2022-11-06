@@ -1,0 +1,6 @@
+.AuthenticationContainer {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin: 24px 16px;
+}

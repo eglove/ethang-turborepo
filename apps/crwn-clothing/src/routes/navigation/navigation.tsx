@@ -15,6 +15,9 @@ export function Navigation(): JSX.Element {
           <Link className={styles.NavLink} to="/shop">
             Shop
           </Link>
+          <Link className={styles.NavLink} to="/auth">
+            Sign In
+          </Link>
         </div>
       </div>
       <Outlet />

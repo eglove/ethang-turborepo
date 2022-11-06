@@ -11,12 +11,13 @@ describe('Navigation', () => {
       </BrowserRouter>
     );
 
-    let element = screen.getByRole('link', {
-      name: 'Shop',
-    });
-    expect(element).toBeDefined();
+    const links = ['Shop', 'Sign In'];
 
-    element = screen.getByText('Shop');
-    expect(element).toBeDefined();
+    for (const link of links) {
+      const element = screen.getByRole('link', {
+        name: link,
+      });
+      expect(element).toBeDefined();
+    }
   });
 });
