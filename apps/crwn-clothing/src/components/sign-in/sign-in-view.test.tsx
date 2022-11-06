@@ -15,12 +15,7 @@ describe('SignUpView', () => {
       />
     );
 
-    const inputsLabels = [
-      'displayName',
-      'email',
-      'password',
-      'confirmPassword',
-    ];
+    const inputsLabels = ['email', 'password'];
 
     for (const inputLabel of inputsLabels) {
       const element = screen.getByLabelText<HTMLInputElement>(inputLabel);
@@ -35,8 +30,6 @@ describe('SignUpView', () => {
     const error = 'There was an error.';
 
     const formState = {
-      confirmPassword: faker.internet.password(),
-      displayName: faker.internet.userName(),
       email: faker.internet.email(),
       password: faker.internet.password(),
     };
