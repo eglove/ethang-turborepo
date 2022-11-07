@@ -1,0 +1,50 @@
+.ProductCardContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 350px;
+}
+
+.ProductCardContainer img {
+    width: 100%;
+    height: 95%;
+    object-fit: cover;
+    margin-bottom: 5px;
+}
+
+.ProductCardContainer button {
+    position: absolute;
+    top: 255px;
+    display: none;
+    width: 80%;
+    opacity: 70%;
+}
+
+.ProductCardContainer:hover img, .ProductCardContainer:focus img {
+    opacity: 80%;
+}
+
+.ProductCardContainer:hover button, .ProductCardContainer:focus button {
+    display: flex;
+    opacity: 85%;
+}
+
+.ProductCardContainer .Footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 5%;
+    font-size: 18px;
+}
+
+.ProductCardContainer .Footer .Name {
+    width: 90%;
+    margin-bottom: 15px;
+}
+
+.ProductCardContainer .Footer .Price {
+    width: 10%;
+}
+

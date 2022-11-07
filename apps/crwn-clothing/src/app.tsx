@@ -4,14 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 import { Directory } from './components/directory/directory';
 import { Authentication } from './routes/authentication/authentication';
 import { Navigation } from './routes/navigation/navigation';
-
-function Shop(): JSX.Element {
-  return (
-    <div>
-      <p>Shop</p>
-    </div>
-  );
-}
+import { Shop } from './routes/shop/shop';
 
 function App(): JSX.Element {
   return (

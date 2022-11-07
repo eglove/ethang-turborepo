@@ -1,0 +1,29 @@
+.CartDropdownContainer {
+    position: absolute;
+    top: 90px;
+    right: 40px;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    width: 240px;
+    height: 340px;
+    padding: 20px;
+    background-color: hsl(0deg 0% 100%);
+    border: 1px solid hsl(0deg 0% 0%);
+}
+
+.CartDropdownContainer .EmptyMessage {
+    margin: 50px auto;
+    font-size: 18px;
+}
+
+.CartDropdownContainer .CartItems {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: auto;
+}
+
+.CartDropdownContainer button {
+    margin-top: auto;
+}

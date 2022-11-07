@@ -1,0 +1,21 @@
+.CartIconContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+}
+
+.CartIconContainer .ShoppingIcon {
+    width: 24px;
+    height: 24px;
+}
+
+.CartIconContainer .ItemCount {
+    position: absolute;
+    bottom: 12px;
+    font-size: 10px;
+    font-weight: bold;
+}

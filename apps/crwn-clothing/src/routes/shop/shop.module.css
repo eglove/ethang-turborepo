@@ -1,0 +1,6 @@
+.ProductsContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 56px;
+    column-gap: 16px;
+}
