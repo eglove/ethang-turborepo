@@ -23,7 +23,7 @@
     "@types/node": "^18.11.9",
     "@types/react": "^18.0.25",
     "eslint-config-ethang": "workspace:*",
-    "jest": "^29.2.2",
+    "jest": "^29.3.0",
     "ts-jest": "^29.0.3",
     "tsconfig": "workspace:*"
   }
