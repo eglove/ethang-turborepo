@@ -5,12 +5,10 @@ import { CartContext } from '../../contexts/cart-context';
 import styles from './cart-icon.module.css';
 
 export function CartIcon(): JSX.Element {
-  const { setIsCartOpen, cartCount } = useContext(CartContext);
+  const { setIsCartOpen, cartCount, isCartOpen } = useContext(CartContext);
 
   const toggleIsCartOpen = (): void => {
-    setIsCartOpen(isCartOpen_ => {
-      return !isCartOpen_;
-    });
+    setIsCartOpen(!isCartOpen);
   };
 
   return (

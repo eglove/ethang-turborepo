@@ -1,27 +1,51 @@
 import type { Unsubscribe, User } from 'firebase/auth';
-import type { Dispatch, ReactNode, SetStateAction } from 'react';
-import { createContext, useEffect, useMemo, useState } from 'react';
+import { createContext, useEffect, useMemo, useReducer } from 'react';
 
 import { firebase } from '../utils/firebase/utils-firebase';
+import type {
+  UserContextType,
+  UserProviderProperties,
+  UserReducerAction,
+  UserReducerType,
+} from './user-context-types';
 
-type UserProviderProperties = {
-  children: ReactNode;
-};
-
-type UserContextType = {
-  currentUser: User | null;
-  setCurrentUser: Dispatch<SetStateAction<User | null>>;
-};
-
-// @ts-expect-error set in Provider
 export const UserContext = createContext<UserContextType>({
   currentUser: null,
 });
 
+const userReducer = (
+  state: UserContextType,
+  action: UserReducerAction<UserReducerType>
+): UserContextType => {
+  const { type, payload } = action;
+
+  switch (type) {
+    case 'SET_CURRENT_USER': {
+      return {
+        ...state,
+        currentUser: payload,
+      };
+    }
+
+    default: {
+      throw new Error(`Action type not found.`);
+    }
+  }
+};
+
 export function UserProvider({
   children,
 }: UserProviderProperties): JSX.Element {
-  const [currentUser, setCurrentUser] = useState<User | null>(null);
+  const [{ currentUser }, dispatch] = useReducer<typeof userReducer>(
+    userReducer,
+    {
+      currentUser: null,
+    }
+  );
+
+  const setCurrentUser = (user: User | null): void => {
+    dispatch({ payload: user, type: 'SET_CURRENT_USER' });
+  };
 
   const value = useMemo(() => {
     return { currentUser, setCurrentUser };
