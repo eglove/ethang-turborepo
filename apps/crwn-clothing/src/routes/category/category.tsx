@@ -1,14 +1,14 @@
-import { useContext } from 'react';
+import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 
 import { ProductCard } from '../../components/product-card/product-card';
-import { CategoryContext } from '../../contexts/category-context';
+import { selectCategoriesMap } from '../../store/categories/category-selector';
 import type { ShopDatum } from '../../utils/types';
 import styles from './category.module.css';
 
 export function Category(): JSX.Element {
   const { category } = useParams();
-  const { categories } = useContext(CategoryContext);
+  const categories = useSelector(selectCategoriesMap);
 
   let products: ShopDatum[] = [];
   if (typeof category !== 'undefined') {

@@ -2,25 +2,20 @@ import './index.css';
 
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 
 import App from './app';
-import { CartProvider } from './contexts/cart-context';
-import { CategoryProvider } from './contexts/category-context';
-import { UserProvider } from './contexts/user-context';
+import { store } from './store/store';
 
 // @ts-expect-error Assume this exists
 const root = ReactDOM.createRoot(document.querySelector('#root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <UserProvider>
-        <CategoryProvider>
-          <CartProvider>
-            <App />
-          </CartProvider>
-        </CategoryProvider>
-      </UserProvider>
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>
 );

@@ -30,7 +30,7 @@ import {
   writeBatch,
 } from 'firebase/firestore';
 
-import type { CategoryMap, ShopCategory, ShopData } from '../types';
+import type { ShopCategory, ShopData } from '../types';
 
 const defaultConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -116,19 +116,14 @@ export class Firebase {
     return createUserWithEmailAndPassword(this.auth, email, password);
   }
 
-  public async getCategoriesAndDocuments(): Promise<CategoryMap> {
+  public async getCategoriesAndDocuments(): Promise<ShopCategory[]> {
     const collectionReference = collection(this.database, 'categories');
     const newQuery = query(collectionReference);
     const querySnapshot = await getDocs(newQuery);
 
-    const categoryMap: CategoryMap = {};
-    for (const element of querySnapshot.docs) {
-      const { title, items } = element.data() as ShopCategory;
-
-      categoryMap[title.toLowerCase()] = items;
-    }
-
-    return categoryMap;
+    return querySnapshot.docs.map(snapshot => {
+      return snapshot.data();
+    }) as ShopCategory[];
   }
 
   public async signInAuthUserWithEmailAndPassword(

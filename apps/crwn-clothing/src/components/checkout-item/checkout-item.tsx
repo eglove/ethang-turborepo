@@ -1,6 +1,11 @@
-import { useContext } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
-import { CartContext } from '../../contexts/cart-context';
+import {
+  addItemToCart,
+  clearItemFromCart,
+  removeItemFromCart,
+} from '../../store/cart/cart-action';
+import { selectCartItems } from '../../store/cart/cart-selector';
 import type { CartItem } from '../../utils/types';
 import styles from './checkout-item.module.css';
 
@@ -12,8 +17,8 @@ export function CheckoutItem({
   cartItem,
 }: CheckoutItemProperties): JSX.Element {
   const { price, imageUrl, quantity, name, id } = cartItem;
-  const { clearItemFromCart, addItemToCart, removeItemFromCart } =
-    useContext(CartContext);
+  const dispatch = useDispatch();
+  const cartItems = useSelector(selectCartItems);
 
   return (
     <div className={styles.CheckoutItemContainer}>
@@ -25,7 +30,7 @@ export function CheckoutItem({
         <div
           className={styles.Arrow}
           onClick={(): void => {
-            removeItemFromCart(cartItem);
+            dispatch(removeItemFromCart(cartItems, cartItem));
           }}
         >
           &#10094;
@@ -34,7 +39,7 @@ export function CheckoutItem({
         <div
           className={styles.Arrow}
           onClick={(): void => {
-            addItemToCart(cartItem);
+            dispatch(addItemToCart(cartItems, cartItem));
           }}
         >
           &#10095;
@@ -44,7 +49,7 @@ export function CheckoutItem({
       <div
         className={styles.RemoveButton}
         onClick={(): void => {
-          clearItemFromCart(id);
+          dispatch(clearItemFromCart(cartItems, id));
         }}
       >
         &#10005;
