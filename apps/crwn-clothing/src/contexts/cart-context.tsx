@@ -7,7 +7,10 @@ type CartContextType = {
   addItemToCart: (shopDatum: ShopDatum) => void;
   cartCount: number;
   cartItems: CartItem[];
+  cartTotal: number;
+  clearItemFromCart: (id: number) => void;
   isCartOpen: boolean;
+  removeItemFromCart: (cartItemToRemove: CartItem) => void;
   setIsCartOpen: Dispatch<SetStateAction<boolean>>;
 };
 
@@ -26,6 +29,7 @@ export function CartProvider({
   const [isCartOpen, setIsCartOpen] = useState<boolean>(false);
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
   const [cartCount, setCartCount] = useState<number>(0);
+  const [cartTotal, setCartTotal] = useState<number>(0);
 
   const value = useMemo(() => {
     const addItemToCart = (productToAdd: ShopDatum): void => {
@@ -45,14 +49,61 @@ export function CartProvider({
       setCartItems(newCartItems);
     };
 
+    const removeItemFromCart = (cartItemToRemove: CartItem): void => {
+      const existingItem = cartItems.find(item => {
+        return item.id === cartItemToRemove.id;
+      });
+
+      if (typeof existingItem !== 'undefined') {
+        if (existingItem.quantity === 1) {
+          setCartItems(
+            cartItems.filter(item => {
+              return item.id !== existingItem.id;
+            })
+          );
+        } else {
+          setCartItems(
+            cartItems.map(item => {
+              return item.id === cartItemToRemove.id
+                ? { ...item, quantity: item.quantity - 1 }
+                : item;
+            })
+          );
+        }
+      }
+    };
+
+    const clearItemFromCart = (id: number): void => {
+      setCartItems(
+        cartItems.filter(item => {
+          return item.id !== id;
+        })
+      );
+    };
+
     setCartCount(
       cartItems.reduce((total, item) => {
         return total + item.quantity;
       }, 0)
     );
 
-    return { addItemToCart, cartCount, cartItems, isCartOpen, setIsCartOpen };
-  }, [cartCount, cartItems, isCartOpen]);
+    setCartTotal(
+      cartItems.reduce((total, item) => {
+        return total + item.quantity * item.price;
+      }, 0)
+    );
+
+    return {
+      addItemToCart,
+      cartCount,
+      cartItems,
+      cartTotal,
+      clearItemFromCart,
+      isCartOpen,
+      removeItemFromCart,
+      setIsCartOpen,
+    };
+  }, [cartCount, cartItems, cartTotal, isCartOpen]);
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
 }

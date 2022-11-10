@@ -1,0 +1,17 @@
+.CategoryPreviewContainer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.CategoryPreviewContainer .Title {
+    margin-bottom: 25px;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.CategoryPreviewContainer .Preview {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 20px;
+}

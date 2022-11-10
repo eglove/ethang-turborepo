@@ -1,0 +1,31 @@
+.CheckoutContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 90vh;
+    margin: 50px auto 0;
+}
+
+.CheckoutContainer .CheckoutHeader {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 1px solid hsl(0deg 0% 66%);
+}
+
+.CheckoutContainer .CheckoutHeader .HeaderBlock {
+    width: 100%;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.CheckoutContainer .CheckoutHeader .HeaderBlock:last-child {
+    width: 8%;
+}
+
+.CheckoutContainer .Total {
+    margin-top: 30px;
+    margin-left: auto;
+    font-size: 36px;
+}

@@ -6,7 +6,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 import App from './app';
 import { CartProvider } from './contexts/cart-context';
-import { ProductProvider } from './contexts/product-context';
+import { CategoryProvider } from './contexts/category-context';
 import { UserProvider } from './contexts/user-context';
 
 // @ts-expect-error Assume this exists
@@ -15,11 +15,11 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <UserProvider>
-        <ProductProvider>
+        <CategoryProvider>
           <CartProvider>
             <App />
           </CartProvider>
-        </ProductProvider>
+        </CategoryProvider>
       </UserProvider>
     </BrowserRouter>
   </React.StrictMode>

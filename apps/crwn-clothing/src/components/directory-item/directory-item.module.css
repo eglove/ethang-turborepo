@@ -1,4 +1,4 @@
-.CategoryContainer {
+.DirectoryItemContainer {
     display: flex;
     flex: 1 1 auto;
     align-items: center;
@@ -10,46 +10,46 @@
     border: 1px solid hsl(0deg 0% 0%);
 }
 
-.CategoryContainer:hover, .CategoryContainer:focus {
+.DirectoryItemContainer:hover, .DirectoryItemContainer:focus {
     cursor: pointer;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
-    .CategoryContainer:hover .BackgroundImage, .CategoryContainer:focus .BackgroundImage {
+    .DirectoryItemContainer:hover .BackgroundImage, .DirectoryItemContainer:focus .BackgroundImage {
         transition: none;
         transform: scale(1.1);
     }
 }
 
-.CategoryContainer:hover .BackgroundImage, .CategoryContainer:focus .BackgroundImage {
+.DirectoryItemContainer:hover .BackgroundImage, .DirectoryItemContainer:focus .BackgroundImage {
     transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
     transform: scale(1.1);
 }
 
-.CategoryContainer:hover .CategoryBodyContainer, .CategoryContainer:focus .CategoryBodyContainer {
+.DirectoryItemContainer:hover .DirectoryItemBody, .DirectoryItemContainer:focus .DirectoryItemBody {
     opacity: 90%;
 }
 
-.CategoryContainer.large {
+.DirectoryItemContainer.large {
     height: 380px;
 }
 
-.CategoryContainer:first-child {
+.DirectoryItemContainer:first-child {
     margin-right: 7.5px;
 }
 
-.CategoryContainer:last-child {
+.DirectoryItemContainer:last-child {
     margin-left: 7.5px;
 }
 
-.CategoryContainer .BackgroundImage {
+.DirectoryItemContainer .BackgroundImage {
     width: 100%;
     height: 100%;
     background-position: center;
     background-size: cover;
 }
 
-.CategoryContainer .CategoryBodyContainer {
+.DirectoryItemContainer .DirectoryItemBody {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -62,14 +62,14 @@
     opacity: 70%;
 }
 
-.CategoryContainer .CategoryBodyContainer h2 {
+.DirectoryItemContainer .DirectoryItemBody h2 {
     margin: 0 6px;
     font-size: 22px;
     font-weight: bold;
     color: hsl(0deg 0% 29%);
 }
 
-.CategoryContainer .CategoryBodyContainer p {
+.DirectoryItemContainer .DirectoryItemBody p {
     font-size: 16px;
     font-weight: lighter;
 }

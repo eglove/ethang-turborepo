@@ -1,0 +1,12 @@
+.DirectoryItemContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 56px;
+    column-gap: 24px;
+}
+
+.DirectoryItemContainer .Title {
+    margin-bottom: 25px;
+    font-size: 32px;
+    text-align: center;
+}

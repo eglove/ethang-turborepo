@@ -19,7 +19,18 @@ import {
   signOut,
 } from 'firebase/auth';
 import type { DocumentData, Firestore } from 'firebase/firestore';
-import { doc, getDoc, getFirestore, setDoc } from 'firebase/firestore';
+import {
+  collection,
+  doc,
+  getDoc,
+  getDocs,
+  getFirestore,
+  query,
+  setDoc,
+  writeBatch,
+} from 'firebase/firestore';
+
+import type { CategoryMap, ShopCategory, ShopData } from '../types';
 
 const defaultConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -45,6 +56,25 @@ export class Firebase {
     this.googleAuthProvider.setCustomParameters({
       prompt: 'select_account',
     });
+  }
+
+  public async addCollectionAndDocuments(
+    collectionKey: string,
+    documents: ShopData
+  ): Promise<void> {
+    const collectionReference = collection(this.database, collectionKey);
+    const batch = writeBatch(this.database);
+
+    for (const document of documents) {
+      const documentReference = doc(
+        collectionReference,
+        document.title.toLowerCase()
+      );
+
+      batch.set(documentReference, document);
+    }
+
+    await batch.commit();
   }
 
   public async authStateChangedListener(
@@ -84,6 +114,21 @@ export class Firebase {
     password: string
   ): Promise<UserCredential> {
     return createUserWithEmailAndPassword(this.auth, email, password);
+  }
+
+  public async getCategoriesAndDocuments(): Promise<CategoryMap> {
+    const collectionReference = collection(this.database, 'categories');
+    const newQuery = query(collectionReference);
+    const querySnapshot = await getDocs(newQuery);
+
+    const categoryMap: CategoryMap = {};
+    for (const element of querySnapshot.docs) {
+      const { title, items } = element.data() as ShopCategory;
+
+      categoryMap[title.toLowerCase()] = items;
+    }
+
+    return categoryMap;
   }
 
   public async signInAuthUserWithEmailAndPassword(

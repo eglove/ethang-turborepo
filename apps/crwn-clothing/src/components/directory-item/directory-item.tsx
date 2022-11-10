@@ -1,24 +1,24 @@
 import React from 'react';
 
 import type { Category } from '../../data/categories';
-import styles from './category-item.module.css';
+import styles from './directory-item.module.css';
 
-type CategoryItemProperties = {
+type DirectoryItemProperties = {
   category: Category;
 };
 
-export function CategoryItem({
+export function DirectoryItem({
   category: { imageUrl, title },
-}: CategoryItemProperties): JSX.Element {
+}: DirectoryItemProperties): JSX.Element {
   return (
-    <div className={styles.CategoryContainer}>
+    <div className={styles.DirectoryItemContainer}>
       <div
         className={styles.BackgroundImage}
         style={{
           backgroundImage: `url(${imageUrl})`,
         }}
       />
-      <div className={styles.CategoryBodyContainer}>
+      <div className={styles.DirectoryItemBody}>
         <h2>{title}</h2>
         <p>Shop Now</p>
       </div>
