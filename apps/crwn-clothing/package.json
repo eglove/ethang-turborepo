@@ -30,6 +30,8 @@
     "react-router-dom": "^6.4.3",
     "redux": "^4.2.0",
     "redux-logger": "^3.0.6",
+    "redux-persist": "^6.0.0",
+    "redux-thunk": "^2.4.2",
     "reselect": "^4.1.7"
   },
   "devDependencies": {
@@ -42,6 +44,7 @@
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.8",
     "@types/redux-logger": "^3.0.9",
+    "@types/redux-persist": "^4.3.1",
     "eslint-config-ethang": "workspace:*",
     "identity-obj-proxy": "^3.0.0",
     "react-scripts": "5.0.1",

@@ -19,12 +19,22 @@ export const selectCategoriesMap = createSelector(
   [selectCategories],
   (categories): CategoryMap => {
     const categoryMap: CategoryMap = {};
-    for (const category of categories) {
-      const { title, items } = category;
 
-      categoryMap[title.toLowerCase()] = items;
+    if (categories !== null) {
+      for (const category of categories) {
+        const { title, items } = category;
+
+        categoryMap[title.toLowerCase()] = items;
+      }
     }
 
     return categoryMap;
+  }
+);
+
+export const selectCategoriesIsLoading = createSelector(
+  [selectCategoryReducer],
+  category => {
+    return category.isLoading;
   }
 );

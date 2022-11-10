@@ -1,7 +1,10 @@
+import type { ShopCategory } from '../../utils/types';
 import type { CategoryAction, CategoryContextType } from './category-type';
 
 export const CATEGORIES_INITIAL_STATE: CategoryContextType = {
   categories: [],
+  error: null,
+  isLoading: false,
 };
 
 export const categoriesReducer = (
@@ -12,10 +15,26 @@ export const categoriesReducer = (
   const { type, payload } = action;
 
   switch (type) {
-    case 'categories/SET_CATEGORIES': {
+    case 'categories/FETCH_CATEGORIES_START': {
       return {
         ...state,
-        categories: payload,
+        isLoading: true,
+      };
+    }
+
+    case 'categories/FETCH_CATEGORIES_SUCCESS': {
+      return {
+        ...state,
+        categories: payload as ShopCategory[],
+        isLoading: false,
+      };
+    }
+
+    case 'categories/FETCH_CATEGORIES_FAIL': {
+      return {
+        ...state,
+        error: payload as unknown,
+        isLoading: true,
       };
     }
 

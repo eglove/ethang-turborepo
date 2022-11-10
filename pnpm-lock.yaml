@@ -38,6 +38,7 @@ importers:
       '@types/react': ^18.0.25
       '@types/react-dom': ^18.0.8
       '@types/redux-logger': ^3.0.9
+      '@types/redux-persist': ^4.3.1
       eslint-config-ethang: workspace:*
       firebase: ^9.13.0
       identity-obj-proxy: ^3.0.0
@@ -48,6 +49,8 @@ importers:
       react-scripts: 5.0.1
       redux: ^4.2.0
       redux-logger: ^3.0.6
+      redux-persist: ^6.0.0
+      redux-thunk: ^2.4.2
       reselect: ^4.1.7
       tsconfig: workspace:*
       typescript: ^4.8.4
@@ -60,6 +63,8 @@ importers:
       react-router-dom: 6.4.3_biqbaboplfbrettd7655fr4n2y
       redux: 4.2.0
       redux-logger: 3.0.6
+      redux-persist: 6.0.0_react@18.2.0+redux@4.2.0
+      redux-thunk: 2.4.2_redux@4.2.0
       reselect: 4.1.7
     devDependencies:
       '@faker-js/faker': 7.6.0
@@ -71,6 +76,7 @@ importers:
       '@types/react': 18.0.25
       '@types/react-dom': 18.0.8
       '@types/redux-logger': 3.0.9
+      '@types/redux-persist': 4.3.1_react@18.2.0+redux@4.2.0
       eslint-config-ethang: link:../../packages/eslint-config-ethang
       identity-obj-proxy: 3.0.0
       react-scripts: 5.0.1_uf773njghfwrphsm6ek7wep3um
@@ -6291,6 +6297,16 @@ packages:
     resolution: {integrity: sha512-cwYhVbYNgH01aepeMwhd0ABX6fhVB2rcQ9m80u8Fl50ZODhsZ8RhQArnLTkE7/Zrfq4Sz/taNoF7DQy9pCZSKg==}
     dependencies:
       redux: 4.2.0
+    dev: true
+
+  /@types/redux-persist/4.3.1_react@18.2.0+redux@4.2.0:
+    resolution: {integrity: sha512-YkMnMUk+4//wPtiSTMfsxST/F9Gh9sPWX0LVxHuOidGjojHtMdpep2cYvQgfiDMnj34orXyZI+QJCQMZDlafKA==}
+    deprecated: This is a stub types definition for redux-persist (https://github.com/rt2zz/redux-persist). redux-persist provides its own type definitions, so you don't need @types/redux-persist installed!
+    dependencies:
+      redux-persist: 6.0.0_react@18.2.0+redux@4.2.0
+    transitivePeerDependencies:
+      - react
+      - redux
     dev: true
 
   /@types/resolve/1.17.1:
@@ -18374,6 +18390,18 @@ packages:
     dependencies:
       deep-diff: 0.3.8
     dev: false
+
+  /redux-persist/6.0.0_react@18.2.0+redux@4.2.0:
+    resolution: {integrity: sha512-71LLMbUq2r02ng2We9S215LtPu3fY0KgaGE0k8WRgl6RkqxtGfl7HUozz1Dftwsb0D/5mZ8dwAaPbtnzfvbEwQ==}
+    peerDependencies:
+      react: '>=16'
+      redux: '>4.0.0'
+    peerDependenciesMeta:
+      react:
+        optional: true
+    dependencies:
+      react: 18.2.0
+      redux: 4.2.0
 
   /redux-thunk/2.4.2_redux@4.2.0:
     resolution: {integrity: sha512-+P3TjtnP0k/FEjcBL5FZpoovtvrTNT/UXd4/sluaSyrURlSlhLSzEdfsTBW7WsKB6yPvgd7q/iZPICFjW4o57Q==}
