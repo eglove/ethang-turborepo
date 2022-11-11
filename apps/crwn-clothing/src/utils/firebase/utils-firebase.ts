@@ -163,6 +163,13 @@ export class Firebase {
 
 export const firebase = new Firebase();
 
+export async function createAuthUserWithEmailAndPassword(
+  email: string,
+  password: string
+): Promise<DocumentData | void> {
+  return firebase.createAuthUserWithEmailAndPassword(email, password);
+}
+
 export async function createUserDocumentFromAuth(
   user: User
 ): Promise<DocumentData | void> {
@@ -186,4 +193,8 @@ export async function signInWithEmailPassword(
 
 export async function signInWithGooglePopup(): Promise<UserCredential> {
   return firebase.signInWithGooglePopup();
+}
+
+export async function signOutUser(): Promise<void> {
+  return firebase.signOutUser();
 }

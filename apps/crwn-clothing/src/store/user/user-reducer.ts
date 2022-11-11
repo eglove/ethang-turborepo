@@ -30,7 +30,16 @@ export const userReducer: Reducer<
       };
     }
 
-    case 'user/SIGN_IN_FAIL': {
+    case 'user/SIGN_OUT_SUCCESS': {
+      return {
+        ...state,
+        currentUser: null,
+      };
+    }
+
+    case 'user/SIGN_IN_FAIL':
+    case 'user/SIGN_UP_FAIL':
+    case 'user/SIGN_OUT_FAIL': {
       return {
         ...state,
         error: payload,

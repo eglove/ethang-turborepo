@@ -1,6 +1,5 @@
 import type { User, UserCredential } from 'firebase/auth';
 import type { DocumentData } from 'firebase/firestore';
-import { Simulate } from 'react-dom/test-utils';
 import type {
   CallEffect,
   PutEffectDescriptor,
@@ -9,14 +8,22 @@ import type {
 import { all, call, put, takeLatest } from 'redux-saga/effects';
 
 import {
+  createAuthUserWithEmailAndPassword,
   createUserDocumentFromAuth,
   getCurrentUser,
   signInWithEmailPassword,
   signInWithGooglePopup,
+  signOutUser,
 } from '../../utils/firebase/utils-firebase';
 import type { UserActionReturn } from './user-action';
-import { signInFail, signInSuccess } from './user-action';
-import error = Simulate.error;
+import {
+  signInFail,
+  signInSuccess,
+  signOutFail,
+  signOutSuccess,
+  signUpFail,
+  signUpSuccess,
+} from './user-action';
 
 export type FetchCategoriesGenerator =
   | CallEffect<DocumentData | void>
@@ -89,6 +96,44 @@ export function* signInWithGoogle(): Generator {
   }
 }
 
+export function* signUp({
+  payload,
+}: {
+  payload: { displayName: string; email: string; password: string };
+}): Generator {
+  const { email, password } = payload;
+
+  try {
+    // @ts-expect-error Assume is User
+    const { user } = yield call(
+      createAuthUserWithEmailAndPassword,
+      email,
+      password
+    );
+    yield put(signUpSuccess(user as User));
+  } catch (error: unknown) {
+    yield put(signUpFail(JSON.stringify(error)));
+  }
+}
+
+export function* signInAfterSignUp({
+  payload,
+}: {
+  payload: { user: User };
+}): Generator {
+  const { user } = payload;
+  yield call(getSnapshotFromUserAuth, user);
+}
+
+export function* signOut(): Generator {
+  try {
+    yield call(signOutUser);
+    yield put(signOutSuccess());
+  } catch (error: unknown) {
+    yield put(signOutFail(JSON.stringify(error)));
+  }
+}
+
 export function* onEmailSignInStart(): Generator {
   // @ts-expect-error let it go
   yield takeLatest('user/EMAIL_SIGN_IN_START', signInWithEmail);
@@ -96,6 +141,20 @@ export function* onEmailSignInStart(): Generator {
 
 export function* onGoogleSignInStart(): Generator {
   yield takeLatest('user/GOOGLE_SIGN_IN_START', signInWithGoogle);
+}
+
+export function* onSignUpStart(): Generator {
+  // @ts-expect-error let it go
+  yield takeLatest('user/SIGN_UP_START', signUp);
+}
+
+export function* onSignUpSuccess(): Generator {
+  // @ts-expect-error let it go
+  yield takeLatest('user/SIGN_UP_SUCCESS', signInAfterSignUp);
+}
+
+export function* onSignOutStart(): Generator {
+  yield takeLatest('user/SIGN_OUT_START', signOut);
 }
 
 export function* onCheckUserSession(): Generator {
@@ -107,5 +166,8 @@ export function* userSaga(): Generator {
     call(onCheckUserSession),
     call(onEmailSignInStart),
     call(onGoogleSignInStart),
+    call(onSignUpStart),
+    call(onSignUpSuccess),
+    call(onSignOutStart),
   ]);
 }

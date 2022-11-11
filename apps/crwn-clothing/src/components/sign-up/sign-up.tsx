@@ -1,8 +1,9 @@
 import type { AuthError } from 'firebase/auth';
 import type { ChangeEvent, FormEvent } from 'react';
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
 
-import { firebase } from '../../utils/firebase/utils-firebase';
+import { signUpStart } from '../../store/user/user-action';
 import { SignUpView } from './sign-up-view';
 
 const initialState = {
@@ -13,6 +14,8 @@ const initialState = {
 };
 
 export function SignUp(): JSX.Element {
+  const dispatch = useDispatch();
+
   const [formState, setFormState] = useState(initialState);
   const [formError, setFormError] = useState('');
   const { confirmPassword, email, password, displayName } = formState;
@@ -41,15 +44,7 @@ export function SignUp(): JSX.Element {
     setFormError('');
 
     try {
-      const { user } = await firebase.createAuthUserWithEmailAndPassword(
-        email,
-        password
-      );
-
-      await firebase.createUserDocumentFromAuth({
-        ...user,
-        displayName,
-      });
+      dispatch(signUpStart(email, password, displayName));
       setFormState(initialState);
     } catch (error: unknown) {
       const authError = error as AuthError;
