@@ -2,13 +2,16 @@ import { configureStore } from '@reduxjs/toolkit';
 import logger from 'redux-logger';
 import { persistReducer, persistStore } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
-import thunk from 'redux-thunk';
+import createSagaMiddleware from 'redux-saga';
 
 import { rootReducer } from './root-reducer';
+import { rootSaga } from './root-saga';
 
 export type StoreState = ReturnType<typeof store['getState']>;
 
-const middlewares = [logger, thunk];
+const sagaMiddleware = createSagaMiddleware();
+
+const middlewares = [logger, sagaMiddleware];
 
 const persistConfig = {
   key: 'root',
@@ -24,5 +27,7 @@ export const store = configureStore({
   },
   reducer: persistedReducer,
 });
+
+sagaMiddleware.run(rootSaga);
 
 export const persistObject = persistStore(store);

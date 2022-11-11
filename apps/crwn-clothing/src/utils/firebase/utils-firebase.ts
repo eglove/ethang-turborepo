@@ -91,7 +91,7 @@ export class Firebase {
     const userSnapshot = await getDoc(userDocumentReference);
 
     if (userSnapshot.exists()) {
-      return userDocumentReference;
+      return userSnapshot;
     }
 
     const { displayName, email } = userAuth;
@@ -107,6 +107,8 @@ export class Firebase {
     } catch (error: unknown) {
       console.error('Error creating user.', error);
     }
+
+    return userSnapshot;
   }
 
   public async createAuthUserWithEmailAndPassword(
@@ -124,6 +126,19 @@ export class Firebase {
     return querySnapshot.docs.map(snapshot => {
       return snapshot.data();
     }) as ShopCategory[];
+  }
+
+  public async getCurrentUser(): Promise<User | null> {
+    return new Promise((resolve, reject) => {
+      const unsubscribe = onAuthStateChanged(
+        this.auth,
+        userAuth => {
+          unsubscribe();
+          resolve(userAuth);
+        },
+        reject
+      );
+    });
   }
 
   public async signInAuthUserWithEmailAndPassword(
@@ -147,3 +162,28 @@ export class Firebase {
 }
 
 export const firebase = new Firebase();
+
+export async function createUserDocumentFromAuth(
+  user: User
+): Promise<DocumentData | void> {
+  return firebase.createUserDocumentFromAuth(user);
+}
+
+export async function getCategories(): Promise<ShopCategory[]> {
+  return firebase.getCategoriesAndDocuments();
+}
+
+export async function getCurrentUser(): Promise<User | null> {
+  return firebase.getCurrentUser();
+}
+
+export async function signInWithEmailPassword(
+  email: string,
+  password: string
+): Promise<UserCredential> {
+  return firebase.signInAuthUserWithEmailAndPassword(email, password);
+}
+
+export async function signInWithGooglePopup(): Promise<UserCredential> {
+  return firebase.signInWithGooglePopup();
+}

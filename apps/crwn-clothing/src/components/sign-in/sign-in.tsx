@@ -1,8 +1,12 @@
 import type { AuthError } from 'firebase/auth';
 import type { ChangeEvent, FormEvent } from 'react';
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
 
-import { firebase } from '../../utils/firebase/utils-firebase';
+import {
+  emailSignInStart,
+  googleSignInStart,
+} from '../../store/user/user-action';
 import { SignInView } from './sign-in-view';
 
 const initialState = {
@@ -11,6 +15,8 @@ const initialState = {
 };
 
 export function SignIn(): JSX.Element {
+  const dispatch = useDispatch();
+
   const [formState, setFormState] = useState(initialState);
   const [formError, setFormError] = useState('');
   const { email, password } = formState;
@@ -27,7 +33,7 @@ export function SignIn(): JSX.Element {
   };
 
   const signInWithGoogle = async (): Promise<void> => {
-    await firebase.signInWithGooglePopup();
+    dispatch(googleSignInStart());
   };
 
   const handleSubmit = async (
@@ -38,7 +44,7 @@ export function SignIn(): JSX.Element {
     setFormError('');
 
     try {
-      await firebase.signInAuthUserWithEmailAndPassword(email, password);
+      dispatch(emailSignInStart(email, password));
       setFormState(initialState);
     } catch (error: unknown) {
       const authError = error as AuthError;

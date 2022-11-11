@@ -1,10 +1,7 @@
-import type { Dispatch } from 'redux';
-
-import { firebase } from '../../utils/firebase/utils-firebase';
 import type { ShopCategory } from '../../utils/types';
 import type { CategoryActionType } from './category-type';
 
-type CategoriesAction<PayloadType> = {
+export type CategoriesAction<PayloadType> = {
   payload: PayloadType;
   type: CategoryActionType;
 };
@@ -23,23 +20,10 @@ export const fetchCategoriesSuccess = (
 };
 
 export const fetchCategoriesFail = (
-  error: unknown
-): CategoriesAction<unknown> => {
+  error: string
+): CategoriesAction<string> => {
   return {
     payload: error,
     type: 'categories/FETCH_CATEGORIES_FAIL',
   };
-};
-
-export const fetchCategoriesAsync = async (
-  dispatch: Dispatch
-): Promise<void> => {
-  dispatch(fetchCategoriesStart());
-
-  try {
-    const categories = await firebase.getCategoriesAndDocuments();
-    dispatch(fetchCategoriesSuccess(categories));
-  } catch (error: unknown) {
-    dispatch(fetchCategoriesFail(error));
-  }
 };

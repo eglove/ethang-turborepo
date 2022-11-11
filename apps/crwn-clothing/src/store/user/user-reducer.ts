@@ -8,6 +8,8 @@ import type {
 
 const INITIAL_STATE = {
   currentUser: null,
+  error: null,
+  isLoading: false,
 };
 
 export const userReducer: Reducer<
@@ -21,10 +23,17 @@ export const userReducer: Reducer<
   const { type, payload } = action;
 
   switch (type) {
-    case 'user/SET_CURRENT_USER': {
+    case 'user/SIGN_IN_SUCCESS': {
       return {
         ...state,
         currentUser: payload,
+      };
+    }
+
+    case 'user/SIGN_IN_FAIL': {
+      return {
+        ...state,
+        error: payload,
       };
     }
 

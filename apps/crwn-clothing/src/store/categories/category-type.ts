@@ -25,4 +25,4 @@ export type CategoryPayload<Type extends CategoryActionType> =
     ? ShopCategory[]
     : Type extends 'categories/FETCH_CATEGORIES_START'
     ? null
-    : Error;
+    : string;
