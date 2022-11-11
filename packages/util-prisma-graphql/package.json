@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@paljs/plugins": "^4.1.0",
-    "@prisma/generator-helper": "^4.6.0",
+    "@prisma/generator-helper": "^4.6.1",
     "graphql": "^16.6.0",
     "util-typescript": "workspace:*"
   },
