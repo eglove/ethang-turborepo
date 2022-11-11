@@ -25,3 +25,20 @@
     cursor: pointer;
 }
 
+
+@media screen and (max-width: 800px) {
+    .Navigation {
+        height: 60px;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+
+    .Navigation .LogoContainer {
+        width: 50px;
+        padding: 0;
+    }
+
+    .Navigation .NavLinksContainer {
+        width: 80%;
+    }
+}
