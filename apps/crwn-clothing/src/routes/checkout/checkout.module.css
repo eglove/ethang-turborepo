@@ -7,8 +7,9 @@
 }
 
 .CheckoutContainer .CheckoutHeader {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    place-items: center;
     width: 100%;
     padding: 10px 0;
     border-bottom: 1px solid hsl(0deg 0% 66%);

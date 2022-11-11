@@ -1,4 +1,4 @@
-$categoryUrls = Get-Content .\libs\powershell-scripts\udemy\udemy-category-urls.txt
+$categoryUrls = Get-Content .\packages\powershell-scripts\udemy\udemy-category-urls.txt
 
 foreach ($url in $categoryUrls)
 {

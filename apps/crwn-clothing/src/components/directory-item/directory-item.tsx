@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import type { Category } from '../../data/categories';
 import styles from './directory-item.module.css';
@@ -19,8 +20,10 @@ export function DirectoryItem({
         }}
       />
       <div className={styles.DirectoryItemBody}>
-        <h2>{title}</h2>
-        <p>Shop Now</p>
+        <Link to={`/shop/${title.toLowerCase()}`}>
+          <h2>{title}</h2>
+          <p>Shop Now</p>
+        </Link>
       </div>
     </div>
   );

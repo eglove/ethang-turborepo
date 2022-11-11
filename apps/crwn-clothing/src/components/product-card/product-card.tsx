@@ -25,7 +25,7 @@ export function ProductCard({ product }: ProductCardProperties): JSX.Element {
       <img alt={name} src={imageUrl} />
       <div className={styles.Footer}>
         <span className={styles.Name}>{name}</span>
-        <span className={styles.Price}>{price}</span>
+        <span className={styles.Price}>${price}</span>
       </div>
       <Button
         variant="inverted"

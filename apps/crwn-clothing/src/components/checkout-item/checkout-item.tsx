@@ -45,7 +45,7 @@ export function CheckoutItem({
           &#10095;
         </div>
       </span>
-      <span className={styles.Price}>{price}</span>
+      <span className={styles.Price}>${price}</span>
       <div
         className={styles.RemoveButton}
         onClick={(): void => {
