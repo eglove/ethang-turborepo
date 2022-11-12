@@ -38,7 +38,6 @@ importers:
       '@types/react': ^18.0.25
       '@types/react-dom': ^18.0.8
       '@types/redux-logger': ^3.0.9
-      '@types/redux-persist': ^4.3.1
       eslint-config-ethang: workspace:*
       firebase: ^9.14.0
       identity-obj-proxy: ^3.0.0
@@ -78,7 +77,6 @@ importers:
       '@types/react': 18.0.25
       '@types/react-dom': 18.0.8
       '@types/redux-logger': 3.0.9
-      '@types/redux-persist': 4.3.1_react@18.2.0+redux@4.2.0
       eslint-config-ethang: link:../../packages/eslint-config-ethang
       identity-obj-proxy: 3.0.0
       react-scripts: 5.0.1_uf773njghfwrphsm6ek7wep3um
@@ -245,7 +243,6 @@ importers:
       '@types/node': ^18.11.9
       '@types/react': 18.0.25
       '@types/react-dom': ^18.0.8
-      '@vercel/analytics': ^0.1.4
       eslint: 8.27.0
       eslint-config-ethang: workspace:*
       eslint-config-next: ^13.0.3
@@ -264,7 +261,6 @@ importers:
     dependencies:
       '@portabletext/react': 2.0.0_react@18.2.0
       '@sanity/client': 3.4.1
-      '@vercel/analytics': 0.1.4_react@18.2.0
       next: 13.0.3_biqbaboplfbrettd7655fr4n2y
       next-components: link:../../packages/next-components
       next-radix: link:../../packages/next-radix
@@ -6615,16 +6611,6 @@ packages:
       redux: 4.2.0
     dev: true
 
-  /@types/redux-persist/4.3.1_react@18.2.0+redux@4.2.0:
-    resolution: {integrity: sha512-YkMnMUk+4//wPtiSTMfsxST/F9Gh9sPWX0LVxHuOidGjojHtMdpep2cYvQgfiDMnj34orXyZI+QJCQMZDlafKA==}
-    deprecated: This is a stub types definition for redux-persist (https://github.com/rt2zz/redux-persist). redux-persist provides its own type definitions, so you don't need @types/redux-persist installed!
-    dependencies:
-      redux-persist: 6.0.0_react@18.2.0+redux@4.2.0
-    transitivePeerDependencies:
-      - react
-      - redux
-    dev: true
-
   /@types/resolve/1.17.1:
     resolution: {integrity: sha512-yy7HuzQhj0dhGpD8RLXSZWEkLsV9ibvxvi6EiJ3bkqLAO1RGo0WbkWQiwpRlSFymTJRz0d3k5LM3kkx8ArDbLw==}
     dependencies:
@@ -7032,14 +7018,6 @@ packages:
       object-assign: 4.1.1
       receptor: 1.0.0
       resolve-id-refs: 0.1.0
-    dev: false
-
-  /@vercel/analytics/0.1.4_react@18.2.0:
-    resolution: {integrity: sha512-6xI1kozfgigwmDTQCrtj+m0yQnzhLGa/l0yE8BjTbUQ2vF9b88CEXF3dXjZl48ESfjssCur3FkK3jOwZm4emrw==}
-    peerDependencies:
-      react: ^16.8||^17||^18
-    dependencies:
-      react: 18.2.0
     dev: false
 
   /@webassemblyjs/ast/1.11.1:
@@ -18722,6 +18700,7 @@ packages:
     dependencies:
       react: 18.2.0
       redux: 4.2.0
+    dev: false
 
   /redux-saga/1.2.1:
     resolution: {integrity: sha512-fVCicLlf4hLP+KB6H7RHfZlZ8LdYckhaemXBB3wh//a2ESyz/z/l8ygxlm0OqPjS/PARdsQ2hIdAltxEB+NgvA==}

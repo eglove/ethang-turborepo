@@ -2,7 +2,6 @@ import './globals.css';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 import { Header } from './components';
-import { AnalyticsWrapper } from './components/analytics/analytics';
 import styles from './page.module.css';
 
 export default function RootLayout({
@@ -33,13 +32,12 @@ export default function RootLayout({
           type="image/png"
         />
         <link href="/site.webmanifest" rel="manifest" />
-        <meta charSet="UTF-8" />
+        <meta charSet="utf8" />
         <meta content="width=device-width" name="viewport" />
       </head>
       <main className={styles.ContentContainer}>
         <Header />
         {children}
-        <AnalyticsWrapper />
       </main>
     </html>
   );
