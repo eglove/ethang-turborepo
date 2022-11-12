@@ -1,4 +1,5 @@
 import { NextLink } from 'next-components';
+import { NavigationMenu } from 'next-radix/navigation-menu/navigation-menu';
 
 import styles from './header.module.css';
 
@@ -19,13 +20,12 @@ export function Navigation(): JSX.Element {
   ];
 
   return (
-    <nav className={styles.Navigation}>
+    <NavigationMenu navProperties={{ className: styles.Navigation }}>
       {navLinks.map(navLink => {
         return (
           <NextLink
             key={navLink.title}
             linkProperties={{
-              className: styles.NavigationLink,
               href: navLink.link,
             }}
           >
@@ -33,6 +33,6 @@ export function Navigation(): JSX.Element {
           </NextLink>
         );
       })}
-    </nav>
+    </NavigationMenu>
   );
 }

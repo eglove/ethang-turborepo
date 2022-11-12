@@ -5,7 +5,7 @@
   "description": "",
   "main": "package.json",
   "author": "Ethan Glover <hello@ethang.email>",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "scripts": {
     "dev": "sanity start",
     "start": "sanity start",

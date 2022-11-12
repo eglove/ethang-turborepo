@@ -22,30 +22,31 @@
   box-shadow: var(--box-shadow-hover);
 }
 
-.Navigation {
-  display: flex;
-  place-items: center;
+.Navigation > div {
+  width: 100%;
 }
 
-.NavigationLink {
+.Navigation ul {
+  display: flex;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.Navigation ul li {
   box-sizing: border-box;
   width: 100%;
   min-width: 248px;
-  padding: 1rem;
   text-align: center;
-  text-decoration: none;
+  list-style: none;
   background-color: var(--background-color);
   border: 1px solid var(--border-color);
 }
 
-.NavigationLink:visited {
-  color: var(--font-color);
-}
-
-.NavigationLink:hover, .NavigationLink:focus {
-  cursor: pointer;
-  filter: brightness(95%);
-  box-shadow: var(--box-shadow-hover);
+.Navigation ul li a {
+  display: block;
+  padding: 16px;
+  text-decoration: none;
 }
 
 .SocialLinks {
@@ -57,12 +58,12 @@
   background-color: var(--background-color);
 }
 
-@media (max-width: 780px) {
-  .Navigation {
+@media (max-width: 843px) {
+  .Navigation ul {
     display: grid;
   }
 
-  .NavigationLink {
+  .Navigation ul li {
     min-width: 0;
   }
 }
