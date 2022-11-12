@@ -1,25 +1,43 @@
-import type { DehydratedState } from '@tanstack/react-query';
-import { dehydrate, QueryClient } from '@tanstack/react-query';
+import { QueryClient } from '@tanstack/react-query';
+import type { InferGetStaticPropsType } from 'next';
 
 import { PageLayout } from '../../feature/common/page-layout/page-layout';
 import { ShowPage } from '../../feature/page/show-page';
-import { getPage, getPageKey } from '../../util/groq/page-groq';
+import { REVALIDATE } from '../../util/constants';
+import type { GetPageReturn } from '../../util/groq/page-groq';
+import { getPage, getPageKey, getPageSlugs } from '../../util/groq/page-groq';
+import type { GetPropertiesData } from '../../util/types/next-types';
 
-export default function SlugPage(): JSX.Element {
+export default function SlugPage({
+  data,
+}: InferGetStaticPropsType<typeof getStaticProps>): JSX.Element {
   return (
     <PageLayout>
-      <ShowPage />
+      <ShowPage pageData={data} />
     </PageLayout>
   );
 }
 
-export async function getServerSideProps({
+export async function getStaticPaths(): Promise<{
+  fallback: boolean;
+  paths: string[];
+}> {
+  const data = await getPageSlugs();
+  const paths = data.map(datum => {
+    return datum.slug.current;
+  });
+
+  return {
+    fallback: false,
+    paths,
+  };
+}
+
+export async function getStaticProps({
   query,
 }: {
   query: { slug: string };
-}): Promise<{
-  props: { dehydratedState: DehydratedState };
-}> {
+}): Promise<GetPropertiesData<GetPageReturn>> {
   const queryClient = new QueryClient();
 
   const { slug } = query;
@@ -28,9 +46,12 @@ export async function getServerSideProps({
     return getPage(slug);
   });
 
+  const page = await getPage(slug);
+
   return {
     props: {
-      dehydratedState: dehydrate(queryClient),
+      data: page,
     },
+    revalidate: REVALIDATE,
   };
 }

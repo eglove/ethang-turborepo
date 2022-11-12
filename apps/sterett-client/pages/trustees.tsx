@@ -1,30 +1,31 @@
-import type { DehydratedState } from '@tanstack/react-query';
-import { dehydrate, QueryClient } from '@tanstack/react-query';
+import type { InferGetStaticPropsType } from 'next';
 
 import { PageLayout } from '../feature/common/page-layout/page-layout';
-import { getTrustees, getTrusteesKey } from '../feature/trustees/trustees-groq';
+import type { GetTrusteesReturn } from '../feature/trustees/trustees-groq';
+import { getTrustees } from '../feature/trustees/trustees-groq';
 import { TrusteesLayout } from '../feature/trustees/trustees-layout';
+import { REVALIDATE } from '../util/constants';
+import type { GetPropertiesData } from '../util/types/next-types';
 
-export default function Trustees(): JSX.Element {
+export default function Trustees({
+  data,
+}: InferGetStaticPropsType<typeof getStaticProps>): JSX.Element {
   return (
     <PageLayout>
-      <TrusteesLayout />
+      <TrusteesLayout trustees={data} />
     </PageLayout>
   );
 }
 
-export async function getStaticProps(): Promise<{
-  props: { dehydratedState: DehydratedState };
-  revalidate: number;
-}> {
-  const queryClient = new QueryClient();
-
-  await queryClient.prefetchQuery(getTrusteesKey(), getTrustees);
+export async function getStaticProps(): Promise<
+  GetPropertiesData<GetTrusteesReturn>
+> {
+  const trustees = await getTrustees();
 
   return {
     props: {
-      dehydratedState: dehydrate(queryClient),
+      data: trustees,
     },
-    revalidate: 60,
+    revalidate: REVALIDATE,
   };
 }

@@ -1,4 +1,3 @@
-import { useQuery } from '@tanstack/react-query';
 import { Icon } from '@trussworks/react-uswds';
 import { humanReadableLocalDateTime } from 'util-typescript';
 
@@ -10,14 +9,14 @@ import type {
   NewsUpdate,
   SortedNewsAndEvents,
 } from './news-groq';
-import { getNewsAndEvents, getNewsAndEventsKey } from './news-groq';
 
-export function NewsLayout(): JSX.Element {
-  const { data: newsAndEvents } = useQuery<SortedNewsAndEvents>(
-    [getNewsAndEventsKey],
-    getNewsAndEvents
-  );
+type NewsLayoutProperties = {
+  newsAndEvents: SortedNewsAndEvents;
+};
 
+export function NewsLayout({
+  newsAndEvents,
+}: NewsLayoutProperties): JSX.Element {
   return (
     <Container>
       {newsAndEvents?.map(datum => {

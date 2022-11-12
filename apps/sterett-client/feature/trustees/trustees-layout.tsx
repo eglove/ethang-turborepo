@@ -1,18 +1,21 @@
-import { useQuery } from '@tanstack/react-query';
 import { TrussNextLink } from 'trussworks-next-components';
 
 import { Container } from '../common/container/container';
 import { TrusteeImage } from './trustee-image';
 import styles from './trustees.module.css';
-import { getTrustees, getTrusteesKey } from './trustees-groq';
+import type { GetTrusteesReturn } from './trustees-groq';
 
-export function TrusteesLayout(): JSX.Element {
-  const { data } = useQuery(getTrusteesKey(), getTrustees);
+type TrusteesLayoutProperties = {
+  trustees: GetTrusteesReturn;
+};
 
+export function TrusteesLayout({
+  trustees,
+}: TrusteesLayoutProperties): JSX.Element {
   return (
     <Container>
       <div className={styles.TrusteeContainer}>
-        {data?.map(trustee => {
+        {trustees?.map(trustee => {
           return (
             <div className={styles.TrusteeGrid} key={trustee._id}>
               <TrusteeImage altText={trustee.name} image={trustee.image} />

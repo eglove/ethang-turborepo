@@ -1,33 +1,32 @@
-import type { DehydratedState } from '@tanstack/react-query';
-import { dehydrate, QueryClient } from '@tanstack/react-query';
+import type { InferGetStaticPropsType } from 'next';
 
 import { PageLayout } from '../feature/common/page-layout/page-layout';
 import { HomeLayout } from '../feature/home/home-layout';
-import { getPage, getPageKey } from '../util/groq/page-groq';
+import { REVALIDATE } from '../util/constants';
+import type { GetPageReturn } from '../util/groq/page-groq';
+import { getPage } from '../util/groq/page-groq';
+import type { GetPropertiesData } from '../util/types/next-types';
 
-export function Index(): JSX.Element {
+export function Index({
+  data,
+}: InferGetStaticPropsType<typeof getStaticProps>): JSX.Element {
   return (
     <PageLayout>
-      <HomeLayout />
+      <HomeLayout homeData={data} />
     </PageLayout>
   );
 }
 
-export async function getStaticProps(): Promise<{
-  props: { dehydratedState: DehydratedState };
-  revalidate: number;
-}> {
-  const queryClient = new QueryClient();
-
-  await queryClient.prefetchQuery(getPageKey('home'), async () => {
-    return getPage('home');
-  });
+export async function getStaticProps(): Promise<
+  GetPropertiesData<GetPageReturn>
+> {
+  const data = await getPage('home');
 
   return {
     props: {
-      dehydratedState: dehydrate(queryClient),
+      data,
     },
-    revalidate: 60,
+    revalidate: REVALIDATE,
   };
 }
 

@@ -67,3 +67,15 @@ export const getAllPages = async (): Promise<GetAllPagesReturn> => {
 
   return sterettSanityClient.fetch(slugQuery);
 };
+
+type GetPageSlugsReturn = Array<{
+  slug: {
+    current: string;
+  };
+}>;
+
+export const getPageSlugs = async (): Promise<GetPageSlugsReturn> => {
+  const slugQuery = `*[_type == "page" && slug.current != "home" && ${NO_DRAFTS}]{slug{current}}`;
+
+  return sterettSanityClient.fetch(slugQuery);
+};

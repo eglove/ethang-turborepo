@@ -1,19 +1,19 @@
-import { useQuery } from '@tanstack/react-query';
 import { TrussNextLink } from 'trussworks-next-components';
 
 import { Container } from '../common/container/container';
-import {
-  getMeetingMinutes,
-  getMeetingMinutesKey,
-} from './meeting-minutes-groq';
+import type { GetMeetingMinutesReturn } from './meeting-minutes-groq';
 
-export function MeetingMinutesLayout(): JSX.Element {
-  const { data } = useQuery(getMeetingMinutesKey(), getMeetingMinutes);
+type MeetingMinutesLayoutProperties = {
+  meetingMinutes: GetMeetingMinutesReturn;
+};
 
+export function MeetingMinutesLayout({
+  meetingMinutes,
+}: MeetingMinutesLayoutProperties): JSX.Element {
   return (
     <Container>
       <div>
-        {data?.map(meetingMinute => {
+        {meetingMinutes?.map(meetingMinute => {
           return (
             <div key={meetingMinute._id} style={{ padding: '8px' }}>
               <TrussNextLink isNewTab href={meetingMinute.file.asset.url}>
