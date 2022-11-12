@@ -178,7 +178,7 @@ importers:
       '@portabletext/types': ^2.0.0
       '@sanity/client': ^3.4.1
       '@sanity/image-url': ^1.0.1
-      '@tanstack/react-query': ^4.14.6
+      '@tanstack/react-query': ^4.15.0
       '@trussworks/react-uswds': ^4.0.0
       '@types/node': ^18.11.9
       '@types/nprogress': ^0.2.0
@@ -208,7 +208,7 @@ importers:
       '@portabletext/react': 2.0.0_react@18.2.0
       '@sanity/client': 3.4.1
       '@sanity/image-url': 1.0.1
-      '@tanstack/react-query': 4.14.6_biqbaboplfbrettd7655fr4n2y
+      '@tanstack/react-query': 4.15.0_biqbaboplfbrettd7655fr4n2y
       '@trussworks/react-uswds': 4.0.0_grxjd74kxvzn5pqe3iqg354tcm
       date-fns: 2.29.3
       next: 13.0.3_biqbaboplfbrettd7655fr4n2y
@@ -6230,12 +6230,12 @@ packages:
       tslib: 2.4.1
     dev: false
 
-  /@tanstack/query-core/4.14.5:
-    resolution: {integrity: sha512-Su1AyrPb6xnm7wXTvpN5tt+B7LViYSh9k04vvuc6+eMVH0HkE9ktZTXibRrTvV83BI1KP5MG7v/k90ne/4zQzw==}
+  /@tanstack/query-core/4.15.0:
+    resolution: {integrity: sha512-zEZ7AuQRb8Ts+WXw9TtGtqydxmcOSRsWkFYxxH8dykPcumsV49BcNDLhHtYqVGPQpMjqMS4RoVYQP+budT6WbA==}
     dev: false
 
-  /@tanstack/react-query/4.14.6_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-ubx49AeV0SXfbt4mZmb0JlJa1PRXynGm+uorJhM50HVDppt/SjcOUNK5kptEWBRzTjKVS9KhpoMkKKJ/ZzuBFQ==}
+  /@tanstack/react-query/4.15.0_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-WQZCSxZgYGkQUx2TRiGVcfxh0dsrP1qU7IYK/kbY1QbcWF2cQJsj80owgjpXBCRSk/nxpZ6j65Xi8TB5OTT5Vw==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
       react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
@@ -6246,7 +6246,7 @@ packages:
       react-native:
         optional: true
     dependencies:
-      '@tanstack/query-core': 4.14.5
+      '@tanstack/query-core': 4.15.0
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       use-sync-external-store: 1.2.0_react@18.2.0
