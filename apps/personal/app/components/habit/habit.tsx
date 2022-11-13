@@ -1,12 +1,13 @@
 import { Fragment } from 'react';
 
-import { getTodaysHabits } from './data';
+import { getNotDueHabits, getTodaysHabits } from './data';
 import styles from './habit.module.css';
 import { HabitForm } from './habit-form';
 import { HabitItem } from './habit-item';
 
 export async function Habit(): Promise<JSX.Element> {
   const todaysHabits = await getTodaysHabits();
+  const notDue = await getNotDueHabits();
 
   return (
     <div>
@@ -17,11 +18,19 @@ export async function Habit(): Promise<JSX.Element> {
         {todaysHabits.map(habit => {
           return (
             <Fragment key={habit.name}>
-              <HabitItem habit={habit} />
+              <HabitItem isDue habit={habit} />
             </Fragment>
           );
         })}
       </div>
+      <h2>Not Due</h2>
+      {notDue.map(habit => {
+        return (
+          <Fragment key={habit.name}>
+            <HabitItem habit={habit} isDue={false} />
+          </Fragment>
+        );
+      })}
     </div>
   );
 }

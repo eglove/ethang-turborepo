@@ -8,12 +8,17 @@ import styles from './habit.module.css';
 
 type HabitItemProperties = {
   habit: HabitRecord & { name: string };
+  isDue: boolean;
 };
 
-export function HabitItem({ habit }: HabitItemProperties): JSX.Element {
+export function HabitItem({ habit, isDue }: HabitItemProperties): JSX.Element {
   const router = useRouter();
 
   const handleComplete = async (): Promise<void> => {
+    if (!isDue) {
+      return;
+    }
+
     const body = JSON.stringify(
       habitCompleteBody.parse({
         name: habit.name,
@@ -34,7 +39,12 @@ export function HabitItem({ habit }: HabitItemProperties): JSX.Element {
   };
 
   return (
-    <span className={styles.HabitItemContainer} onClick={handleComplete}>
+    <span
+      className={`${styles.HabitItemContainer} ${
+        isDue ? styles.HabitDueContainer : ''
+      }`}
+      onClick={handleComplete}
+    >
       <strong>{habit.name}</strong> (Recurs every {ms(habit.recurs)})
     </span>
   );

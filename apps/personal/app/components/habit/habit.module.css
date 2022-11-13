@@ -5,10 +5,13 @@
 
 .HabitItemContainer {
     padding: 8px 8px 2px;
-    cursor: pointer;
     border-bottom: 1px solid hsl(0deg 0% 0%);
 }
 
-.HabitItemContainer:hover, .HabitItemContainer:focus {
+.HabitDueContainer {
+    cursor: pointer;
+}
+
+.HabitDueContainer:hover, .HabitDueContainer:focus {
     background: hsl(0deg 0% 83%);
 }
