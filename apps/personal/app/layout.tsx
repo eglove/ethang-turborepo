@@ -1,7 +1,9 @@
 import './globals.css';
 
+import type { ReactNode } from 'react';
+
 type RootLayoutProperties = {
-  children: JSX.Element | JSX.Element[];
+  children: ReactNode;
 };
 
 export default function RootLayout({
@@ -14,7 +16,7 @@ export default function RootLayout({
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <main>{children}</main>
+      <body>{children}</body>
     </html>
   );
 }
