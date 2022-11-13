@@ -1,0 +1,8 @@
+.FormContainer {
+    display: grid;
+    gap: 16px;
+}
+
+.FormContainer button {
+    width: max-content;
+}
