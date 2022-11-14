@@ -12,7 +12,7 @@ export const getCalorieData = async (): Promise<GetCalorieDataReturn> => {
   const todaysRecords: CalorieRecord[] = [];
   let totalConsumedToday = 0;
   const totalAllowedToday = Number(
-    data?.healthRecord?.[getDayKey()].bmr.toFixed(0) ?? 0
+    data?.healthRecord?.[getDayKey()]?.bmr.toFixed(0) ?? 0
   );
 
   if (data !== null && typeof data?.calorieRecord !== 'undefined') {

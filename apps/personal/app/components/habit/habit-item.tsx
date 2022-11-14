@@ -26,7 +26,7 @@ export function HabitItem({ habit, isDue }: HabitItemProperties): JSX.Element {
     );
 
     // eslint-disable-next-line no-alert
-    const confirmed = confirm('Mark as complete?');
+    const confirmed = confirm(`Complete ${habit.name}?`);
 
     if (confirmed) {
       await fetch('/api/habit-complete', {

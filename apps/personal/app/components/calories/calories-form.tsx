@@ -42,6 +42,8 @@ export function CaloriesForm(): JSX.Element {
       method: 'POST',
     });
 
+    setFormState({ calories: '' });
+
     router.refresh();
   };
 
