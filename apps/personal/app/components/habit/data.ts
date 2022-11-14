@@ -1,41 +1,39 @@
+import { sortObjectArray } from 'util-typescript';
+
 import { database } from '../../lowdb/main';
-import type { HabitRecord } from '../../lowdb/types';
+import type { HabitRecordWithName } from '../../lowdb/types';
 import { getDayKey } from '../../lowdb/util';
 
-export const getTodaysHabits = async (): Promise<
-  Array<HabitRecord & { name: string }>
-> => {
+export const getDueHabits = async (): Promise<HabitRecordWithName[]> => {
   const { data } = await database();
 
   const habits = data?.habit;
 
   if (typeof habits !== 'undefined') {
-    const todayHabits: Array<HabitRecord & { name: string }> = [];
+    const dueHabits: HabitRecordWithName[] = [];
 
     for (const [key, habit] of Object.entries(habits)) {
-      if (getDayKey(habit.due) === getDayKey()) {
-        todayHabits.push({
+      if (getDayKey(habit.due) <= getDayKey()) {
+        dueHabits.push({
           ...habit,
           name: key,
         });
       }
     }
 
-    return todayHabits;
+    return sortObjectArray(dueHabits, 'name');
   }
 
   return [];
 };
 
-export const getNotDueHabits = async (): Promise<
-  Array<HabitRecord & { name: string }>
-> => {
+export const getNotDueHabits = async (): Promise<HabitRecordWithName[]> => {
   const { data } = await database();
 
   const habits = data?.habit;
 
   if (typeof habits !== 'undefined') {
-    const todayHabits: Array<HabitRecord & { name: string }> = [];
+    const todayHabits: HabitRecordWithName[] = [];
 
     for (const [key, habit] of Object.entries(habits)) {
       if (getDayKey(habit.due) !== getDayKey()) {
@@ -46,7 +44,7 @@ export const getNotDueHabits = async (): Promise<
       }
     }
 
-    return todayHabits;
+    return sortObjectArray(todayHabits, 'name');
   }
 
   return [];

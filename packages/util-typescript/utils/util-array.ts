@@ -14,6 +14,23 @@ export const isNonEmptyArray = <Type>(
   return array.length > 0;
 };
 
+export const sortObjectArray = <ObjectType>(
+  array: ObjectType[],
+  key: keyof ObjectType
+): ObjectType[] => {
+  return array.sort((a, b) => {
+    if (a[key] < b[key]) {
+      return -1;
+    }
+
+    if (a[key] > b[key]) {
+      return 1;
+    }
+
+    return 0;
+  });
+};
+
 export const shuffleArray = <Type>(array: Type[]): Type[] => {
   for (let index = array.length - 1; index > 0; index -= 1) {
     const index_ = Math.floor(Math.random() * index);

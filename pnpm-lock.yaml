@@ -135,6 +135,7 @@ importers:
       react-dom: 18.2.0
       tsconfig: workspace:*
       typescript: 4.8.4
+      util-typescript: workspace:*
       zod: ^3.19.1
     dependencies:
       lowdb: 5.0.5
@@ -142,6 +143,7 @@ importers:
       next: 13.0.3_biqbaboplfbrettd7655fr4n2y
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
+      util-typescript: link:../../packages/util-typescript
       zod: 3.19.1
     devDependencies:
       '@types/ms': 0.7.31

@@ -21,3 +21,5 @@ export type HabitRecord = {
   due: Date;
   recurs: number;
 };
+
+export type HabitRecordWithName = HabitRecord & { name: string };

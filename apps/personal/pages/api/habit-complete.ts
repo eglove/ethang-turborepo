@@ -20,11 +20,11 @@ export default async function handler(
       database_.data !== null &&
       typeof database_.data.habit !== 'undefined'
     ) {
-      database_.data.habit[name].due = new Date(
-        new Date().setMilliseconds(
-          new Date().getMilliseconds() + database_.data.habit[name].recurs
-        )
+      const today = new Date();
+      today.setMilliseconds(
+        today.getMilliseconds() + database_.data.habit[name].recurs
       );
+      database_.data.habit[name].due = today;
 
       await database_.write();
 

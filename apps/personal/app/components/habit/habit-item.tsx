@@ -2,12 +2,12 @@
 import ms from 'ms';
 import { useRouter } from 'next/navigation';
 
-import type { HabitRecord } from '../../lowdb/types';
+import type { HabitRecordWithName } from '../../lowdb/types';
 import { habitCompleteBody } from '../../lowdb/zod/zod-health-record';
 import styles from './habit.module.css';
 
 type HabitItemProperties = {
-  habit: HabitRecord & { name: string };
+  habit: HabitRecordWithName;
   isDue: boolean;
 };
 
