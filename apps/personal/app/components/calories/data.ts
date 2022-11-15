@@ -8,23 +8,30 @@ type GetCalorieDataReturn = {
 };
 
 export const getCalorieData = async (): Promise<GetCalorieDataReturn> => {
-  const { data } = await database();
+  const database_ = await database();
   const todaysRecords: CalorieRecord[] = [];
   let totalConsumedToday = 0;
   const totalAllowedToday = Number(
-    data?.healthRecord?.[getDayKey()]?.bmr.toFixed(0) ?? 0
+    database_?.data?.healthRecord?.[getDayKey()]?.bmr.toFixed(0) ?? 0
   );
 
-  if (data !== null && typeof data?.calorieRecord !== 'undefined') {
-    for (const id in data.calorieRecord) {
-      if (getDayKey() === getDayKey(data.calorieRecord[id].date)) {
-        todaysRecords.push(data.calorieRecord[id]);
+  if (
+    database_?.data !== null &&
+    typeof database_?.data?.calorieRecord !== 'undefined'
+  ) {
+    for (const id in database_?.data.calorieRecord) {
+      if (getDayKey() === getDayKey(database_?.data.calorieRecord[id].date)) {
+        todaysRecords.push(database_?.data.calorieRecord[id]);
+      } else {
+        delete database_?.data.calorieRecord[id];
       }
     }
 
     for (const todaysRecord of todaysRecords) {
       totalConsumedToday += todaysRecord.consumed;
     }
+
+    await database_.write();
   }
 
   return { totalAllowedToday, totalConsumedToday };
