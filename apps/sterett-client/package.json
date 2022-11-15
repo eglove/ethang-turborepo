@@ -34,7 +34,7 @@
     "@types/nprogress": "^0.2.0",
     "@types/react": "18.0.25",
     "@types/react-big-calendar": "^0.38.2",
-    "@types/react-dom": "^18.0.8",
+    "@types/react-dom": "^18.0.9",
     "eslint": "8.27.0",
     "eslint-config-ethang": "workspace:*",
     "eslint-config-next": "^13.0.3",
