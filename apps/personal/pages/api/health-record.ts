@@ -2,7 +2,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 import { database } from '../../app/lowdb/main';
-import { getDayKey } from '../../app/lowdb/util';
 import { healthRecordPostBody } from '../../app/lowdb/zod/zod-health-record';
 
 type Data = {
@@ -28,7 +27,7 @@ export default async function handler(
       database_.data !== null &&
       typeof database_.data.healthRecord !== 'undefined'
     ) {
-      database_.data.healthRecord[getDayKey()] = {
+      database_.data.healthRecord = {
         age,
         bmr,
         date: new Date(),

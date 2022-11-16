@@ -12,7 +12,7 @@ export const getCalorieData = async (): Promise<GetCalorieDataReturn> => {
   const todaysRecords: CalorieRecord[] = [];
   let totalConsumedToday = 0;
   const totalAllowedToday = Number(
-    database_?.data?.healthRecord?.[getDayKey()]?.bmr.toFixed(0) ?? 0
+    database_?.data?.healthRecord?.bmr.toFixed(0) ?? 0
   );
 
   if (
@@ -23,7 +23,11 @@ export const getCalorieData = async (): Promise<GetCalorieDataReturn> => {
       if (getDayKey() === getDayKey(database_?.data.calorieRecord[id].date)) {
         todaysRecords.push(database_?.data.calorieRecord[id]);
       } else {
-        delete database_?.data.calorieRecord[id];
+        // @ts-expect-error Delete record
+        database_.data.calorieRecord = {
+          ...database_.data.calorieRecord,
+          [id]: undefined,
+        };
       }
     }
 

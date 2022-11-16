@@ -1,7 +1,7 @@
 export type PersonalDatabase = {
   calorieRecord?: Record<string, CalorieRecord>;
   habit?: Record<string, HabitRecord>;
-  healthRecord?: Record<string, HealthRecord>;
+  healthRecord?: HealthRecord;
 };
 
 export type CalorieRecord = {
