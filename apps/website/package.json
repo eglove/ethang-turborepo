@@ -31,6 +31,6 @@
     "eslint-config-ethang": "workspace:*",
     "eslint-config-next": "^13.0.3",
     "tsconfig": "workspace:*",
-    "typescript": "4.8.4"
+    "typescript": "4.9.3"
   }
 }
