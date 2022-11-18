@@ -1,0 +1,58 @@
+.Container {
+    width: 100%;
+    text-align: center;
+}
+
+.ProgressContainer {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+    margin-bottom: 30px;
+}
+
+.ProgressContainer::before {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    z-index: 1;
+    width: 100%;
+    height: 4px;
+    content: '';
+    background-color: hsl(0deg 0% 88%);
+    transform: translateY(-50%);
+}
+
+.Progress {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    z-index: 1;
+    width: 0%;
+    height: 4px;
+    transition: 0.4s ease;
+    transform: translateY(-50%);
+}
+
+.Circle {
+    z-index: 2;
+    display: grid;
+    place-items: center;
+    width: 30px;
+    height: 30px;
+    color: hsl(0deg 0% 60%);
+    background-color: hsl(0deg 0% 100%);
+    border: 3px solid hsl(0deg 0% 88%);
+    border-radius: 50%;
+    transition: 0.4s ease;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+    .Progress {
+        transition: none;
+    }
+
+    .Circle {
+        transition: none;
+    }
+}
