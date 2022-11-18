@@ -2,21 +2,6 @@
     display: flex;
 }
 
-@media screen and (prefers-reduced-motion: reduce) {
-.Panel {
-    position: relative;
-    flex: 0.5;
-    margin: 8px;
-    color: hsl(0deg 0% 100%);
-    cursor: pointer;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    border-radius: 16px;
-    transition: none;
-}
-}
-
 .Panel {
     position: relative;
     flex: 0.5;
@@ -30,9 +15,15 @@
     transition: flex 0.7s ease-in;
 }
 
+.Content {
+    display: grid;
+    place-items: center;
+}
+
 .Panel .Content {
     opacity: 0%;
 }
+
 
 .Panel.Active {
     flex: 5;
@@ -43,10 +34,6 @@
     transition: opacity 0.3s ease-in 0.4s;
 }
 
-.Content {
-    display: grid;
-    place-items: center;
-}
 
 @media screen and (max-width: 480px) {
     .Panel:nth-child(n+4) {
