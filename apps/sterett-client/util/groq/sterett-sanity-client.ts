@@ -1,7 +1,7 @@
 import SanityClient from '@sanity/client';
 import { getConst } from 'node-environment';
 
-export const STERETT_GROQ_API_VERSION = '2022-09-13';
+export const STERETT_GROQ_API_VERSION = new Date().toISOString().split('T')[0];
 
 export const NO_DRAFTS = "!(_id in path('drafts.**'))";
 

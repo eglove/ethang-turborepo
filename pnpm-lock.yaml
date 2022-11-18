@@ -272,6 +272,7 @@ importers:
 
   apps/website:
     specifiers:
+      '@next/font': ^13.0.4
       '@portabletext/react': ^2.0.0
       '@portabletext/types': ^2.0.0
       '@sanity/client': ^3.4.1
@@ -294,6 +295,7 @@ importers:
       typescript: 4.9.3
       util-typescript: workspace:*
     dependencies:
+      '@next/font': 13.0.4
       '@portabletext/react': 2.0.0_react@18.2.0
       '@sanity/client': 3.4.1
       next: 13.0.4_biqbaboplfbrettd7655fr4n2y
@@ -4348,6 +4350,10 @@ packages:
     resolution: {integrity: sha512-jZ4urKT+aO9QHm3ttihrIQscQISDSKK8isAom750+EySn9o3LCSkTdPGBtvBqY7Yku+NqhfQempR5J58DqTaVg==}
     dependencies:
       glob: 7.1.7
+
+  /@next/font/13.0.4:
+    resolution: {integrity: sha512-csZhVqe870p7XE03WfbDLzjVwdBAWxe6/lWGQosfqY/XN5tsmfDLpj442veicfCiiuF7/ydSnAAJxH8PQVBVWQ==}
+    dev: false
 
   /@next/swc-android-arm-eabi/13.0.4:
     resolution: {integrity: sha512-SD9H+/zuV3L0oHIhsDdFkDqFtg6pIHtqRUPlsrNdOsmWXgMlSzxBmwt2ta4kyrazS62BQu7XRUG++ZyODS7AWg==}

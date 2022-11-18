@@ -1,8 +1,12 @@
 import './globals.css';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
+import { Inter } from '@next/font/google';
+
 import { Header } from './components';
 import styles from './page.module.css';
+
+const inter = Inter();
 
 export default function RootLayout({
   children,
@@ -10,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }): JSX.Element {
   return (
-    <html lang="en">
+    <html className={inter.className} lang="en">
       <head>
         <link href="/favicon.ico" rel="icon" />
         <meta content="$ilp.uphold.com/XqPZ8mnNyprk" name="monetization" />
