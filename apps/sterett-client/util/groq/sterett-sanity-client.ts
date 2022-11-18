@@ -11,5 +11,5 @@ export const sterettSanityClient = SanityClient({
   ignoreBrowserTokenWarning: true,
   projectId: getConst('NEXT_PUBLIC_STERETT_SANITY_PROJECT_ID'),
   token: getConst('NEXT_PUBLIC_STERETT_SANITY_RO_TOKEN'),
-  useCdn: true,
+  useCdn: typeof document !== 'undefined',
 });

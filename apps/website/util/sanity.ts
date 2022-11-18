@@ -22,5 +22,5 @@ export const ethangSanityClient = SanityClient({
   dataset: getConst('ETHANG_SANITY_DATASET'),
   projectId: getConst('ETHANG_SANITY_PROJECT_ID'),
   token: getConst('ETHANG_SANITY_VIEWER_TOKEN'),
-  useCdn: true,
+  useCdn: typeof document !== 'undefined',
 });
