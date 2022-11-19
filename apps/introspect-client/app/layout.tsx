@@ -1,12 +1,12 @@
 import { type ReactNode } from 'react';
 
 type RootLayoutProperties = {
-  children: JSX.Element | JSX.Element[];
+  children: ReactNode;
 };
 
 export default function RootLayout({
   children,
-}: RootLayoutProperties): ReactNode {
+}: RootLayoutProperties): JSX.Element {
   return (
     <html lang="en">
       <head />
