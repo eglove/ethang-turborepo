@@ -63,13 +63,10 @@ jobs:
         with:
           args: --all-projects --severity-threshold=low
   merge:
+    name: Merge
     needs: [codeql, sonarcloud, snyk]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Merge to main
-        uses: devmasx/merge-branch@master
-        with:
-          type: now
-          target_branch: main
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Create PR
+        uses: peter-evans/create-pull-request@v4
