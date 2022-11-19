@@ -1,0 +1,5 @@
+.ListPageContainer {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 24px;
+}
