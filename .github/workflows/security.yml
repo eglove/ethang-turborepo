@@ -73,6 +73,8 @@ jobs:
         with:
           force-depth: 2
       - uses: pnpm/action-setup@v2.0.1
+        with:
+          version: 7.16.1
       - uses: actions/setup-node@v3
         with:
           node-version: 18
