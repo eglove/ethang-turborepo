@@ -17,10 +17,16 @@ if ($?)
 {
     npx stylelint "**/*.module.css" --fix
 }
+else {
+    Break
+}
 
 if ($?)
 {
     npx turbo test
+}
+else {
+    Break
 }
 
 if ($?)
