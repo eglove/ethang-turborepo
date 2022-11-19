@@ -62,26 +62,14 @@ jobs:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         with:
           args: --all-projects --severity-threshold=low
-  build:
-    name: Build and Test
+  merge:
+    needs: [codeql, sonarcloud, snyk]
     runs-on: ubuntu-latest
-    env:
-      TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
-      TURBO_TEAM: ${{ secrets.TURBO_TEAM }}
     steps:
       - uses: actions/checkout@v3
+      - name: Merge to main
+        uses: devmasx/merge-branch@master
         with:
-          force-depth: 2
-      - uses: pnpm/action-setup@v2.0.1
-        with:
-          version: latest
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 18
-          cache: 'pnpm'
-      - name: Install Dependencies
-        run: pnpm install
-      - name: Build
-        run: pnpm build
-      - name: Test
-        run: pnpm test
+          type: now
+          target_branch: main
+          github_token: ${{ secrets.GITHUB_TOKEN }}
