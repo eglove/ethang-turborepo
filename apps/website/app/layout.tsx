@@ -6,7 +6,9 @@ import { Inter } from '@next/font/google';
 import { Header } from './components';
 import styles from './page.module.css';
 
-const inter = Inter();
+const inter = Inter({
+  subsets: ['latin'],
+});
 
 export default function RootLayout({
   children,
