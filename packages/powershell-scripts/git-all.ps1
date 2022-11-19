@@ -6,6 +6,7 @@ if (!$args)
 }
 
 Set-Location ~/Projects/ethang-turborepo
+pnpm store prune
 pnpm i --no-frozen-lockfile
 git add .
 git commit -m "$commitMessage"

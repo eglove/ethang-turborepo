@@ -1,3 +1,5 @@
+import { type ReactNode } from 'react';
+
 import {
   type SampleList,
   type SampleUser,
@@ -7,7 +9,7 @@ import { ListNavigation } from '../../../components/learning-list/list-navigatio
 import styles from './page.module.css';
 
 type ListsProperties = {
-  children: JSX.Element | JSX.Element[];
+  children: ReactNode;
   params: {
     user: string;
   };
