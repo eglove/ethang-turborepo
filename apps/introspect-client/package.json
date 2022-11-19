@@ -1,5 +1,5 @@
 {
-  "name": "website",
+  "name": "introspect-client",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,22 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@next/font": "^13.0.4",
-    "@portabletext/react": "^2.0.0",
-    "@sanity/client": "^3.4.1",
     "next": "13.0.4",
-    "next-components": "workspace:*",
-    "next-radix": "workspace:*",
-    "node-environment": "workspace:*",
     "react": "18.2.0",
-    "react-components": "workspace:*",
-    "react-dom": "18.2.0",
-    "react-schemaorg": "^2.0.0",
-    "schema-dts": "^1.1.0",
-    "util-typescript": "workspace:*"
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "@portabletext/types": "^2.0.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^14.4.3",
+    "@types/jest": "^29.2.3",
     "@types/node": "^18.11.9",
     "@types/react": "18.0.25",
     "@types/react-dom": "^18.0.9",

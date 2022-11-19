@@ -6,6 +6,7 @@ if (!$args)
 }
 
 Set-Location ~/Projects/ethang-turborepo
+pnpm store prune
 pnpm i --no-frozen-lockfile
 git add .
 git commit -m "$commitMessage"
@@ -16,10 +17,16 @@ if ($?)
 {
     npx stylelint "**/*.module.css" --fix
 }
+else {
+    Break
+}
 
 if ($?)
 {
     npx turbo test
+}
+else {
+    Break
 }
 
 if ($?)
