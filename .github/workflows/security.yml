@@ -2,7 +2,7 @@ name: Security
 on:
   push:
     branches:
-      - main
+      - develop
   pull_request:
     types: [ opened, synchronize, reopened ]
 jobs:
@@ -62,3 +62,24 @@ jobs:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         with:
           args: --all-projects --severity-threshold=low
+  build:
+    name: Build and Test
+    runs-on: ubuntu-latest
+    env:
+      TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+      TURBO_TEAM: ${{ secrets.TURBO_TEAM }}
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          force-depth: 2
+      - uses: pnpm/action-setup@v2.0.1
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: 'pnpm'
+      - name: Install Dependencies
+        run: pnpm install
+      - name: Build
+        run: pnpm build
+      - name: Test
+        run: pnpm test
