@@ -14,7 +14,7 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
-    "caniuse-lite": "^1.0.30001431",
+    "caniuse-lite": "^1.0.30001434",
     "eslint-config-ethang": "workspace:*",
     "prettier": "latest",
     "stylelint": "^14.15.0",
