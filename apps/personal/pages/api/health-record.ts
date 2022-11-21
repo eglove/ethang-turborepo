@@ -23,10 +23,7 @@ export default async function handler(
     const heightInCm = height / 0.393_701;
     const bmr = 13.397 * weightInKg + 4.799 * heightInCm - 5.677 * age + 88.362;
 
-    if (
-      database_.data !== null &&
-      typeof database_.data.healthRecord !== 'undefined'
-    ) {
+    if (database_?.data?.healthRecord !== undefined) {
       database_.data.healthRecord = {
         age,
         bmr,

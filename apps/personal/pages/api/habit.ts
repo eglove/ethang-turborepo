@@ -16,10 +16,7 @@ export default async function handler(
   if (request.method === 'POST') {
     const { name, recurs } = habitPostBody.parse(JSON.parse(request.body));
 
-    if (
-      database_.data !== null &&
-      typeof database_.data.habit !== 'undefined'
-    ) {
+    if (database_?.data?.habit !== undefined) {
       database_.data.habit[name] = {
         due: new Date(),
         recurs,

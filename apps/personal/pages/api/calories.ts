@@ -18,10 +18,7 @@ export default async function handler(
   if (request.method === 'POST') {
     const { calories } = caloriePostBody.parse(JSON.parse(request.body));
 
-    if (
-      database_.data !== null &&
-      typeof database_.data.calorieRecord !== 'undefined'
-    ) {
+    if (database_.data?.calorieRecord !== undefined) {
       database_.data.calorieRecord[randomUUID()] = {
         consumed: calories,
         date: new Date(),
