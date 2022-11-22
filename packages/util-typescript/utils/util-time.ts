@@ -181,7 +181,7 @@ export const animationInterval = (
   callback: IntervalCallback
 ): void => {
   const start =
-    typeof document.timeline === 'undefined'
+    document.timeline === undefined
       ? performance.now()
       : document.timeline.currentTime;
 
@@ -195,7 +195,7 @@ export const animationInterval = (
   };
 
   const scheduleFrame = (time: number | undefined): void => {
-    if (typeof time !== 'undefined' && start !== null) {
+    if (time !== undefined && start !== null) {
       const elapsed = time - start;
       const roundedElapsed = Math.round(elapsed / ms) * ms;
       const targetNext = start + roundedElapsed + ms;
