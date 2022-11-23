@@ -55,7 +55,7 @@ export const useForm = <StateType>(
     let { value } = eventTarget;
     const { checked, name, type, files } = eventTarget;
 
-    if (type === 'checkbox' && typeof checked !== 'undefined') {
+    if (type === 'checkbox' && checked !== undefined) {
       value = checked;
     }
 
@@ -112,7 +112,7 @@ export const useForm = <StateType>(
     }
 
     let hasException = false;
-    if (typeof properties?.onSubmit !== 'undefined') {
+    if (properties?.onSubmit !== undefined) {
       try {
         properties.onSubmit();
       } catch (error: unknown) {

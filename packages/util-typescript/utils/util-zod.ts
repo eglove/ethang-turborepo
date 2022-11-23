@@ -10,7 +10,7 @@ export const getZodFieldErrors = (
     for (const key of Object.keys(formState)) {
       const errorArray = error.formErrors.fieldErrors[key];
 
-      if (typeof errorArray !== 'undefined') {
+      if (errorArray !== undefined) {
         errors[key] = errorArray;
       }
     }

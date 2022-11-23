@@ -6,7 +6,7 @@ importers:
     specifiers:
       caniuse-lite: ^1.0.30001434
       eslint-config-ethang: workspace:*
-      prettier: latest
+      prettier: ^2.8.0
       stylelint: ^14.15.0
       stylelint-a11y: ^1.2.3
       stylelint-config-prettier: ^9.0.4
@@ -18,7 +18,7 @@ importers:
     devDependencies:
       caniuse-lite: 1.0.30001434
       eslint-config-ethang: link:packages/eslint-config-ethang
-      prettier: 2.7.1
+      prettier: 2.8.0
       stylelint: 14.15.0
       stylelint-a11y: 1.2.3_stylelint@14.15.0
       stylelint-config-prettier: 9.0.4_stylelint@14.15.0
@@ -434,7 +434,7 @@ importers:
       eslint-plugin-typescript-sort-keys: ^2.1.0
       eslint-plugin-unicorn: ^45.0.0
       eslint-plugin-unused-imports: ^2.0.0
-      prettier: ^2.7.1
+      prettier: ^2.8.0
       tsconfig: workspace:*
       typescript: ^4.9.3
     dependencies:
@@ -448,7 +448,7 @@ importers:
       eslint-config-xo-react: 0.27.0_qitxoqxnyst6lfrl5zg7zrvpve
       eslint-config-xo-space: 0.34.0_eslint@8.28.0
       eslint-config-xo-typescript: 0.55.0_mtaroko63nuj4uo2yxakgj7aly
-      eslint-plugin-prettier: 4.2.1_pgxuib4rd7wiymfktharf5ydt4
+      eslint-plugin-prettier: 4.2.1_cwlo2dingkvfydnaculr42urve
       eslint-plugin-react: 7.31.11_eslint@8.28.0
       eslint-plugin-react-hooks: 4.6.0_eslint@8.28.0
       eslint-plugin-simple-import-sort: 8.0.0_eslint@8.28.0
@@ -456,7 +456,7 @@ importers:
       eslint-plugin-typescript-sort-keys: 2.1.0_fnsv2sbzcckq65bwfk7a5xwslu
       eslint-plugin-unicorn: 45.0.0_eslint@8.28.0
       eslint-plugin-unused-imports: 2.0.0_aucl44mjeutxyzmt4nvo2cczya
-      prettier: 2.7.1
+      prettier: 2.8.0
       tsconfig: link:../tsconfig
     devDependencies:
       typescript: 4.9.3
@@ -613,14 +613,14 @@ importers:
 
   packages/util-prisma-graphql:
     specifiers:
-      '@paljs/plugins': ^5.0.2
+      '@paljs/plugins': ^5.0.3
       '@prisma/generator-helper': ^4.6.1
       eslint-config-ethang: workspace:*
       graphql: ^16.6.0
       tsconfig: workspace:*
       util-typescript: workspace:*
     dependencies:
-      '@paljs/plugins': 5.0.2_graphql@16.6.0
+      '@paljs/plugins': 5.0.3_graphql@16.6.0
       '@prisma/generator-helper': 4.6.1
       graphql: 16.6.0
       util-typescript: link:../util-typescript
@@ -5462,8 +5462,8 @@ packages:
     engines: {node: '>=14'}
     dev: false
 
-  /@paljs/display/5.0.2:
-    resolution: {integrity: sha512-wnfwezJdgtXCcAGHZ6vPqbQhgt6ATe3zqAsmVFCdo3vGScgnq5QKHvtt2GV+eQ+BI01vYu2ovs/AkiHnRx8SiQ==}
+  /@paljs/display/5.0.3:
+    resolution: {integrity: sha512-Zn/tG1a+Ho1dPMSC4gU2qwy2l0aXv0kXUtReAFg7kx483uGlcTj4AUAh7yz8U4dht+LW9hTNmIPjJf90PF9Ysw==}
     dependencies:
       chalk: 4.1.2
       debug: 4.3.4
@@ -5473,32 +5473,32 @@ packages:
       - supports-color
     dev: false
 
-  /@paljs/plugins/5.0.2_graphql@16.6.0:
-    resolution: {integrity: sha512-HmU40dHNGUmIniRhSzBbqc0S5pzRTG8wrMpozMYOnnwnyXv6YAAqyquPgGncXs+GzU/Q0RFTdLo2yxSjENQkxg==}
+  /@paljs/plugins/5.0.3_graphql@16.6.0:
+    resolution: {integrity: sha512-FIYSb0kF3IT6jd3m8xsI6FudtJA6OlYIOBqJDE8HXk6a0/i+KS6ViN5Ubkh3fK+5/C4b7A97nTz+xwK5bkbA/A==}
     peerDependencies:
       '@prisma/client': ^4
       graphql: ^15 | ^16
     dependencies:
-      '@paljs/types': 5.0.2
-      '@paljs/utils': 5.0.2
+      '@paljs/types': 5.0.3
+      '@paljs/utils': 5.0.3
       graphql: 16.6.0
       graphql-parse-resolve-info: 4.12.3_graphql@16.6.0
       graphql-tag: 2.12.6_graphql@16.6.0
-      prettier: 2.7.1
+      prettier: 2.8.0
     transitivePeerDependencies:
       - encoding
       - supports-color
     dev: false
 
-  /@paljs/types/5.0.2:
-    resolution: {integrity: sha512-tZL0whqqgN954dl58OS9mReOuJERnWIG0TgUq/PzZ0K1angf2yz3UlM/YVc/Wu1Ks03+qvMqxyzl0xqFUx1mkA==}
+  /@paljs/types/5.0.3:
+    resolution: {integrity: sha512-KB6vYpx4zEMLN3CYjnBkc8CB3fm1zl0ezwJ1f8Pm1Pi9Hwc69vsqxBTUT82kx//CiRiT1VSbmdqMxK1aiVEqaw==}
     dev: false
 
-  /@paljs/utils/5.0.2:
-    resolution: {integrity: sha512-c4Y101lP8mTHJZxW2rSZodUiuEU6qE0j2OsGnmUSGGzsmGvcO9AoWrChJOZlr6UZfzRScoRfFfomKANR/PWORw==}
+  /@paljs/utils/5.0.3:
+    resolution: {integrity: sha512-mtzOltJ8pA4yVOvaRxbxO4NObTRF65RQcVZRmQ600g20neeQ75WDEkaQeFCr68wL48WlHAtLS3zMF1oos6FQxw==}
     dependencies:
-      '@paljs/display': 5.0.2
-      '@paljs/types': 5.0.2
+      '@paljs/display': 5.0.3
+      '@paljs/types': 5.0.3
       '@prisma/internals': 4.6.1
     transitivePeerDependencies:
       - encoding
@@ -12426,7 +12426,7 @@ packages:
       minimatch: 3.1.2
       semver: 6.3.0
 
-  /eslint-plugin-prettier/4.2.1_pgxuib4rd7wiymfktharf5ydt4:
+  /eslint-plugin-prettier/4.2.1_cwlo2dingkvfydnaculr42urve:
     resolution: {integrity: sha512-f/0rXLXUt0oFYs8ra4w49wYZBG5GKZpAYsJSm6rnYL5uVDjd+zowwMwVZHnAjf4edNrKpCDYfXDgmRE/Ak7QyQ==}
     engines: {node: '>=12.0.0'}
     peerDependencies:
@@ -12439,7 +12439,7 @@ packages:
     dependencies:
       eslint: 8.28.0
       eslint-config-prettier: 8.5.0_eslint@8.28.0
-      prettier: 2.7.1
+      prettier: 2.8.0
       prettier-linter-helpers: 1.0.0
     dev: false
 
@@ -19427,8 +19427,8 @@ packages:
       fast-diff: 1.2.0
     dev: false
 
-  /prettier/2.7.1:
-    resolution: {integrity: sha512-ujppO+MkdPqoVINuDFDRLClm7D78qbDt0/NR+wp5FqEZOoTNAjPHWj17QRhu7geIHJfcNhRk1XVQmF8Bp3ye+g==}
+  /prettier/2.8.0:
+    resolution: {integrity: sha512-9Lmg8hTFZKG0Asr/kW9Bp8tJjRVluO8EJQVfY2T7FMw9T5jy4I/Uvx0Rca/XWf50QQ1/SS48+6IJWnrb+2yemA==}
     engines: {node: '>=10.13.0'}
     hasBin: true
 

@@ -9,7 +9,7 @@ export const portableTextComponents = {
     image(properties: {
       value?: { altText?: string; asset: ImageAsset };
     }): JSX.Element | null {
-      if (typeof properties.value?.asset !== 'undefined') {
+      if (properties.value?.asset !== undefined) {
         return (
           <SanityPortableImage
             altText={properties?.value?.altText ?? ''}
