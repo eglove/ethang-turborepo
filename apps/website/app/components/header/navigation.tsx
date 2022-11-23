@@ -14,7 +14,7 @@ export function Navigation(): JSX.Element {
       title: 'Courses',
     },
     {
-      link: './files/Ethan-Glover-Resume.pdf',
+      link: '/resume',
       title: 'Resume',
     },
   ];
