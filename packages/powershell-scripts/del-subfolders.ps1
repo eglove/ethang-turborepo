@@ -6,4 +6,4 @@ if (!$directory)
 }
 
 Set-Location ~/Projects/ethang-turborepo
-Get-ChildItem -Include $directory -Recurse -Force | Remove-Item -Recurse -Force
+Get-ChildItem -Filter $directory -Recurse -Force | Remove-Item -Recurse -Force

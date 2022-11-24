@@ -1,12 +1,12 @@
 .HeaderContainer {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(40px, auto);
-  margin: 0 1rem;
+  margin: 0 16px;
 }
 
 .Header {
-  padding: 0.5rem;
-  margin: 1rem 0 0;
+  padding: 8px;
+  margin: 16px 0 0;
   font-size: 2em;
   font-weight: bold;
   color: var(--header-font-color);
@@ -36,7 +36,6 @@
 .Navigation ul li {
   box-sizing: border-box;
   width: 100%;
-  min-width: 248px;
   text-align: center;
   list-style: none;
   background-color: var(--background-color);
@@ -53,8 +52,8 @@
   display: grid;
   align-items: center;
   justify-content: space-between;
-  padding: 0 0.3rem;
-  margin-top: 1rem;
+  padding: 0 4px;
+  margin-top: 16px;
   background-color: var(--background-color);
 }
 
