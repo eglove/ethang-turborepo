@@ -209,7 +209,6 @@ importers:
       express-history-api-fallback: ^2.2.1
       prop-types: ^15.7
       react: ^17.0
-      react-barcode: ^1.4.6
       react-dom: ^17.0
       styled-components: ^5.3.6
     dependencies:
@@ -232,7 +231,6 @@ importers:
       express-history-api-fallback: 2.2.1
       prop-types: 15.8.1
       react: 17.0.2
-      react-barcode: 1.4.6_react@17.0.2
       react-dom: 17.0.2_react@17.0.2
       styled-components: 5.3.6_v5ja746gkdtknuc6tj46sve3be
 
@@ -6732,7 +6730,7 @@ packages:
     resolution: {integrity: sha512-9K4zoImiZc3HlIp6AVUDE4CWYx22a+lhSZMYNpbjW04+YF0KWj4pJXnEMjdnFTiQibFFmElcsasJXDbdI/EPhA==}
     dependencies:
       '@types/eslint': 8.4.10
-      '@types/estree': 0.0.51
+      '@types/estree': 1.0.0
 
   /@types/eslint/8.4.10:
     resolution: {integrity: sha512-Sl/HOqN8NKPmhWo2VBEPm0nvHnu2LL3v9vKo8MEq0EtbJ4eVzGPl41VNPvn5E1i5poMk4/XD8UriLHpJvEP/Nw==}
@@ -15012,11 +15010,6 @@ packages:
     dependencies:
       argparse: 2.0.1
 
-  /jsbarcode/3.11.5:
-    resolution: {integrity: sha512-zv3KsH51zD00I/LrFzFSM6dst7rDn0vIMzaiZFL7qusTjPZiPtxg3zxetp0RR7obmjTw4f6NyGgbdkBCgZUIrA==}
-    hasBin: true
-    dev: false
-
   /jsbn/0.1.1:
     resolution: {integrity: sha512-UVU9dibq2JcFWxQPA6KCqj5O42VOmAY3zQUfEKxU0KpTGXwNoCjkX1e13eHNvw/xPynt6pU0rZ1htjWTNTSXsg==}
     dev: false
@@ -18675,16 +18668,6 @@ packages:
       raf: 3.4.1
       regenerator-runtime: 0.13.10
       whatwg-fetch: 3.6.2
-
-  /react-barcode/1.4.6_react@17.0.2:
-    resolution: {integrity: sha512-56WCPqjgpExPVi5LgKOfxM6uSCB4Wd1r94jY2VEwkIdigPjLp8P9RyIBIyQmDraxtYGOHE0e4Uer4+QrmOIy7Q==}
-    peerDependencies:
-      react: ^16.0.0 || ^17.0.0 || ^18.0.0
-    dependencies:
-      jsbarcode: 3.11.5
-      prop-types: 15.8.1
-      react: 17.0.2
-    dev: false
 
   /react-base16-styling/0.6.0:
     resolution: {integrity: sha512-yvh/7CArceR/jNATXOKDlvTnPKPmGZz7zsenQ3jUwLzHkNUR0CvY3yGYJbWJ/nnxsL8Sgmt5cO3/SILVuPO6TQ==}
@@ -22667,7 +22650,7 @@ packages:
       acorn-import-assertions: 1.8.0_acorn@8.8.1
       browserslist: 4.21.4
       chrome-trace-event: 1.0.3
-      enhanced-resolve: 5.10.0
+      enhanced-resolve: 5.12.0
       es-module-lexer: 0.9.3
       eslint-scope: 5.1.1
       events: 3.3.0
