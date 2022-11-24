@@ -1,6 +1,6 @@
-import './button.css';
-
 import type { ButtonHTMLAttributes } from 'react';
+
+import styles from './button.module.css';
 
 const SIZES = {
   large: {
@@ -40,7 +40,7 @@ export function Button({
       type="button"
       {...buttonProperties}
       style={{ ...derivedStyles, ...buttonProperties?.style }}
-      className={`${'ButtonElement'} ${variant} ${
+      className={`${styles.ButtonElement} ${styles[variant]} ${
         buttonProperties?.className ?? ''
       }`}
     >

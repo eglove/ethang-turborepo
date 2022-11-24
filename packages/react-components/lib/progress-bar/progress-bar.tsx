@@ -1,6 +1,5 @@
-import './progress-bar.css';
-
 import { VisuallyHidden } from '../visually-hidden/visually-hidden';
+import styles from './progress-bar.module.css';
 
 type SizeType = {
   borderRadius: number;
@@ -43,13 +42,13 @@ export function ProgressBar({
       aria-valuemax={100}
       aria-valuemin={0}
       aria-valuenow={progress}
-      className="ProgressBarContainer"
+      className={styles.ProgressBarContainer}
       role="progressbar"
       style={{ borderRadius: `${borderRadius}px`, padding: `${padding}px` }}
     >
       <VisuallyHidden>{`${progress}%`}</VisuallyHidden>
       <div
-        className="Bar"
+        className={styles.Bar}
         style={{
           height: `${height}px`,
           width: `${progress}%`,

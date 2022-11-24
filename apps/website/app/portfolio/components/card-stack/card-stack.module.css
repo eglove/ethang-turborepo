@@ -1,0 +1,125 @@
+.Container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    place-items: center;
+    padding: 1.5rem;
+    overflow: hidden;
+}
+
+.Fieldset {
+    display: grid;
+    gap: 1rem;
+}
+
+.Fieldset > label {
+    grid-column: 2;
+}
+
+.Form {
+    display: grid;
+    gap: 1rem;
+    justify-items: start;
+}
+
+.RadioInput {
+    inline-size: auto;
+    block-size: auto;
+}
+
+.CardStack {
+    display: grid;
+    grid: [row] 1fr / [column] min(50vmin, 40ch);
+    justify-self: start;
+}
+
+.Card {
+    --better-bottom-left: -25% 125%;
+    --better-bottom-center: center 200%;
+    --better-bottom-right: 125% 125%;
+    --better-top-left: -25% -25%;
+    --better-top-center: center -200%;
+    --better-top-right: 125% -25%;
+    grid-area: row / column;
+    aspect-ratio: 3/4;
+    background: hsl(210deg 16% 93%);
+    border-radius: 2rem;
+    box-shadow: 0 -1px 3px 0 hsl(220deg 3% 15%/calc(1% + 2%)),0 1px 2px -5px hsl(220deg 3% 15%/calc(1% + 2%)),0 2px 5px -5px hsl(220deg 3% 15%/calc(1% + 4%)),0 4px 12px -5px hsl(220deg 3% 15%/calc(1% + 5%)),0 12px 15px -5px hsl(220deg 3% 15%/calc(1% + 7%));
+    transition:
+            transform-origin .5s cubic-bezier(.5,-.7,.1,1.5),
+            transform .25s cubic-bezier(.5,0,.5,1);
+    transform: rotate(var(--r, 0deg)) translateY(var(--t, 0));
+}
+
+.Card:hover, .Card:focus {
+    --t: 50px;
+}
+
+.Card:nth-of-type(5) {
+    --scalar: 1;
+    --r: 0deg;
+    background: hsl(228deg 94% 67%);
+}
+
+.Card:nth-of-type(4) {
+    --r: calc(var(--scalar, 5) * 1deg);
+    background: hsl(288deg 75% 64%);
+}
+
+.Card:nth-of-type(3) {
+    --r: calc(var(--scalar, 5) * 1deg * -1);
+    background: hsl(255deg 91% 67%);
+}
+
+.Card:nth-of-type(2) {
+    --r: calc(var(--scalar, 5) * 2 * 1deg);
+    background: hsl(207deg 86% 57%);
+}
+
+.Card:nth-of-type(1) {
+    --r: calc(var(--scalar, 5) * 2 * 1deg * -1);
+    background: hsl(162deg 73% 46%);
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+    .Card {
+        transition: none;
+    }
+}
+
+/*  radio states  */
+html:has(#mode-bottom-left:checked) .card-stack > .card {
+    transform-origin: bottom left;
+}
+
+html:has(#mode-top-left:checked) .card-stack > .card {
+    transform-origin: top left;
+}
+
+html:has(#mode-top-right:checked) .card-stack > .card {
+    transform-origin: top right;
+}
+
+html:has(#mode-bottom-right:checked) .card-stack > .card {
+    transform-origin: bottom right;
+}
+
+html:has(#mode-bottom-center:checked) .card-stack > .card {
+    transform-origin: bottom center;
+}
+
+html:has(#mode-better-bottom-center:checked) .card-stack > .card {
+    transform-origin: var(--better-bottom-center);
+}
+
+html:has(#mode-better-top-left:checked) .card-stack > .card {
+    transform-origin: var(--better-top-left);
+}
+
+html:has(#mode-center:checked) .card-stack > .card {
+    transform-origin: center;
+}
+
+html:has(#mode-bett:checked) .card-stack > .card {
+    transform-origin: var(--better-top-center);
+}

@@ -1,8 +1,7 @@
-import './pagination.css';
-
 import type { Dispatch, SetStateAction } from 'react';
 
 import { Button } from '../button/button';
+import styles from './pagination.module.css';
 
 type PaginationProperties = {
   pageLength: number;
@@ -30,7 +29,7 @@ export function Pagination({
   };
 
   return (
-    <div className="PaginationContainer">
+    <div className={styles.PaginationContainer}>
       <Button
         size="small"
         text="Previous"

@@ -1,0 +1,8 @@
+.Header {
+    text-align: center;
+}
+
+.ProjectContainer {
+    display: grid;
+    gap: 16px;
+}
