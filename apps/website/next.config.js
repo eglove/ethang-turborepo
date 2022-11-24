@@ -12,7 +12,7 @@ const nextConfig = {
     ]
   },
   experimental: {
-    transpilePackages: ['next-components', 'react-components'],
+    transpilePackages: ['next-components', 'next-radix', 'node-environment', 'react-components', 'react-hooks', 'util-typescript'],
     appDir: true,
   },
 }

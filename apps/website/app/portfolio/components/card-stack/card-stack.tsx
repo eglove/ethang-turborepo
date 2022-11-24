@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { type ChangeEvent, useRef, useState } from 'react';
 
 import styles from './card-stack.module.css';
@@ -88,6 +89,11 @@ export function CardStack(): JSX.Element {
   return (
     <div>
       <h2>Card Stack</h2>
+      <p>
+        <Link href="https://github.com/eglove/ethang-turborepo/tree/main/apps/website/app/portfolio/components/card-stack">
+          Source
+        </Link>
+      </p>
       <div className={styles.Container}>
         <form className={styles.Form}>
           <fieldset className={styles.Fieldset}>
