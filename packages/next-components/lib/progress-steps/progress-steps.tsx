@@ -13,8 +13,12 @@ export function ProgressSteps({
   stepLabels,
   activeLabels,
 }: ProgressStepsProperties): JSX.Element {
-  const progressWidth =
+  let progressWidth =
     ((activeLabels.length - 1) / (stepLabels.length - 1)) * 100;
+
+  if (progressWidth < 0) {
+    progressWidth = 0;
+  }
 
   return (
     <div className={styles.Container}>
