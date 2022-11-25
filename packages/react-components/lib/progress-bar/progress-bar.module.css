@@ -11,4 +11,11 @@
   height: 8px;
   background-color: var(--primary-color);
   border-radius: 4px;
+  transition: 0.5s ease;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .Bar {
+    transition: none;
+  }
 }

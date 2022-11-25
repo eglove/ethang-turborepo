@@ -10,12 +10,12 @@ export function ProgressBarDemo(): JSX.Element {
   const [value, setValue] = useState(0);
   const [size, setSize] = useState('large');
 
-  useAnimationInterval(300, () => {
-    if (value === 100) {
+  useAnimationInterval(500, () => {
+    if (value >= 100) {
       setValue(0);
     } else {
       setValue(value_ => {
-        return value_ + 1;
+        return value_ + 10;
       });
     }
   });
