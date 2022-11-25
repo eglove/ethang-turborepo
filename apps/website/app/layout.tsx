@@ -41,10 +41,10 @@ export default function RootLayout({
         <meta charSet="utf8" />
         <meta content="width=device-width" name="viewport" />
       </head>
-      <main className={styles.ContentContainer}>
+      <body className={styles.ContentContainer}>
         <Header />
         {children}
-      </main>
+      </body>
     </html>
   );
 }
