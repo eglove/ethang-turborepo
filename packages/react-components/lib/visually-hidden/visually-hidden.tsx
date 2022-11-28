@@ -1,7 +1,23 @@
 'use client';
 
-import type { HTMLAttributes } from 'react';
-import { useEffect, useState } from 'react';
+import {
+  type CSSProperties,
+  type HTMLAttributes,
+  useEffect,
+  useState,
+} from 'react';
+
+const hiddenStyles: CSSProperties = {
+  border: 0,
+  clip: 'rect(0 0 0 0)',
+  display: 'inline-block',
+  height: 1,
+  margin: -1,
+  overflow: 'hidden',
+  padding: 0,
+  position: 'absolute',
+  width: 1,
+};
 
 type VisuallyHiddenProperties = {
   children: JSX.Element | JSX.Element[] | string | number;
@@ -22,8 +38,10 @@ export function VisuallyHidden({
         }
       };
 
-      const handleKeyUp = (): void => {
-        setForceShow(false);
+      const handleKeyUp = (event: KeyboardEvent): void => {
+        if (event.key === 'Alt') {
+          setForceShow(false);
+        }
       };
 
       window.addEventListener('keydown', handleKeyDown);
@@ -41,12 +59,12 @@ export function VisuallyHidden({
   }, []);
 
   if (forceShow) {
-    return <div>{children}</div>;
+    return children as JSX.Element;
   }
 
   return (
-    <div className="visually-hidden" {...divProperties}>
+    <span style={hiddenStyles} {...divProperties}>
       {children}
-    </div>
+    </span>
   );
 }
