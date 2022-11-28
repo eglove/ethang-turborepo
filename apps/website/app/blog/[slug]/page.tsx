@@ -31,7 +31,14 @@ export default async function Blog({
 
   const authors = blog.authors.map(blogAuthor => {
     return (
-      <span itemProp="author" key={blogAuthor.name}>
+      <span
+        key={blogAuthor.name}
+        itemProp={
+          blog.reviews === undefined || blog.reviews === null
+            ? 'author'
+            : undefined
+        }
+      >
         {blogAuthor.name}
       </span>
     );
@@ -41,7 +48,10 @@ export default async function Blog({
     <Container
       containerProperties={{
         itemScope: true,
-        itemType: 'https://schema.org/BlogPosting',
+        itemType:
+          blog.reviews === undefined || blog.reviews === null
+            ? 'https://schema.org/BlogPosting'
+            : 'https://schema.org/Review',
       }}
     >
       <Breadcrumbs
@@ -73,7 +83,7 @@ export default async function Blog({
       </div>
       <hr />
       <article>
-        {blog.reviews && (
+        {blog.reviews !== undefined && blog.reviews !== null && (
           <div
             itemScope
             itemProp="mainEntity"
@@ -104,7 +114,15 @@ export default async function Blog({
             </p>
           </div>
         )}
-        <PortableTextWrapper value={blog.content} />
+        <span
+          itemProp={
+            blog.reviews === undefined || blog.reviews === null
+              ? undefined
+              : 'reviewBody'
+          }
+        >
+          <PortableTextWrapper value={blog.content} />
+        </span>
       </article>
     </Container>
   );
