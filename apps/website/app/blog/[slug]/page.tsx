@@ -73,6 +73,35 @@ export default async function Blog({
       </div>
       <hr />
       <article>
+        {blog.reviews === undefined ? null : (
+          <div
+            itemScope
+            itemProp="mainEntity"
+            itemType="https://schema.org/Course"
+          >
+            <p>
+              Course: <span itemProp="name">{blog.reviews.title}</span>
+            </p>
+            <p
+              itemScope
+              itemProp="aggregateRating"
+              itemType="https://schema.org/AggregateRating"
+            >
+              Rating: <span itemProp="ratingValue">{blog.reviews.rating}</span>
+              /5
+            </p>
+            <p>
+              Instructors:{' '}
+              {blog.reviews.instructors.map(instructor => {
+                return (
+                  <span itemProp="author" key={instructor.name}>
+                    {instructor.name}
+                  </span>
+                );
+              })}
+            </p>
+          </div>
+        )}
         <PortableTextWrapper value={blog.content} />
       </article>
     </Container>

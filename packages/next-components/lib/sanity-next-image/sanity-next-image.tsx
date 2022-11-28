@@ -35,6 +35,7 @@ export function SanityNextImage({
       alt={altText}
       blurDataURL={`${image.asset.url}?w=${blurWidth}&blur=50&quality=30&fit=clip&auto=format`}
       height={heightOverride ?? image.asset.metadata.dimensions.height}
+      itemProp="image"
       placeholder="blur"
       src={`${image.asset.url}?auto=format`}
       style={{ height: 'auto', objectFit: 'contain', position: 'relative' }}
