@@ -1,7 +1,4 @@
-import Script from 'next/script';
 import { SanityNextImage } from 'next-components';
-import { JsonLd, jsonLdScriptProps } from 'react-schemaorg';
-import type { Blog as BlogSchema, Review } from 'schema-dts';
 import { humanReadableLocalDateTime } from 'util-typescript';
 
 import { ethangSanityClient } from '../../../util/sanity';
@@ -33,54 +30,20 @@ export default async function Blog({
   const blog = await getBlog(params.slug);
 
   const authors = blog.authors.map(blogAuthor => {
-    return blogAuthor.name;
+    return (
+      <span itemProp="author" key={blogAuthor.name}>
+        {blogAuthor.name}
+      </span>
+    );
   });
 
   return (
-    <Container>
-      <Script
-        {...jsonLdScriptProps<BlogSchema>({
-          '@context': 'https://schema.org',
-          '@type': 'Blog',
-          audience: 'Developers',
-          author: {
-            '@type': 'Person',
-            name: 'Ethan Glover',
-            url: 'https://ethang.dev/',
-          },
-          dateModified: new Date(blog.updatedAt).toUTCString(),
-          datePublished: new Date(blog.publishedAt).toUTCString(),
-          description: blog.description,
-          headline: blog.title,
-          image: blog.featuredImage.image.asset.url,
-          thumbnailUrl: `${blog.featuredImage.image.asset.url}`,
-        })}
-      />
-      {typeof blog?.reviews === 'undefined' || blog?.reviews === null ? (
-        // eslint-disable-next-line react/jsx-no-useless-fragment
-        <></>
-      ) : (
-        <JsonLd<Review>
-          item={{
-            '@context': 'https://schema.org',
-            '@type': 'Review',
-            author: {
-              '@type': 'Person',
-              name: authors?.[0],
-            },
-            creator: blog?.reviews.instructors?.[0].name,
-            itemReviewed: {
-              '@type': 'Course',
-              image: blog.featuredImage.image.asset.url,
-            },
-            name: blog?.reviews.title,
-            reviewRating: {
-              '@type': 'Rating',
-              ratingValue: blog?.reviews.rating,
-            },
-          }}
-        />
-      )}
+    <Container
+      containerProperties={{
+        itemScope: true,
+        itemType: 'https://schema.org/BlogPosting',
+      }}
+    >
       <Breadcrumbs
         links={[
           { href: '/', label: 'Home' },
@@ -90,13 +53,18 @@ export default async function Blog({
       />
       <div className={styles.BlogInfo}>
         <div>
-          <h1 className={styles.Title}>{blog.title}</h1>
+          <h1 className={styles.Title} itemProp="headline">
+            {blog.title}
+          </h1>
           <div>
             Author{blog.authors.length > 1 ? 's' : ''}: {authors}
           </div>
-          <div>{`Last Updated: ${humanReadableLocalDateTime(
-            blog.updatedAt
-          )}`}</div>
+          <div>
+            Last Updated:{' '}
+            <time dateTime={blog.updatedAt}>{`${humanReadableLocalDateTime(
+              blog.updatedAt
+            )}`}</time>
+          </div>
         </div>
         <SanityNextImage
           altText={blog.featuredImage.description}

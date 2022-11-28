@@ -20,8 +20,6 @@
     "react-components": "workspace:*",
     "react-dom": "18.2.0",
     "react-hooks": "workspace:*",
-    "react-schemaorg": "^2.0.0",
-    "schema-dts": "^1.1.0",
     "util-typescript": "workspace:*"
   },
   "devDependencies": {

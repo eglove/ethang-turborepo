@@ -12,7 +12,7 @@ export function GistEmbed({
 }: ReactGistProperties): JSX.Element {
   return (
     <script
-      className="hello"
+      className="gist"
       src={`https://gist.github.com/${username}/${id}.js`}
     />
   );
