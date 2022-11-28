@@ -19,7 +19,7 @@
     "@babel/core": "^7.20.5",
     "@sanity/base": "^2.35.2",
     "@sanity/cli": "^2.35.0",
-    "@sanity/code-input": "^2.35.2",
+    "@sanity/code-input": "^3.0.0",
     "@sanity/color": "^2.1.20",
     "@sanity/core": "^2.35.0",
     "@sanity/data-aspects": "^2.33.2",
