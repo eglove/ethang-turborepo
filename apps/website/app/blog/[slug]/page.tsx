@@ -73,15 +73,17 @@ export default async function Blog({
       </div>
       <hr />
       <article>
-        {blog.reviews === undefined ? null : (
+        {blog.reviews && (
           <div
             itemScope
             itemProp="mainEntity"
             itemType="https://schema.org/Course"
           >
-            <p>
-              Course: <span itemProp="name">{blog.reviews.title}</span>
-            </p>
+            {blog.reviews.title && (
+              <p>
+                Course: <span itemProp="name">{blog.reviews.title}</span>
+              </p>
+            )}
             <p
               itemScope
               itemProp="aggregateRating"
