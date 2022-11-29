@@ -19,11 +19,17 @@
 
 .LogoContainer {
   padding: var(--small-space);
-  background-color: rgba(255 255 255 / 20%);
+  background-color: rgba(255 255 255 / 10%);
   border-radius: 10px;
   box-shadow: 0 3px 3px rgba(0 0 0 / 80%);
 }
 
 .LogoContainer:hover, .LogoContainer:focus {
   box-shadow: 0 3px 3px rgba(0 0 0 / 20%);
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  .LogoContainer img {
+    mix-blend-mode: hard-light;
+  }
 }
