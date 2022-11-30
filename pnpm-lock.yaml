@@ -4,7 +4,7 @@ importers:
 
   .:
     specifiers:
-      caniuse-lite: ^1.0.30001434
+      caniuse-lite: ^1.0.30001435
       eslint-config-ethang: workspace:*
       prettier: ^2.8.0
       stylelint: ^14.15.0
@@ -16,7 +16,7 @@ importers:
       stylelint-no-unsupported-browser-features: ^6.0.1
       turbo: ^1.6.3
     devDependencies:
-      caniuse-lite: 1.0.30001434
+      caniuse-lite: 1.0.30001435
       eslint-config-ethang: link:packages/eslint-config-ethang
       prettier: 2.8.0
       stylelint: 14.15.0
@@ -31,7 +31,7 @@ importers:
   apps/crwn-clothing:
     specifiers:
       '@faker-js/faker': ^7.6.0
-      '@reduxjs/toolkit': ^1.9.0
+      '@reduxjs/toolkit': ^1.9.1
       '@testing-library/jest-dom': ^5.16.5
       '@testing-library/react': ^13.4.0
       '@testing-library/user-event': ^14.4.3
@@ -57,7 +57,7 @@ importers:
       tsconfig: workspace:*
       typescript: ^4.9.3
     dependencies:
-      '@reduxjs/toolkit': 1.9.0_k4ae6lp43ej6mezo3ztvx6pykq
+      '@reduxjs/toolkit': 1.9.1_k4ae6lp43ej6mezo3ztvx6pykq
       firebase: 9.14.0
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
@@ -612,26 +612,26 @@ importers:
   packages/util-prisma-graphql:
     specifiers:
       '@paljs/plugins': ^5.1.0
-      '@prisma/client': ^4.6.1
-      '@prisma/generator-helper': ^4.6.1
+      '@prisma/client': ^4.7.0
+      '@prisma/generator-helper': ^4.7.0
       eslint-config-ethang: workspace:*
       graphql: ^16.6.0
       tsconfig: workspace:*
       util-typescript: workspace:*
     dependencies:
-      '@paljs/plugins': 5.1.0_pklidt7cjcgpcftevpowxyuoaa
-      '@prisma/generator-helper': 4.6.1
+      '@paljs/plugins': 5.1.0_lxx4i7iz5kuxja6cqehl64klxa
+      '@prisma/generator-helper': 4.7.0
       graphql: 16.6.0
       util-typescript: link:../util-typescript
     devDependencies:
-      '@prisma/client': 4.6.1
+      '@prisma/client': 4.7.0
       eslint-config-ethang: link:../eslint-config-ethang
       tsconfig: link:../tsconfig
 
   packages/util-typescript:
     specifiers:
       '@types/node': ^18.11.9
-      '@types/uuid': ^8.3.4
+      '@types/uuid': ^9.0.0
       '@types/validator': ^13.7.10
       fast-xml-parser: ^4.0.12
       tsconfig: workspace:*
@@ -645,7 +645,7 @@ importers:
       zod: 3.19.1
     devDependencies:
       '@types/node': 18.11.9
-      '@types/uuid': 8.3.4
+      '@types/uuid': 9.0.0
       '@types/validator': 13.7.10
       tsconfig: link:../tsconfig
 
@@ -2633,7 +2633,7 @@ packages:
       '@babel/helper-module-imports': 7.18.6
       '@babel/helper-plugin-utils': 7.20.2
       '@babel/plugin-syntax-jsx': 7.18.6_@babel+core@7.20.5
-      '@babel/types': 7.20.5
+      '@babel/types': 7.20.2
 
   /@babel/plugin-transform-react-pure-annotations/7.18.6_@babel+core@7.19.6:
     resolution: {integrity: sha512-I8VfEPg9r2TRDdvnHgPepTKvuRomzA8+u+nhY7qSI1fR2hRNebasZEETLyM5mAUr0Ku56OkXJ0I7NHJnO6cJiQ==}
@@ -3450,7 +3450,7 @@ packages:
       debug: 4.3.4
       espree: 9.4.1
       globals: 13.18.0
-      ignore: 5.2.0
+      ignore: 5.2.1
       import-fresh: 3.3.0
       js-yaml: 4.1.0
       minimatch: 3.1.2
@@ -4844,7 +4844,7 @@ packages:
       - supports-color
     dev: false
 
-  /@paljs/plugins/5.1.0_pklidt7cjcgpcftevpowxyuoaa:
+  /@paljs/plugins/5.1.0_lxx4i7iz5kuxja6cqehl64klxa:
     resolution: {integrity: sha512-f2ZTcB82nC2Xs1tPFMrUr58zS2TfjxFAB87FDifYxshBEYixxhsE8akpRdxf5EioiIjAb7CCzX/b+TJ8YU90+A==}
     peerDependencies:
       '@prisma/client': ^4
@@ -4852,7 +4852,7 @@ packages:
     dependencies:
       '@paljs/types': 5.1.0
       '@paljs/utils': 5.1.0
-      '@prisma/client': 4.6.1
+      '@prisma/client': 4.7.0
       graphql: 16.6.0
       graphql-parse-resolve-info: 4.12.3_graphql@16.6.0
       graphql-tag: 2.12.6_graphql@16.6.0
@@ -4974,8 +4974,8 @@ packages:
     resolution: {integrity: sha512-AjbCPt9x9U0XFwLuVnIxweBrDAlKKcPJRVkpckjMk77VKEQoYvX2dITf5QtQf1TlLIx8zHJFtMcLmiqDJiGuLg==}
     engines: {node: ^14.13.1 || >=16.0.0 || >=18.0.0}
 
-  /@prisma/client/4.6.1:
-    resolution: {integrity: sha512-M1+NNrMzqaOIxT7PBGcTs3IZo7d1EW/+gVQd4C4gUgWBDGgD9AcIeZnUSidgWClmpMSgVUdnVORjsWWGUameYA==}
+  /@prisma/client/4.7.0:
+    resolution: {integrity: sha512-keXMa0oJWJGOzMEFKp+CEgzJPwnOtGSrnTWw6qMYxnypYrRFdNxqyA06EzELZexBhgM4oLooZ1jDJ3iy46wExA==}
     engines: {node: '>=14.17'}
     requiresBuild: true
     peerDependencies:
@@ -4984,10 +4984,20 @@ packages:
       prisma:
         optional: true
     dependencies:
-      '@prisma/engines-version': 4.6.1-3.694eea289a8462c80264df36757e4fdc129b1b32
+      '@prisma/engines-version': 4.7.0-74.39190b250ebc338586e25e6da45e5e783bc8a635
 
   /@prisma/debug/4.6.1:
     resolution: {integrity: sha512-BezDvSenTgQDQ6WA3TdTDGcrt0Oh4vmpZtmSOYm1KaSZiSVIL2xT0P9TFM3vtOa4wn7sn/003PyTSxyHS3mShg==}
+    dependencies:
+      '@types/debug': 4.1.7
+      debug: 4.3.4
+      strip-ansi: 6.0.1
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
+  /@prisma/debug/4.7.0:
+    resolution: {integrity: sha512-KdfL70X2OgYMrweEiXa9pZReAPbsYbCbFAyT8Ud/8+w+zI1xOWpFZ4watK95ambK0f6/2p1kP6WGHGKOor1imA==}
     dependencies:
       '@types/debug': 4.1.7
       debug: 4.3.4
@@ -5017,8 +5027,8 @@ packages:
       - supports-color
     dev: false
 
-  /@prisma/engines-version/4.6.1-3.694eea289a8462c80264df36757e4fdc129b1b32:
-    resolution: {integrity: sha512-HUCmkXAU2jqp2O1RvNtbE+seLGLyJGEABZS/R38rZjSAafAy0WzBuHq+tbZMnD+b5OSCsTVtIPVcuvx1ySxcWQ==}
+  /@prisma/engines-version/4.7.0-74.39190b250ebc338586e25e6da45e5e783bc8a635:
+    resolution: {integrity: sha512-ImczGEQ8NS1OUApEeyAGxC4uLTtQp0wI1+2wM4MeQLVwIQbyMHk1vOhWWE8Pwbi3rnzLcPvsIrd9sm6oNXhERw==}
 
   /@prisma/engines/4.6.1:
     resolution: {integrity: sha512-3u2/XxvxB+Q7cMXHnKU0CpBiUK1QWqpgiBv28YDo1zOIJE3FCF8DI2vrp6vuwjGt5h0JGXDSvmSf4D4maVjJdw==}
@@ -5054,6 +5064,17 @@ packages:
     resolution: {integrity: sha512-70XBmqDhmpe8H35ttOJOgyg1OpppO/uelILB1SIwjeSI7PHHdU2+Y/+LkpnifkCEpSZKIhxEIPbHx17m2neAsA==}
     dependencies:
       '@prisma/debug': 4.6.1
+      '@types/cross-spawn': 6.0.2
+      chalk: 4.1.2
+      cross-spawn: 7.0.3
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
+  /@prisma/generator-helper/4.7.0:
+    resolution: {integrity: sha512-/RA7QoAPc7dTnRHULcK6c+F6t3AjKOn3XnqyY4XgmwN+IIWOhNaR4712Bid+CoK6ITyHYxgdg6B4iMscZnqXYQ==}
+    dependencies:
+      '@prisma/debug': 4.7.0
       '@types/cross-spawn': 6.0.2
       chalk: 4.1.2
       cross-spawn: 7.0.3
@@ -5502,8 +5523,8 @@ packages:
     resolution: {integrity: sha512-1dgmkh+3so0+LlBWRhGA33ua4MYr7tUOj+a9Si28vUi0IUFNbff1T3sgpeDJI/LaC75bBYnQ0A3wXjn0OrRNBA==}
     dev: false
 
-  /@reduxjs/toolkit/1.9.0_k4ae6lp43ej6mezo3ztvx6pykq:
-    resolution: {integrity: sha512-ak11IrjYcUXRqlhNPwnz6AcvA2ynJTu8PzDbbqQw4a3xR4KZtgiqbNblQD+10CRbfK4+5C79SOyxnT9dhBqFnA==}
+  /@reduxjs/toolkit/1.9.1_k4ae6lp43ej6mezo3ztvx6pykq:
+    resolution: {integrity: sha512-HikrdY+IDgRfRYlCTGUQaiCxxDDgM1mQrRbZ6S1HFZX5ZYuJ4o8EstNmhTwHdPl2rTmLxzwSu0b3AyeyTlR+RA==}
     peerDependencies:
       react: ^16.9.0 || ^17.0.0 || ^18
       react-redux: ^7.2.1 || ^8.0.2
@@ -7208,6 +7229,11 @@ packages:
 
   /@types/uuid/8.3.4:
     resolution: {integrity: sha512-c/I8ZRb51j+pYGAu5CrFMRxqZ2ke4y2grEBO5AUjgSkSk+qT2Ea+OdWElz/OiMf5MNpn2b17kuVBwZLQJXzihw==}
+    dev: false
+
+  /@types/uuid/9.0.0:
+    resolution: {integrity: sha512-kr90f+ERiQtKWMz5rP32ltJ/BtULDI5RVO0uavn1HQUOwjx0R1h0rnDYNL0CepF1zL5bSY6FISAfd9tOdDhU5Q==}
+    dev: true
 
   /@types/validator/13.7.10:
     resolution: {integrity: sha512-t1yxFAR2n0+VO6hd/FJ9F2uezAZVWHLmpmlJzm1eX03+H7+HsuTAp7L8QJs+2pQCfWkP1+EXsGK9Z9v7o/qPVQ==}
@@ -8331,7 +8357,7 @@ packages:
       postcss: ^8.1.0
     dependencies:
       browserslist: 4.21.4
-      caniuse-lite: 1.0.30001431
+      caniuse-lite: 1.0.30001435
       fraction.js: 4.2.0
       normalize-range: 0.1.2
       picocolors: 1.0.0
@@ -8981,7 +9007,7 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001434
+      caniuse-lite: 1.0.30001435
       electron-to-chromium: 1.4.284
       node-releases: 2.0.6
       update-browserslist-db: 1.0.10_browserslist@4.21.4
@@ -9179,15 +9205,16 @@ packages:
     resolution: {integrity: sha512-bsTwuIg/BZZK/vreVTYYbSWoe2F+71P7K5QGEX+pT250DZbfU1MQ5prOKpPR+LL6uWKK3KMwMCAS74QB3Um1uw==}
     dependencies:
       browserslist: 4.21.4
-      caniuse-lite: 1.0.30001434
+      caniuse-lite: 1.0.30001435
       lodash.memoize: 4.1.2
       lodash.uniq: 4.5.0
 
-  /caniuse-lite/1.0.30001431:
-    resolution: {integrity: sha512-zBUoFU0ZcxpvSt9IU66dXVT/3ctO1cy4y9cscs1szkPlcWb6pasYM144GqrUygUbT+k7cmUCW61cvskjcv0enQ==}
-
   /caniuse-lite/1.0.30001434:
     resolution: {integrity: sha512-aOBHrLmTQw//WFa2rcF1If9fa3ypkC1wzqqiKHgfdrXTWcU8C4gKVZT77eQAPWN1APys3+uQ0Df07rKauXGEYA==}
+    dev: false
+
+  /caniuse-lite/1.0.30001435:
+    resolution: {integrity: sha512-kdCkUTjR+v4YAJelyiDTqiu82BDr4W4CP5sgTA0ZBmqn30XfS2ZghPLMowik9TPhS+psWJiUNxsqLyurDbmutA==}
 
   /canvg/3.0.10:
     resolution: {integrity: sha512-qwR2FRNO9NlzTeKIPIKpnTY6fqwuYSequ8Ru8c0YkYU7U0oW+hLUvWadLvAu1Rl72OMNiFhoLu4f8eUjQ7l/+Q==}
@@ -10733,7 +10760,7 @@ packages:
     hasBin: true
     dependencies:
       browserslist: 4.21.4
-      caniuse-lite: 1.0.30001434
+      caniuse-lite: 1.0.30001435
       css-rule-stream: 1.1.0
       duplexer2: 0.0.2
       ldjson-stream: 1.2.1
@@ -11766,12 +11793,12 @@ packages:
       glob-parent: 6.0.2
       globals: 13.18.0
       grapheme-splitter: 1.0.4
-      ignore: 5.2.0
+      ignore: 5.2.1
       import-fresh: 3.3.0
       imurmurhash: 0.1.4
       is-glob: 4.0.3
       is-path-inside: 3.0.3
-      js-sdsl: 4.1.5
+      js-sdsl: 4.2.0
       js-yaml: 4.1.0
       json-stable-stringify-without-jsonify: 1.0.1
       levn: 0.4.1
@@ -12375,6 +12402,15 @@ packages:
       tslib: 2.4.1
     dev: false
 
+  /follow-redirects/1.15.2:
+    resolution: {integrity: sha512-VQLG33o04KaQ8uYi2tVNbdrWp1QWxNNea+nmIB4EVM28v0hmP17z7aG1+wAkNzVq4KeXTq3221ye5qTJP91JwA==}
+    engines: {node: '>=4.0'}
+    peerDependencies:
+      debug: '*'
+    peerDependenciesMeta:
+      debug:
+        optional: true
+
   /follow-redirects/1.15.2_debug@2.6.9:
     resolution: {integrity: sha512-VQLG33o04KaQ8uYi2tVNbdrWp1QWxNNea+nmIB4EVM28v0hmP17z7aG1+wAkNzVq4KeXTq3221ye5qTJP91JwA==}
     engines: {node: '>=4.0'}
@@ -12385,6 +12421,7 @@ packages:
         optional: true
     dependencies:
       debug: 2.6.9
+    dev: false
 
   /for-each/0.3.3:
     resolution: {integrity: sha512-jqYfLp7mo9vIyQf8ykW2v7A+2N4QjeCeI5+Dz9XraiO1ign81wjiH7Fb9vSOWvQfNtmSa4H2RoQTrrXivdUZmw==}
@@ -13348,7 +13385,7 @@ packages:
     engines: {node: '>=8.0.0'}
     dependencies:
       eventemitter3: 4.0.7
-      follow-redirects: 1.15.2_debug@2.6.9
+      follow-redirects: 1.15.2
       requires-port: 1.0.0
     transitivePeerDependencies:
       - debug
@@ -15213,8 +15250,8 @@ packages:
     resolution: {integrity: sha512-pZe//GGmwJndub7ZghVHz7vjb2LgC1m8B07Au3eYqeqv9emhESByMXxaEgkUkEqJe87oBbSniGYoQNIBklc7IQ==}
     dev: false
 
-  /js-sdsl/4.1.5:
-    resolution: {integrity: sha512-08bOAKweV2NUC1wqTtf3qZlnpOX/R2DU9ikpjOHs0H+ibQv3zpncVQg6um4uYtRtrwIX8M4Nh3ytK4HGlYAq7Q==}
+  /js-sdsl/4.2.0:
+    resolution: {integrity: sha512-dyBIzQBDkCqCu+0upx25Y2jGdbTGxE9fshMsCdK0ViOongpV+n5tXRcZY9v7CaVQ79AGS9KA1KHtojxiM7aXSQ==}
 
   /js-tokens/3.0.2:
     resolution: {integrity: sha512-RjTcuD4xjtthQkaWH7dFlH85L+QaVtSoOyGdZ3g6HFhS9dFNDfLyqgm2NFe2X6cQpeFmt0452FJjFG5UameExg==}
