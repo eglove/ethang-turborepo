@@ -1,0 +1,27 @@
+{
+  "name": "flyby-subgraph-locations",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "dev": "nodemon index.ts",
+    "lint": "eslint ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@apollo/server": "^4.0.0",
+    "@apollo/subgraph": "^2.2.1",
+    "graphql": "^16.6.0",
+    "graphql-tag": "^2.12.6"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.9",
+    "eslint-config-ethang": "workspace:*",
+    "nodemon": "^2.0.20",
+    "ts-node": "^10.9.1",
+    "tsconfig": "workspace:*",
+    "typescript": "4.9.3"
+  }
+}
