@@ -11,7 +11,7 @@
   },
   "devDependencies": {
     "@types/node": "^18.11.9",
-    "@types/uuid": "^8.3.4",
+    "@types/uuid": "^9.0.0",
     "@types/validator": "^13.7.10",
     "tsconfig": "workspace:*"
   },
