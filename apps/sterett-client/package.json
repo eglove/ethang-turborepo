@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "@portabletext/types": "^2.0.0",
-    "@types/node": "^18.11.9",
+    "@types/node": "^18.11.10",
     "@types/nprogress": "^0.2.0",
     "@types/react": "18.0.25",
     "@types/react-big-calendar": "^0.38.2",
