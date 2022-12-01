@@ -25,7 +25,7 @@ export default async function Courses(): Promise<JSX.Element> {
               href: './files/course-curriculum.pdf',
             }}
           >
-            downloading the November 2022 snapshot
+            downloading the December 2022 snapshot
           </NextLink>{' '}
           (PDF).
         </p>
