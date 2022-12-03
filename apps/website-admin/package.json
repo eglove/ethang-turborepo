@@ -30,7 +30,7 @@
     "@sanity/form-builder": "^2.35.2",
     "@sanity/orderable-document-list": "^0.0.10",
     "@sanity/vision": "^2.35.2",
-    "eslint": "^8.28.0",
+    "eslint": "^8.29.0",
     "eslint-config-ethang": "workspace:*",
     "prop-types": "^15.7",
     "react": "^17.0",
