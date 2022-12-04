@@ -1,6 +1,5 @@
 import 'normalize.css/normalize.css';
 import '../styles/nprogress.css';
-import 'react-toastify/dist/ReactToastify.css';
 import '@trussworks/react-uswds/lib/uswds.css';
 import '@trussworks/react-uswds/lib/index.css';
 import '../styles/global.css';
@@ -14,7 +13,6 @@ import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import { Router } from 'next/router';
 import NProgress from 'nprogress';
-import { ToastContainer } from 'react-toastify';
 
 Router.events.on('routeChangeStart', () => {
   return NProgress.start();
@@ -36,7 +34,6 @@ function App({ Component, pageProps }: AppProps): JSX.Element {
           <title>Sterett Creek Village Trustee Admin</title>
         </Head>
         <main>
-          <ToastContainer />
           <Component {...pageProps} />
         </main>
       </Hydrate>
