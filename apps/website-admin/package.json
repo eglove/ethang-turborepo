@@ -28,7 +28,7 @@
     "@sanity/desk-tool": "^2.35.2",
     "@sanity/eslint-config-studio": "^2.0.1",
     "@sanity/form-builder": "^2.35.2",
-    "@sanity/orderable-document-list": "^0.0.10",
+    "@sanity/orderable-document-list": "^1.0.2",
     "@sanity/vision": "^2.35.2",
     "eslint": "^8.29.0",
     "eslint-config-ethang": "workspace:*",
