@@ -26,7 +26,7 @@
     "@sanity/eslint-config-studio": "^2.0.1",
     "@sanity/form-builder": "^2.35.2",
     "@sanity/orderable-document-list": "^0.0.10",
-    "@sanity/ui": "^1.0.0",
+    "@sanity/ui": "^1.0.1",
     "@sanity/validation": "^2.35.0",
     "@sanity/vision": "^2.35.2",
     "browserslist-config-google": "^3.0.1",
