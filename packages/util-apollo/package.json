@@ -10,7 +10,7 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "@apollo/client": "^3.7.1",
+    "@apollo/client": "^3.7.2",
     "apollo3-cache-persist": "^0.14.1",
     "util-typescript": "workspace:*"
   },

@@ -644,14 +644,14 @@ importers:
 
   packages/util-apollo:
     specifiers:
-      '@apollo/client': ^3.7.1
+      '@apollo/client': ^3.7.2
       apollo3-cache-persist: ^0.14.1
       eslint-config-ethang: workspace:*
       tsconfig: workspace:*
       util-typescript: workspace:*
     dependencies:
-      '@apollo/client': 3.7.1_graphql@16.6.0
-      apollo3-cache-persist: 0.14.1_@apollo+client@3.7.1
+      '@apollo/client': 3.7.2_graphql@16.6.0
+      apollo3-cache-persist: 0.14.1_@apollo+client@3.7.2
       util-typescript: link:../util-typescript
     devDependencies:
       eslint-config-ethang: link:../eslint-config-ethang
@@ -742,8 +742,8 @@ packages:
       graphql: 16.6.0
     dev: false
 
-  /@apollo/client/3.7.1_graphql@16.6.0:
-    resolution: {integrity: sha512-xu5M/l7p9gT9Fx7nF3AQivp0XukjB7TM7tOd5wifIpI8RskYveL4I+rpTijzWrnqCPZabkbzJKH7WEAKdctt9w==}
+  /@apollo/client/3.7.2_graphql@16.6.0:
+    resolution: {integrity: sha512-ohAIpXl3mTa1Fd3GT/K37VwQJfTIuuJRp4aOlJ4q/hlx0Wxh+RqDrbn0awtVCOdhGDQN+CQQmVzIqFKn6GziXQ==}
     peerDependencies:
       graphql: ^14.0.0 || ^15.0.0 || ^16.0.0
       graphql-ws: ^5.5.5
@@ -767,12 +767,12 @@ packages:
       graphql: 16.6.0
       graphql-tag: 2.12.6_graphql@16.6.0
       hoist-non-react-statics: 3.3.2
-      optimism: 0.16.1
+      optimism: 0.16.2
       prop-types: 15.8.1
       response-iterator: 0.2.6
       symbol-observable: 4.0.0
       ts-invariant: 0.10.3
-      tslib: 2.4.0
+      tslib: 2.4.1
       zen-observable-ts: 1.2.5
     dev: false
 
@@ -7920,13 +7920,6 @@ packages:
       '@webassemblyjs/ast': 1.11.1
       '@xtuc/long': 4.2.2
 
-  /@wry/context/0.6.1:
-    resolution: {integrity: sha512-LOmVnY1iTU2D8tv4Xf6MVMZZ+juIJ87Kt/plMijjN20NMAXGmH4u8bS1t0uT74cZ5gwpocYueV58YwyI8y+GKw==}
-    engines: {node: '>=8'}
-    dependencies:
-      tslib: 2.4.1
-    dev: false
-
   /@wry/context/0.7.0:
     resolution: {integrity: sha512-LcDAiYWRtwAoSOArfk7cuYvFXytxfVrdX7yxoUmK7pPITLk5jYh2F8knCwS7LjgYL8u1eidPlKKV6Ikqq0ODqQ==}
     engines: {node: '>=8'}
@@ -8228,12 +8221,12 @@ packages:
       normalize-path: 3.0.0
       picomatch: 2.3.1
 
-  /apollo3-cache-persist/0.14.1_@apollo+client@3.7.1:
+  /apollo3-cache-persist/0.14.1_@apollo+client@3.7.2:
     resolution: {integrity: sha512-p/jNzN/MmSd0TmY7/ts0B3qi0SdQ3w9yNLQdKqB3GGb9xATUlAum2v4hSrTeWd/DZKK2Z7Xg5kFXTH6nNVnKSQ==}
     peerDependencies:
       '@apollo/client': ^3.2.5
     dependencies:
-      '@apollo/client': 3.7.1_graphql@16.6.0
+      '@apollo/client': 3.7.2_graphql@16.6.0
     dev: false
 
   /archiver-utils/2.1.0:
@@ -16882,10 +16875,10 @@ packages:
       is-wsl: 1.1.0
     dev: false
 
-  /optimism/0.16.1:
-    resolution: {integrity: sha512-64i+Uw3otrndfq5kaoGNoY7pvOhSsjFEN4bdEFh80MWVk/dbgJfMv7VFDeCT8LxNAlEVhQmdVEbfE7X2nWNIIg==}
+  /optimism/0.16.2:
+    resolution: {integrity: sha512-zWNbgWj+3vLEjZNIh/okkY2EUfX+vB9TJopzIZwT1xxaMqC5hRLLraePod4c5n4He08xuXNH+zhKFFCu390wiQ==}
     dependencies:
-      '@wry/context': 0.6.1
+      '@wry/context': 0.7.0
       '@wry/trie': 0.3.2
     dev: false
 
