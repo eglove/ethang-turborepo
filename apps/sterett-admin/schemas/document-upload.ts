@@ -1,3 +1,4 @@
+import { DocumentPdfIcon } from '@sanity/icons';
 import { defineType } from 'sanity';
 import { isRequired } from 'util-sanity/lib/validations';
 
@@ -36,6 +37,7 @@ export default defineType({
       validation: isRequired,
     },
   ],
+  icon: DocumentPdfIcon,
   name: 'documentUpload',
   title: 'Document',
   type: 'document',

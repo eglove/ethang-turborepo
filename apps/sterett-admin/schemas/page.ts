@@ -1,3 +1,4 @@
+import { DocumentTextIcon } from '@sanity/icons';
 import { defineType } from 'sanity';
 import { isRequired, slugify } from 'util-sanity/lib/validations';
 
@@ -25,6 +26,7 @@ export default defineType({
       type: 'blockContent',
     },
   ],
+  icon: DocumentTextIcon,
   name: 'page',
   title: 'Page',
   type: 'document',

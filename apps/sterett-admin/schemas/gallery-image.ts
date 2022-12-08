@@ -1,3 +1,4 @@
+import { ImageIcon } from '@sanity/icons';
 import { defineType } from 'sanity';
 import { isRequired } from 'util-sanity/lib/validations';
 
@@ -17,6 +18,7 @@ export default defineType({
       validation: isRequired,
     },
   ],
+  icon: ImageIcon,
   name: 'galleryImage',
   title: 'Gallery Image',
   type: 'document',

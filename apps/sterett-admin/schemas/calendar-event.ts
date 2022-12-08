@@ -1,3 +1,4 @@
+import { CalendarIcon } from '@sanity/icons';
 import { defineType } from 'sanity';
 import { isRequired } from 'util-sanity/lib/validations';
 
@@ -26,6 +27,7 @@ export default defineType({
       type: 'blockContent',
     },
   ],
+  icon: CalendarIcon,
   name: 'calendarEvent',
   title: 'Calendar Event',
   type: 'document',

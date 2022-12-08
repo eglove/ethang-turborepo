@@ -242,6 +242,7 @@ importers:
     specifiers:
       '@sanity/code-input': ^3.0.1
       '@sanity/eslint-config-studio': ^2.0.1
+      '@sanity/icons': ^2.1.0
       '@sanity/orderable-document-list': ^1.0.2
       '@sanity/vision': ^3.0.5
       eslint: ^8.29.0
@@ -256,6 +257,7 @@ importers:
       util-sanity: workspace:*
     dependencies:
       '@sanity/code-input': 3.0.1_csf4mg3i6tpr73kyvhgcyfseky
+      '@sanity/icons': 2.1.0_react@18.2.0
       '@sanity/orderable-document-list': 1.0.2_csf4mg3i6tpr73kyvhgcyfseky
       '@sanity/vision': 3.0.5_tvjnc2ddxzbkurfarkyztohcju
       react: 18.2.0

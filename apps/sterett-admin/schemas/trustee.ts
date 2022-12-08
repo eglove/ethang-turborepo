@@ -1,3 +1,4 @@
+import { UserIcon } from '@sanity/icons';
 import {
   orderRankField,
   orderRankOrdering,
@@ -36,6 +37,7 @@ export default defineType({
       type: 'image',
     },
   ],
+  icon: UserIcon,
   name: 'trustee',
   orderings: [
     // @ts-expect-error typing seems right

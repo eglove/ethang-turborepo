@@ -1,3 +1,4 @@
+import { BulbOutlineIcon } from '@sanity/icons';
 import { defineType } from 'sanity';
 import { isRequired } from 'util-sanity/lib/validations';
 
@@ -27,6 +28,7 @@ export default defineType({
       validation: isRequired,
     },
   ],
+  icon: BulbOutlineIcon,
   name: 'newsUpdate',
   title: 'News Update',
   type: 'document',
