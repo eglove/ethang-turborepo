@@ -65,13 +65,6 @@ jobs:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         with:
           args: --all-projects --severity-threshold=low
-  qodana:
-    name: Qodana Scan
-    runs-on: ubuntu-latest
-    steps:
-      - uses: JetBrains/qodana-action@main
-        env:
-          QODANA_TOKEN: ${{ secrets.QODANA_TOKEN }}
   merge:
     name: Merge
     needs: [codeql, sonarcloud, snyk, qodana]
