@@ -1,25 +1,23 @@
 {
-  "name": "util-typescript",
+  "name": "util-sanity",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "keywords": [],
-  "author": "",
-  "license": "MIT",
   "scripts": {
     "lint": "eslint"
   },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@sanity/client": "^3.4.1",
+    "@sanity/orderable-document-list": "^1.0.2",
+    "node-environment": "workspace:*",
+    "sanity": "^3.0.5"
+  },
   "devDependencies": {
     "@types/node": "^18.11.11",
-    "@types/uuid": "^9.0.0",
-    "@types/validator": "^13.7.10",
     "eslint-config-ethang": "workspace:*",
     "tsconfig": "workspace:*"
-  },
-  "dependencies": {
-    "fast-xml-parser": "^4.0.12",
-    "uuid": "^9.0.0",
-    "validator": "^13.7.0",
-    "zod": "^3.19.1"
   }
 }

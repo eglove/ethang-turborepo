@@ -2,8 +2,8 @@ import { codeInput } from '@sanity/code-input';
 import { visionTool } from '@sanity/vision';
 import { defineConfig } from 'sanity';
 import { deskTool } from 'sanity/desk';
+import { deskStructure } from 'util-sanity';
 
-import deskStructure from './desk-structure';
 import schema from './schemas/schema';
 export default defineConfig({
   dataset: 'production',
