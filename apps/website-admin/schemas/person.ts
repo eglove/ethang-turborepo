@@ -1,4 +1,6 @@
-export default {
+import { defineType } from 'sanity';
+
+export default defineType({
   fields: [
     {
       name: 'name',
@@ -9,4 +11,4 @@ export default {
   name: 'person',
   title: 'Person',
   type: 'document',
-};
+});

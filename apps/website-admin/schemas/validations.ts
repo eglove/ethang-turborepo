@@ -1,5 +1,7 @@
-export const isRequired = (Rule: { required: () => true }): true => {
-  return Rule.required();
+import { type Rule } from 'sanity';
+
+export const isRequired = (rule: Rule): Rule => {
+  return rule.required();
 };
 
 export const slugify = (input: string): string => {

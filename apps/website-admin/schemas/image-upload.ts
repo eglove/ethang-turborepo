@@ -1,12 +1,14 @@
-export default {
+import { defineType } from 'sanity';
+
+import { isRequired } from './validations';
+
+export default defineType({
   fields: [
     {
       name: 'description',
       title: 'Description',
       type: 'string',
-      validation(Rule) {
-        return Rule.required();
-      },
+      validation: isRequired,
     },
     {
       name: 'category',
@@ -20,12 +22,10 @@ export default {
       name: 'image',
       title: 'Image',
       type: 'image',
-      validation(Rule) {
-        return Rule.required();
-      },
+      validation: isRequired,
     },
   ],
   name: 'imageUpload',
   title: 'Image Upload',
   type: 'document',
-};
+});

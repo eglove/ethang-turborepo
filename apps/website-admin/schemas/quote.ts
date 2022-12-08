@@ -1,6 +1,8 @@
+import { defineType } from 'sanity';
+
 import { isRequired } from './validations';
 
-export default {
+export default defineType({
   fields: [
     {
       name: 'author',
@@ -23,4 +25,4 @@ export default {
   name: 'quote',
   title: 'Quote',
   type: 'document',
-};
+});

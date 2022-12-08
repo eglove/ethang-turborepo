@@ -1,29 +1,26 @@
-import { isSlugUnique } from '../util/is-slug-unique';
+import { defineType } from 'sanity';
 
-export default {
+import { isRequired } from './validations';
+
+export default defineType({
   fields: [
     {
       name: 'title',
       title: 'Title',
       type: 'string',
-      validation(Rule) {
-        return Rule.required();
-      },
+      validation: isRequired,
     },
     {
       name: 'slug',
       options: {
-        isUnique: isSlugUnique,
-        slugify(input) {
+        slugify(input): string {
           return input.toLowerCase().replace(/\s+/g, '-').slice(0, 200);
         },
         source: 'title',
       },
       title: 'Slug',
       type: 'slug',
-      validation(Rule) {
-        return Rule.required();
-      },
+      validation: isRequired,
     },
     {
       name: 'content',
@@ -34,4 +31,4 @@ export default {
   name: 'page',
   title: 'Page',
   type: 'document',
-};
+});

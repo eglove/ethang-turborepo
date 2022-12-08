@@ -2,17 +2,18 @@ import {
   orderRankField,
   orderRankOrdering,
 } from '@sanity/orderable-document-list';
+import { defineType } from 'sanity';
 
-export default {
+import { isRequired } from './validations';
+
+export default defineType({
   fields: [
     orderRankField({ type: 'course' }),
     {
       name: 'title',
       title: 'Title',
       type: 'string',
-      validation(Rule) {
-        return Rule.required();
-      },
+      validation: isRequired,
     },
     {
       name: 'duration',
@@ -26,9 +27,7 @@ export default {
       },
       title: 'Rating',
       type: 'number',
-      validation(Rule) {
-        return Rule.required();
-      },
+      validation: isRequired,
     },
     {
       name: 'ratingUrl',
@@ -86,6 +85,7 @@ export default {
   ],
   name: 'course',
   orderings: [
+    // @ts-expect-error typing seems right
     orderRankOrdering,
     {
       by: [{ direction: 'asc', field: 'title' }],
@@ -95,4 +95,4 @@ export default {
   ],
   title: 'Course',
   type: 'document',
-};
+});

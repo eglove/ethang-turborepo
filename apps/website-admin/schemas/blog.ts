@@ -1,7 +1,8 @@
-import { isSlugUnique } from '../util/is-slug-unique';
+import { defineType } from 'sanity';
+
 import { isRequired, slugify } from './validations';
 
-export default {
+export default defineType({
   fields: [
     {
       name: 'title',
@@ -12,7 +13,6 @@ export default {
     {
       name: 'slug',
       options: {
-        isUnique: isSlugUnique,
         slugify,
         source: 'title',
       },
@@ -79,4 +79,4 @@ export default {
   name: 'blog',
   title: 'Blog',
   type: 'document',
-};
+});

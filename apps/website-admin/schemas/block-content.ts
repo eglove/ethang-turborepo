@@ -1,4 +1,6 @@
-export default {
+import { defineType } from 'sanity';
+
+export default defineType({
   name: 'blockContent',
   of: [
     {
@@ -103,4 +105,4 @@ export default {
   ],
   title: 'Block Content',
   type: 'array',
-};
+});

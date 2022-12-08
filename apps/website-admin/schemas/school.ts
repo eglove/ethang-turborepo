@@ -1,20 +1,20 @@
-export default {
+import { defineType } from 'sanity';
+
+import { isRequired } from './validations';
+
+export default defineType({
   fields: [
     {
       name: 'name',
       title: 'Name',
       type: 'string',
-      validation(Rule) {
-        return Rule.required();
-      },
+      validation: isRequired,
     },
     {
       name: 'url',
       title: 'URL',
       type: 'url',
-      validation(Rule) {
-        return Rule.required();
-      },
+      validation: isRequired,
     },
     {
       name: 'image',
@@ -26,4 +26,4 @@ export default {
   name: 'school',
   title: 'School',
   type: 'document',
-};
+});
