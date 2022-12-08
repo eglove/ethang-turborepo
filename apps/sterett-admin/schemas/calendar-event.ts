@@ -1,19 +1,19 @@
-export default {
-  name: 'calendarEvent',
-  title: 'Calendar Event',
-  type: 'document',
+import { defineType } from 'sanity';
+import { isRequired } from 'util-sanity/lib/validations';
+
+export default defineType({
   fields: [
     {
       name: 'title',
       title: 'Title',
       type: 'string',
-      validation: Rule => Rule.required(),
+      validation: isRequired,
     },
     {
       name: 'startsAt',
       title: 'Starts At',
       type: 'datetime',
-      validation: Rule => Rule.required(),
+      validation: isRequired,
     },
     {
       name: 'endsAt',
@@ -23,7 +23,10 @@ export default {
     {
       name: 'description',
       title: 'Description',
-      type: 'blockContent'
-    }
-  ]
-}
+      type: 'blockContent',
+    },
+  ],
+  name: 'calendarEvent',
+  title: 'Calendar Event',
+  type: 'document',
+});

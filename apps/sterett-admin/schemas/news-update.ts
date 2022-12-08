@@ -1,28 +1,33 @@
-export default {
-  name: 'newsUpdate',
-  title: 'News Update',
-  type: 'document',
+import { defineType } from 'sanity';
+import { isRequired } from 'util-sanity/lib/validations';
+
+export default defineType({
   fields: [
     {
       name: 'title',
       title: 'Title',
       type: 'string',
-      validation: Rule => Rule.required(),
+      validation: isRequired,
     },
     {
+      initialValue(): { date: Date } {
+        return {
+          date: new Date(),
+        };
+      },
       name: 'date',
       title: 'Date',
       type: 'date',
-      validation: Rule => Rule.required(),
-      initialValue: () => ({
-        date: new Date(),
-      })
+      validation: isRequired,
     },
     {
       name: 'description',
       title: 'Description',
       type: 'blockContent',
-      validation: Rule => Rule.required(),
-    }
-  ]
-}
+      validation: isRequired,
+    },
+  ],
+  name: 'newsUpdate',
+  title: 'News Update',
+  type: 'document',
+});

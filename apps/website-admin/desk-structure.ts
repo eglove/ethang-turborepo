@@ -5,6 +5,7 @@ import {
   type StructureResolver,
   type StructureResolverContext,
 } from 'sanity/lib/exports/desk';
+
 export const deskStructure: StructureResolver = (
   S: StructureBuilder,
   context: StructureResolverContext

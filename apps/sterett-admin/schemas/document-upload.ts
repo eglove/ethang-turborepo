@@ -1,37 +1,42 @@
-export default {
-  name: 'documentUpload',
-  title: 'Document',
-  type: 'document',
+import { defineType } from 'sanity';
+import { isRequired } from 'util-sanity/lib/validations';
+
+export default defineType({
   fields: [
     {
       name: 'title',
       title: 'Title',
       type: 'string',
-      validation: Rule => Rule.required(),
+      validation: isRequired,
     },
     {
       name: 'category',
-      title: 'Category',
-      type: 'string',
-      validation: Rule => Rule.required(),
       options: {
         list: ['Covenant', 'Meeting Minute'],
-      }
+      },
+      title: 'Category',
+      type: 'string',
+      validation: isRequired,
     },
     {
+      initialValue(): { date: Date } {
+        return {
+          date: new Date(),
+        };
+      },
       name: 'date',
       title: 'Date',
       type: 'date',
-      validation: Rule => Rule.required(),
-      initialValue: () => ({
-        date: new Date(),
-      })
+      validation: isRequired,
     },
     {
       name: 'file',
       title: 'File',
       type: 'fileUpload',
-      validation: Rule => Rule.required(),
-    }
-  ]
-}
+      validation: isRequired,
+    },
+  ],
+  name: 'documentUpload',
+  title: 'Document',
+  type: 'document',
+});

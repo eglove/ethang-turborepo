@@ -2,17 +2,17 @@ import {
   orderRankField,
   orderRankOrdering,
 } from '@sanity/orderable-document-list';
+import { defineType } from 'sanity';
+import { isRequired } from 'util-sanity/lib/validations';
 
-export default {
+export default defineType({
   fields: [
     orderRankField({ type: 'trustee' }),
     {
       name: 'name',
       title: 'Name',
       type: 'string',
-      validation(Rule) {
-        return Rule.required();
-      },
+      validation: isRequired,
     },
     {
       hidden: true,
@@ -38,6 +38,7 @@ export default {
   ],
   name: 'trustee',
   orderings: [
+    // @ts-expect-error typing seems right
     orderRankOrdering,
     {
       by: [{ direction: 'asc', field: 'order' }],
@@ -47,4 +48,4 @@ export default {
   ],
   title: 'Trustee',
   type: 'document',
-};
+});

@@ -15,9 +15,9 @@ export default defineConfig({
     visionTool(),
     codeInput(),
   ],
-  projectId: 'ipn3uarr',
+  projectId: '540gjnt8',
   schema: {
     types: schema,
   },
-  title: 'EthanG Admin',
+  title: 'Sterett Creek Village Trustee Admin',
 });

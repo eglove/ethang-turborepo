@@ -1,34 +1,31 @@
-import {isSlugUnique} from "../util/is-slug-unique";
+import { defineType } from 'sanity';
+import { isRequired, slugify } from 'util-sanity/lib/validations';
 
-export default {
-  name: 'page',
-  title: 'Page',
-  type: 'document',
+export default defineType({
   fields: [
     {
       name: 'title',
       title: 'Title',
       type: 'string',
-      validation: Rule => Rule.required(),
+      validation: isRequired,
     },
     {
       name: 'slug',
+      options: {
+        slugify,
+        source: 'title',
+      },
       title: 'Slug - https://sterettcreekvillagetrustee.com/page/SLUG',
       type: 'slug',
-      validation: Rule => Rule.required(),
-      options: {
-        isUnique: isSlugUnique,
-        source: 'title',
-        slugify: input => input
-          .toLowerCase()
-          .replace(/\s+/g, '-')
-          .slice(0, 200)
-      }
+      validation: isRequired,
     },
     {
       name: 'content',
       title: 'Content',
-      type: 'blockContent'
-    }
-  ]
-}
+      type: 'blockContent',
+    },
+  ],
+  name: 'page',
+  title: 'Page',
+  type: 'document',
+});

@@ -1,19 +1,23 @@
-export default {
-  name: 'galleryImage',
-  title: 'Gallery Image',
-  type: 'document',
+import { defineType } from 'sanity';
+import { isRequired } from 'util-sanity/lib/validations';
+
+export default defineType({
   fields: [
     {
       name: 'description',
-      title: 'Description (This is read by screen readers for visually impaired people.)',
+      title:
+        'Description (This is read by screen readers for visually impaired people.)',
       type: 'string',
-      validation: Rule => Rule.required(),
+      validation: isRequired,
     },
     {
       name: 'image',
       title: 'Image',
       type: 'image',
-      validation: Rule => Rule.required(),
-    }
-  ]
-}
+      validation: isRequired,
+    },
+  ],
+  name: 'galleryImage',
+  title: 'Gallery Image',
+  type: 'document',
+});
