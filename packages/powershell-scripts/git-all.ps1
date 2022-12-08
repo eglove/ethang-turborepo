@@ -8,9 +8,9 @@ if (!$args)
 Set-Location ~/Projects/ethang-turborepo
 pnpm store prune
 pnpm i --no-frozen-lockfile
+npx --yes browserslist@latest --update-db
 git add .
 git commit -m "$commitMessage"
-npx --yes browserslist@latest --update-db
 npx turbo lint
 
 if ($?)
