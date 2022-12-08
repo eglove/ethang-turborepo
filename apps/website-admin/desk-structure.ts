@@ -11,7 +11,7 @@ export const deskStructure: StructureResolver = (
   context: StructureResolverContext
 ): ListBuilder => {
   return S.list()
-    .title('Recommended Courses')
+    .title('Content')
     .items([
       ...S.documentTypeListItems(),
       orderableDocumentListDeskItem({
