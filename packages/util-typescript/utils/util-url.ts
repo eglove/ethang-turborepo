@@ -7,35 +7,10 @@ type GetYoutubeIdProperties = {
 
 export const getYoutubeId = ({
   url,
-  options,
 }: GetYoutubeIdProperties): string | undefined => {
-  if (/youtu\.?be/.test(url)) {
-    const knownPatterns = [
-      /youtu\.be\/([^#&?]{11})/, // youtu.be/<id>
-      /\?v=([^#&?]{11})/, // ?v=<id>
-      /&v=([^#&?]{11})/, // &v=<id>
-      /embed\/([^#&?]{11})/, // embed/<id>
-      /\/v\/([^#&?]{11})/, // /v/<id>
-    ];
-
-    for (const knownPattern of knownPatterns) {
-      if (knownPattern.test(url)) {
-        return knownPattern.exec(url)?.[1];
-      }
-    }
-
-    // Search for 11 character key
-    if (options?.fuzzy === true) {
-      const tokens = url.split(/[\s#&./=?]/g);
-      for (const token of tokens) {
-        if (/^[^#&?]{11}$/.test(token)) {
-          return token;
-        }
-      }
-    }
-  }
-
-  return undefined;
+  const regex = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+  const match = regex.exec(url);
+  return match && match[2].length === 11 ? match[2] : undefined;
 };
 
 export const isUrlSecure = (url: string): boolean => {

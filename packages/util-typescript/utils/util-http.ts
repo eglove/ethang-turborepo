@@ -1,10 +1,14 @@
-export enum HTTP_METHOD {
-  DELETE = 'DELETE',
-  GET = 'GET',
-  PATCH = 'PATCH',
-  POST = 'POST',
-  PUT = 'PUT',
-}
+export const HTTP_METHOD = {
+  CONNECT: 'CONNECT',
+  DELETE: 'DELETE',
+  GET: 'GET',
+  HEAD: 'HEAD',
+  OPTIONS: 'OPTIONS',
+  PATCH: 'PATCH',
+  POST: 'POST',
+  PUT: 'PUT',
+  TRACE: 'TRACE',
+};
 
 export const JSON_HEADER = { 'Content-Type': 'application/json' };
 

@@ -13,10 +13,10 @@
     "@sanity/client": "^3.4.1",
     "@sanity/orderable-document-list": "^1.0.2",
     "node-environment": "workspace:*",
-    "sanity": "^3.0.5"
+    "sanity": "^3.0.6"
   },
   "devDependencies": {
-    "@types/node": "^18.11.11",
+    "@types/node": "^18.11.12",
     "eslint-config-ethang": "workspace:*",
     "tsconfig": "workspace:*"
   }
