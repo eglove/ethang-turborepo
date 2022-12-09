@@ -10,16 +10,8 @@ export function Navigation(): JSX.Element {
       title: 'Blog',
     },
     {
-      link: '/portfolio',
-      title: 'Components',
-    },
-    {
       link: '/courses',
       title: 'Courses',
-    },
-    {
-      link: '/resume',
-      title: 'Resume',
     },
   ];
 
