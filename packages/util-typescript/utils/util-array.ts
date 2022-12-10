@@ -7,7 +7,7 @@ export const arrayHasDuplicate = (array: unknown[]): boolean => {
 export const isNonEmptyArray = <Type>(
   array?: Type[] | undefined | null
 ): boolean => {
-  if (typeof array === 'undefined' || array === null) {
+  if (array === undefined || array === null) {
     return false;
   }
 
@@ -31,7 +31,7 @@ export const sortObjectArray = <ObjectType>(
   });
 };
 
-export const shuffleArray = <Type>(array: Type[]): Type[] => {
+export const shuffleArray = <Type>([...array]: Type[]): Type[] => {
   for (let index = array.length - 1; index > 0; index -= 1) {
     const index_ = Math.floor(Math.random() * index);
     const temporary = array[index];
