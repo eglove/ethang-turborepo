@@ -77,8 +77,16 @@ describe('shuffleArray', () => {
     const shuffledArray = shuffleArray(array);
 
     expect(shuffledArray).not.toEqual(array);
-    // eslint-disable-next-line @typescript-eslint/require-array-sort-compare
-    expect(shuffledArray.sort()).toEqual(array.sort());
+
+    expect(
+      shuffledArray.sort((a, b) => {
+        return a - b;
+      })
+    ).toEqual(
+      array.sort((a, b) => {
+        return a - b;
+      })
+    );
   });
 
   it('should return an empty array if the input array is empty', () => {
