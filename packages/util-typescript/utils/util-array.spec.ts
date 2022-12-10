@@ -78,7 +78,7 @@ describe('shuffleArray', () => {
 
     expect(shuffledArray).not.toEqual(array);
 
-    const sortedShuffledArray = shuffledArray.sort((a, b) => {
+    const sortedShuffledArray = [...shuffledArray].sort((a, b) => {
       return a - b;
     });
     expect(sortedShuffledArray).toEqual(array);
