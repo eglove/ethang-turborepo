@@ -78,15 +78,10 @@ describe('shuffleArray', () => {
 
     expect(shuffledArray).not.toEqual(array);
 
-    expect(
-      shuffledArray.sort((a, b) => {
-        return a - b;
-      })
-    ).toEqual(
-      array.sort((a, b) => {
-        return a - b;
-      })
-    );
+    const sortedShuffledArray = shuffledArray.sort((a, b) => {
+      return a - b;
+    });
+    expect(sortedShuffledArray).toEqual(array);
   });
 
   it('should return an empty array if the input array is empty', () => {
