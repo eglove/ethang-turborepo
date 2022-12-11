@@ -1,16 +1,5 @@
-import { environmentVariablesDevelopment } from './environment-variables-development';
-import { environmentVariablesProduction } from './environment-variables-production';
-
-export const getConst = (
-  key: keyof typeof environmentVariablesDevelopment,
-  environment = process.env['NODE_ENV']
-): string => {
-  const constants =
-    environment === 'development'
-      ? environmentVariablesDevelopment
-      : environmentVariablesProduction;
-
-  const value = constants[key];
+export const getConst = (key: string): string => {
+  const value = process.env[key];
 
   if (value === undefined) {
     throw new Error(`Constant ${key} not found.`);
