@@ -1,28 +1,32 @@
 import { useState } from 'react';
 
+type LocalStorageType<ValueType> = ValueType | string | undefined;
+
 export const useLocalStorage = <ValueType>(
   keyName: string,
   defaultValue?: ValueType,
   deserialize = JSON.parse,
   serialize = JSON.stringify
-): [ValueType | undefined, (newValue: ValueType) => void] => {
-  const [storedValue, setStoredValue] = useState<ValueType | undefined>(() => {
-    const value = globalThis.localStorage?.getItem(keyName);
+): [LocalStorageType<ValueType>, (newValue: ValueType) => void] => {
+  const [storedValue, setStoredValue] = useState<LocalStorageType<ValueType>>(
+    () => {
+      const value = globalThis.localStorage?.getItem(keyName);
 
-    if (value !== null) {
-      try {
-        return deserialize(value) as ValueType;
-      } catch {
-        return defaultValue;
+      if (value !== null) {
+        try {
+          return deserialize(value) as ValueType;
+        } catch {
+          return value;
+        }
       }
-    }
 
-    if (typeof defaultValue !== 'undefined') {
-      globalThis.localStorage?.setItem(keyName, serialize(defaultValue));
-    }
+      if (defaultValue !== undefined) {
+        globalThis.localStorage?.setItem(keyName, serialize(defaultValue));
+      }
 
-    return defaultValue;
-  });
+      return defaultValue;
+    }
+  );
 
   const setValue = (newValue: ValueType): void => {
     if (typeof newValue === 'string') {
