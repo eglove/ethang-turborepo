@@ -1,5 +1,14 @@
 $commitMessage = $args
 
+function BreakOnFail($function) {
+    $function
+
+    if (!$?)
+    {
+        Break;
+    }
+}
+
 if (!$args)
 {
     $commitMessage = Read-Host "Enter a commit message"
@@ -13,24 +22,12 @@ git add .
 git commit -m "$commitMessage"
 npx turbo lint
 
-if ($?)
-{
-    npx stylelint "**/*.module.css" --fix
-}
+BreakOnFail(npx stylelint "**/*.module.css" --fix)
+BreakOnFail(npx turbo test)
 
-if ($?)
-{
-    npx turbo test
-}
+git add .
+git commit -m "$commitMessage {Automated Fixup}"
 
-if ($?)
-{
-    git add .
-    git commit -m "$commitMessage {Automated Fixup}"
-    npx turbo build
-}
+BreakOnFail(npx turbo build)
 
-if ($?)
-{
-    git push
-}
+git push
