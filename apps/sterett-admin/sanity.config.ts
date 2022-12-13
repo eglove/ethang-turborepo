@@ -1,5 +1,4 @@
 import { codeInput } from '@sanity/code-input';
-import { visionTool } from '@sanity/vision';
 import { defineConfig } from 'sanity';
 import { deskTool } from 'sanity/desk';
 
@@ -12,7 +11,6 @@ export default defineConfig({
     deskTool({
       structure: deskStructure,
     }),
-    visionTool(),
     codeInput(),
   ],
   projectId: '540gjnt8',
