@@ -1,6 +1,4 @@
-function BreakOnFail($function) {
-    $function
-
+function BreakOnFail() {
     if (!$?)
     {
         Break;
@@ -26,12 +24,11 @@ npx --yes browserslist@latest --update-db
 gitCommit("$commitMessage")
 
 npx turbo lint
-
-BreakOnFail(npx stylelint "**/*.module.css" --fix)
-BreakOnFail(npx turbo test)
-
+npx stylelint "**/*.module.css" --fix
+BreakOnFail
+npx turbo test
+BreakOnFail
 gitCommit("$commitMessage {Automated Fixup}")
-
-BreakOnFail(npx turbo build)
-
+npx turbo build
+BreakOnFail
 git push
