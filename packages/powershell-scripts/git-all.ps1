@@ -28,7 +28,7 @@ npx stylelint "**/*.module.css" --fix
 BreakOnFail
 npx turbo test
 BreakOnFail
-gitCommit("$commitMessage {Automated Fixup}")
 npx turbo build
 BreakOnFail
+gitCommit("$commitMessage {Automated Fixup}")
 git push
