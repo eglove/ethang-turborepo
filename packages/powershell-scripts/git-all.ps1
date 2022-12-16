@@ -11,23 +11,29 @@ pnpm i --no-frozen-lockfile
 npx --yes browserslist@latest --update-db
 git add .
 git commit -m "$commitMessage"
-$lintResult = npx turbo lint
+npx turbo lint
 
-if ($lintResult)
+if ($?)
 {
-    $stylelintResult = npx stylelint "**/*.module.css" --fix
+    npx stylelint "**/*.module.css" --fix
+} else {
+    Break
 }
 
-if ($stylelintResult)
+if ($?)
 {
-    $testResult = npx turbo test
+    npx turbo test
+} else {
+    Break
 }
 
-if ($testResult)
+if ($?)
 {
     git add .
     git commit -m "$commitMessage {Automated Fixup}"
     npx turbo build
+} else {
+    Break
 }
 
 if ($?)
