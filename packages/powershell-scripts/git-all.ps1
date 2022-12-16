@@ -1,16 +1,5 @@
-function BreakOnFail() {
-    if (!$?)
-    {
-        Break;
-    }
-}
-
-function gitCommit ($message) {
-    git add .
-    git commit -m $message
-}
-
 $commitMessage = $args
+
 if (!$args)
 {
     $commitMessage = Read-Host "Enter a commit message"
@@ -20,15 +9,28 @@ Set-Location ~/Projects/ethang-turborepo
 pnpm store prune
 pnpm i --no-frozen-lockfile
 npx --yes browserslist@latest --update-db
+git add .
+git commit -m "$commitMessage"
+$lintResult = npx turbo lint
 
-gitCommit("$commitMessage")
+if ($lintResult)
+{
+    $stylelintResult = npx stylelint "**/*.module.css" --fix
+}
 
-npx turbo lint
-npx stylelint "**/*.module.css" --fix
-BreakOnFail
-npx turbo test
-BreakOnFail
-npx turbo build
-BreakOnFail
-gitCommit("$commitMessage {Automated Fixup}")
-git push
+if ($stylelintResult)
+{
+    $testResult = npx turbo test
+}
+
+if ($testResult)
+{
+    git add .
+    git commit -m "$commitMessage {Automated Fixup}"
+    npx turbo build
+}
+
+if ($?)
+{
+    git push
+}

@@ -17,7 +17,7 @@
     "graphql-tag": "^2.12.6"
   },
   "devDependencies": {
-    "@types/node": "^18.11.14",
+    "@types/node": "^18.11.15",
     "eslint-config-ethang": "workspace:*",
     "nodemon": "^2.0.20",
     "ts-node": "^10.9.1",
