@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "scripts": {
     "dev": "react-scripts start",
-    "lint": "eslint",
+    "lint": "eslint --fix",
     "build": "react-scripts build",
     "test": "react-scripts test --watchAll=false",
     "test:watch": "react-scripts test",

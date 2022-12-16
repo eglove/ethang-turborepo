@@ -22,7 +22,7 @@ export function Button({
   return (
     <button
       className={`${styles.ButtonContainer} ${
-        typeof variant === 'undefined' ? '' : variantClasses[variant]
+        variant === undefined ? '' : variantClasses[variant]
       }`}
       {...properties}
       type={properties?.type ?? 'button'}

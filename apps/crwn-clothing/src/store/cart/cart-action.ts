@@ -19,7 +19,7 @@ export const addItemToCart = (
   });
 
   const newCartItems =
-    typeof existingItem === 'undefined'
+    existingItem === undefined
       ? [...cartItems, { ...productToAdd, quantity: 1 }]
       : cartItems.map(item => {
           return item.id === productToAdd.id
@@ -39,7 +39,7 @@ export const removeItemFromCart = (
   });
   let newCartItems: CartItem[] = [];
 
-  if (typeof existingItem !== 'undefined') {
+  if (existingItem !== undefined) {
     newCartItems =
       existingItem.quantity === 1
         ? cartItems.filter(item => {

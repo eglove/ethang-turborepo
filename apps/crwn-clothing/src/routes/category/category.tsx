@@ -16,7 +16,7 @@ export function Category(): JSX.Element {
   const isLoading = useSelector(selectCategoriesIsLoading);
 
   let products: ShopDatum[] = [];
-  if (typeof category !== 'undefined') {
+  if (category !== undefined) {
     products = categories[category];
   }
 
