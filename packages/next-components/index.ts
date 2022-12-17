@@ -1,5 +1,6 @@
 export * from './lib/blockquote/blockquote';
 export * from './lib/breadcrumbs/breadcrumbs';
+export * from './lib/carousel/carousel';
 export * from './lib/expanding-cards/expanding-cards';
 export * from './lib/next-link/next-link';
 export * from './lib/progress-steps/progress-steps';
