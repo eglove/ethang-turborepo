@@ -6,6 +6,7 @@ if (!$args)
 }
 
 Set-Location ~/Projects/ethang-turborepo
+git pull
 pnpm store prune
 pnpm i --no-frozen-lockfile
 npx --yes browserslist@latest --update-db
