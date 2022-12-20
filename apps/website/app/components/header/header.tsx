@@ -27,7 +27,7 @@ export function Header(): JSX.Element {
           }}
         >
           <Image
-            alt="GitHub"
+            alt="LinkedIn"
             height={40}
             src="/images/linkedin.svg"
             width={40}
