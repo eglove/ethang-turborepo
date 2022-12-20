@@ -9,6 +9,7 @@ module.exports = {
     'xo-typescript/space',
     'xo-react/space',
     'plugin:typescript-sort-keys/recommended',
+    'plugin:jsx-a11y/strict',
     'prettier'
   ],
   plugins: [
