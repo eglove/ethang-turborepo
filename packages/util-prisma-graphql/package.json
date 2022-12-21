@@ -11,12 +11,12 @@
   },
   "dependencies": {
     "@paljs/plugins": "^5.1.0",
-    "@prisma/generator-helper": "^4.7.1",
+    "@prisma/generator-helper": "^4.8.0",
     "graphql": "^16.6.0",
     "util-typescript": "workspace:*"
   },
   "devDependencies": {
-    "@prisma/client": "^4.7.1",
+    "@prisma/client": "^4.8.0",
     "eslint-config-ethang": "workspace:*",
     "tsconfig": "workspace:*"
   }

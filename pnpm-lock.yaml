@@ -635,14 +635,14 @@ importers:
 
   packages/util-apollo:
     specifiers:
-      '@apollo/client': ^3.7.2
+      '@apollo/client': ^3.7.3
       apollo3-cache-persist: ^0.14.1
       eslint-config-ethang: workspace:*
       tsconfig: workspace:*
       util-typescript: workspace:*
     dependencies:
-      '@apollo/client': 3.7.2_graphql@16.6.0
-      apollo3-cache-persist: 0.14.1_@apollo+client@3.7.2
+      '@apollo/client': 3.7.3_graphql@16.6.0
+      apollo3-cache-persist: 0.14.1_@apollo+client@3.7.3
       util-typescript: link:../util-typescript
     devDependencies:
       eslint-config-ethang: link:../eslint-config-ethang
@@ -651,19 +651,19 @@ importers:
   packages/util-prisma-graphql:
     specifiers:
       '@paljs/plugins': ^5.1.0
-      '@prisma/client': ^4.7.1
-      '@prisma/generator-helper': ^4.7.1
+      '@prisma/client': ^4.8.0
+      '@prisma/generator-helper': ^4.8.0
       eslint-config-ethang: workspace:*
       graphql: ^16.6.0
       tsconfig: workspace:*
       util-typescript: workspace:*
     dependencies:
-      '@paljs/plugins': 5.1.0_3rg34vvvvba7lsbghsg2xh5lj4
-      '@prisma/generator-helper': 4.7.1
+      '@paljs/plugins': 5.1.0_ajxtmyg5qaudh4yzcztuqmu4iq
+      '@prisma/generator-helper': 4.8.0
       graphql: 16.6.0
       util-typescript: link:../util-typescript
     devDependencies:
-      '@prisma/client': 4.7.1
+      '@prisma/client': 4.8.0
       eslint-config-ethang: link:../eslint-config-ethang
       tsconfig: link:../tsconfig
 
@@ -741,8 +741,8 @@ packages:
       graphql: 16.6.0
     dev: false
 
-  /@apollo/client/3.7.2_graphql@16.6.0:
-    resolution: {integrity: sha512-ohAIpXl3mTa1Fd3GT/K37VwQJfTIuuJRp4aOlJ4q/hlx0Wxh+RqDrbn0awtVCOdhGDQN+CQQmVzIqFKn6GziXQ==}
+  /@apollo/client/3.7.3_graphql@16.6.0:
+    resolution: {integrity: sha512-nzZ6d6a4flLpm3pZOGpuAUxLlp9heob7QcCkyIqZlCLvciUibgufRfYTwfkWCc4NaGHGSZyodzvfr79H6oUwGQ==}
     peerDependencies:
       graphql: ^14.0.0 || ^15.0.0 || ^16.0.0
       graphql-ws: ^5.5.5
@@ -4182,7 +4182,7 @@ packages:
       - supports-color
     dev: false
 
-  /@paljs/plugins/5.1.0_3rg34vvvvba7lsbghsg2xh5lj4:
+  /@paljs/plugins/5.1.0_ajxtmyg5qaudh4yzcztuqmu4iq:
     resolution: {integrity: sha512-f2ZTcB82nC2Xs1tPFMrUr58zS2TfjxFAB87FDifYxshBEYixxhsE8akpRdxf5EioiIjAb7CCzX/b+TJ8YU90+A==}
     peerDependencies:
       '@prisma/client': ^4
@@ -4190,7 +4190,7 @@ packages:
     dependencies:
       '@paljs/types': 5.1.0
       '@paljs/utils': 5.1.0
-      '@prisma/client': 4.7.1
+      '@prisma/client': 4.8.0
       graphql: 16.6.0
       graphql-parse-resolve-info: 4.12.3_graphql@16.6.0
       graphql-tag: 2.12.6_graphql@16.6.0
@@ -4312,8 +4312,8 @@ packages:
     resolution: {integrity: sha512-AjbCPt9x9U0XFwLuVnIxweBrDAlKKcPJRVkpckjMk77VKEQoYvX2dITf5QtQf1TlLIx8zHJFtMcLmiqDJiGuLg==}
     engines: {node: ^14.13.1 || >=16.0.0 || >=18.0.0}
 
-  /@prisma/client/4.7.1:
-    resolution: {integrity: sha512-/GbnOwIPtjiveZNUzGXOdp7RxTEkHL4DZP3vBaFNadfr6Sf0RshU5EULFzVaSi9i9PIK9PYd+1Rn7z2B2npb9w==}
+  /@prisma/client/4.8.0:
+    resolution: {integrity: sha512-Y1riB0p2W52kh3zgssP/YAhln3RjBFcJy3uwEiyjmU+TQYh6QTZDRFBo3JtBWuq2FyMOl1Rye8jxzUP+n0l5Cg==}
     engines: {node: '>=14.17'}
     requiresBuild: true
     peerDependencies:
@@ -4322,10 +4322,20 @@ packages:
       prisma:
         optional: true
     dependencies:
-      '@prisma/engines-version': 4.7.1-1.272861e07ab64f234d3ffc4094e32bd61775599c
+      '@prisma/engines-version': 4.8.0-61.d6e67a83f971b175a593ccc12e15c4a757f93ffe
 
   /@prisma/debug/4.7.1:
     resolution: {integrity: sha512-oppjBRcTakJuAn0rANxWT9caxLKypSBT4Ajh7t+uPcO06CJOoN2Gt4VpFdw2i79U+klGAjTe/1yh8SCsTmxAhA==}
+    dependencies:
+      '@types/debug': 4.1.7
+      debug: 4.3.4
+      strip-ansi: 6.0.1
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
+  /@prisma/debug/4.8.0:
+    resolution: {integrity: sha512-/VT+P6npte5nN8RgLUYm7cNFpHnl7WxbPRZDUIbMF6FG1oI2i3I3NOSOM05urdd1X/rjlZWUgxoh7rL2sdaLSQ==}
     dependencies:
       '@types/debug': 4.1.7
       debug: 4.3.4
@@ -4355,8 +4365,8 @@ packages:
       - supports-color
     dev: false
 
-  /@prisma/engines-version/4.7.1-1.272861e07ab64f234d3ffc4094e32bd61775599c:
-    resolution: {integrity: sha512-Bd4LZ+WAnUHOq31e9X/ihi5zPlr4SzTRwUZZYxvWOxlerIZ7HJlVa9zXpuKTKLpI9O1l8Ec4OYCKsivWCs5a3Q==}
+  /@prisma/engines-version/4.8.0-61.d6e67a83f971b175a593ccc12e15c4a757f93ffe:
+    resolution: {integrity: sha512-MHSOSexomRMom8QN4t7bu87wPPD+pa+hW9+71JnVcF3DqyyO/ycCLhRL1we3EojRpZxKvuyGho2REQsMCvxcJw==}
 
   /@prisma/engines/4.7.1:
     resolution: {integrity: sha512-zWabHosTdLpXXlMefHmnouhXMoTB1+SCbUU3t4FCmdrtIOZcarPKU3Alto7gm/pZ9vHlGOXHCfVZ1G7OIrSbog==}
@@ -4392,6 +4402,17 @@ packages:
     resolution: {integrity: sha512-q9mjYOyLxkLWhqjvPB5sx5J1VRegWA2eC9mwrGgA0CSMo6SzZ7xwIe4rMJKnh4a7QMUO03+HQFdv/Nz7BOWCcg==}
     dependencies:
       '@prisma/debug': 4.7.1
+      '@types/cross-spawn': 6.0.2
+      chalk: 4.1.2
+      cross-spawn: 7.0.3
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
+  /@prisma/generator-helper/4.8.0:
+    resolution: {integrity: sha512-qUSX/6aLkIXUAnIw5IyJdizkqFYYc4EfP4VFLAFYQb281affP6XNQm8nf+El7H6J4MM0eWPRqTH1gtAWFqAYkg==}
+    dependencies:
+      '@prisma/debug': 4.8.0
       '@types/cross-spawn': 6.0.2
       chalk: 4.1.2
       cross-spawn: 7.0.3
@@ -6771,12 +6792,12 @@ packages:
       normalize-path: 3.0.0
       picomatch: 2.3.1
 
-  /apollo3-cache-persist/0.14.1_@apollo+client@3.7.2:
+  /apollo3-cache-persist/0.14.1_@apollo+client@3.7.3:
     resolution: {integrity: sha512-p/jNzN/MmSd0TmY7/ts0B3qi0SdQ3w9yNLQdKqB3GGb9xATUlAum2v4hSrTeWd/DZKK2Z7Xg5kFXTH6nNVnKSQ==}
     peerDependencies:
       '@apollo/client': ^3.2.5
     dependencies:
-      '@apollo/client': 3.7.2_graphql@16.6.0
+      '@apollo/client': 3.7.3_graphql@16.6.0
     dev: false
 
   /archiver-utils/2.1.0:
