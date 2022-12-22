@@ -15,7 +15,7 @@
     "@tanstack/react-query": "^4.20.4",
     "@trussworks/react-uswds": "^4.0.0",
     "date-fns": "^2.29.3",
-    "next": "13.0.6",
+    "next": "13.1.0",
     "next-components": "workspace:*",
     "node-environment": "workspace:*",
     "normalize.css": "^8.0.1",
@@ -36,7 +36,7 @@
     "@types/react-dom": "^18.0.9",
     "eslint": "8.30.0",
     "eslint-config-ethang": "workspace:*",
-    "eslint-config-next": "^13.0.7",
+    "eslint-config-next": "^13.1.0",
     "next-transpile-modules": "^10.0.0",
     "tsconfig": "workspace:*",
     "typescript": "4.9.4"

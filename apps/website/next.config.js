@@ -13,8 +13,8 @@ const nextConfig = {
   },
   experimental: {
     appDir: true,
-    transpilePackages: ['next-components', 'next-radix', 'node-environment', 'react-components', 'react-hooks', 'util-typescript'],
   },
+  transpilePackages: ['next-components', 'next-radix', 'node-environment', 'react-components', 'react-hooks', 'util-typescript'],
 }
 
 module.exports = nextConfig

@@ -2,12 +2,6 @@
 const nextConfig = {
   experimental: {
     appDir: false,
-    transpilePackages: [
-      "next-components",
-      "node-environment",
-      "trussworks-next-components",
-      "util-typescript"
-    ],
   },
   eslint: {
     ignoreDuringBuilds: true,
@@ -37,6 +31,12 @@ const nextConfig = {
     ]
   },
   swcMinify: true,
+  transpilePackages: [
+    "next-components",
+    "node-environment",
+    "trussworks-next-components",
+    "util-typescript"
+  ],
 }
 
 module.exports = nextConfig
