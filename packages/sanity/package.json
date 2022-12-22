@@ -13,7 +13,7 @@
     "@sanity/client": "^3.4.1",
     "@sanity/orderable-document-list": "^1.0.2",
     "node-environment": "workspace:*",
-    "sanity": "^3.1.1"
+    "sanity": "^3.1.2"
   },
   "devDependencies": {
     "@types/node": "^18.11.17",
