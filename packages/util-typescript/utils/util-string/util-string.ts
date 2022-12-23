@@ -1,5 +1,7 @@
 import { v4 as uuidv4 } from 'uuid';
 
+import { getRandomNumber } from '../util-number';
+
 export const capitalizeFirstLetter = (
   string: string,
   lowercaseRest = false
@@ -67,7 +69,9 @@ export const formatPhoneNumber = (string: string): string | undefined => {
 };
 
 export const randomColor = (): string => {
-  return `#${Math.floor(Math.random() * 16_777_215).toString(16)}`;
+  return `#${Math.floor(getRandomNumber(0, 1, true) * 16_777_215).toString(
+    16
+  )}`;
 };
 
 export const removeNonAplhaNumericChars = (string: string): string => {
