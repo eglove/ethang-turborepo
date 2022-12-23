@@ -48,13 +48,11 @@ export const formatList = (list: string[]): string => {
     list.pop();
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment,@typescript-eslint/no-unsafe-call
   const formatter = new Intl.ListFormat('en', {
     style: 'long',
     type: 'conjunction',
   });
 
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-call,@typescript-eslint/no-unsafe-return
   return formatter.format(list);
 };
 
@@ -87,7 +85,7 @@ export const sortStringArray = (array: string[]): string[] => {
 };
 
 export const isStringNot = (string: unknown, not?: string): boolean => {
-  if (typeof not === 'undefined') {
+  if (not === undefined) {
     return typeof string === string;
   }
 

@@ -38,7 +38,7 @@ importers:
       '@types/jest': ^29.2.4
       '@types/node': ^18.11.17
       '@types/react': ^18.0.26
-      '@types/react-dom': ^18.0.9
+      '@types/react-dom': ^18.0.10
       '@types/redux-logger': ^3.0.9
       eslint-config-ethang: workspace:*
       firebase: ^9.15.0
@@ -61,7 +61,7 @@ importers:
       firebase: 9.15.0
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
-      react-redux: 8.0.5_6fpxtwwxc52cyvwzdgczt4jvpq
+      react-redux: 8.0.5_gm3gubmwja4o7q6fr6adx3fpz4
       react-router-dom: 6.6.0_biqbaboplfbrettd7655fr4n2y
       redux: 4.2.0
       redux-logger: 3.0.6
@@ -73,11 +73,11 @@ importers:
       '@faker-js/faker': 7.6.0
       '@testing-library/jest-dom': 5.16.5
       '@testing-library/react': 13.4.0_biqbaboplfbrettd7655fr4n2y
-      '@testing-library/user-event': 14.4.3_aaq3sbffpfe3jnxzm2zngsddei
+      '@testing-library/user-event': 14.4.3_ua4wuun3fnehcjqtqj2e2ldgpe
       '@types/jest': 29.2.4
       '@types/node': 18.11.17
       '@types/react': 18.0.26
-      '@types/react-dom': 18.0.9
+      '@types/react-dom': 18.0.10
       '@types/redux-logger': 3.0.9
       eslint-config-ethang: link:../../packages/eslint-config-ethang
       identity-obj-proxy: 3.0.0
@@ -143,7 +143,7 @@ importers:
       '@types/jest': ^29.2.4
       '@types/node': ^18.11.17
       '@types/react': 18.0.26
-      '@types/react-dom': ^18.0.9
+      '@types/react-dom': ^18.0.10
       eslint-config-ethang: workspace:*
       next: 13.1.0
       react: 18.2.0
@@ -157,11 +157,11 @@ importers:
     devDependencies:
       '@testing-library/jest-dom': 5.16.5
       '@testing-library/react': 13.4.0_biqbaboplfbrettd7655fr4n2y
-      '@testing-library/user-event': 14.4.3_aaq3sbffpfe3jnxzm2zngsddei
+      '@testing-library/user-event': 14.4.3_ua4wuun3fnehcjqtqj2e2ldgpe
       '@types/jest': 29.2.4
       '@types/node': 18.11.17
       '@types/react': 18.0.26
-      '@types/react-dom': 18.0.9
+      '@types/react-dom': 18.0.10
       eslint-config-ethang: link:../../packages/eslint-config-ethang
       tsconfig: link:../../packages/tsconfig
       typescript: 4.9.4
@@ -174,7 +174,7 @@ importers:
       '@types/jest': ^29.2.4
       '@types/node': ^18.11.17
       '@types/react': ^18.0.26
-      '@types/react-dom': ^18.0.9
+      '@types/react-dom': ^18.0.10
       eslint-config-ethang: workspace:*
       jest: ^29.3.1
       react: ^18.2.0
@@ -191,11 +191,11 @@ importers:
     devDependencies:
       '@testing-library/jest-dom': 5.16.5
       '@testing-library/react': 13.4.0_biqbaboplfbrettd7655fr4n2y
-      '@testing-library/user-event': 14.4.3_aaq3sbffpfe3jnxzm2zngsddei
+      '@testing-library/user-event': 14.4.3_ua4wuun3fnehcjqtqj2e2ldgpe
       '@types/jest': 29.2.4
       '@types/node': 18.11.17
       '@types/react': 18.0.26
-      '@types/react-dom': 18.0.9
+      '@types/react-dom': 18.0.10
       eslint-config-ethang: link:../../packages/eslint-config-ethang
       jest: 29.3.1_xgdmd3tdlagpkcvgycprrn3igm
       ts-jest: 29.0.3_jgcrazg63n7mkdjrxsk5jv2npy
@@ -207,7 +207,7 @@ importers:
     specifiers:
       '@types/ms': ^0.7.31
       '@types/react': 18.0.26
-      '@types/react-dom': ^18.0.9
+      '@types/react-dom': ^18.0.10
       eslint: 8.30.0
       eslint-config-ethang: workspace:*
       eslint-config-next: ^13.1.0
@@ -231,7 +231,7 @@ importers:
     devDependencies:
       '@types/ms': 0.7.31
       '@types/react': 18.0.26
-      '@types/react-dom': 18.0.9
+      '@types/react-dom': 18.0.10
       eslint: 8.30.0
       eslint-config-ethang: link:../../packages/eslint-config-ethang
       eslint-config-next: 13.1.0_lzzuuodtsqwxnvqeq4g4likcqa
@@ -285,7 +285,7 @@ importers:
       '@types/nprogress': ^0.2.0
       '@types/react': 18.0.26
       '@types/react-big-calendar': ^0.38.3
-      '@types/react-dom': ^18.0.9
+      '@types/react-dom': ^18.0.10
       date-fns: ^2.29.3
       eslint: 8.30.0
       eslint-config-ethang: workspace:*
@@ -328,7 +328,7 @@ importers:
       '@types/nprogress': 0.2.0
       '@types/react': 18.0.26
       '@types/react-big-calendar': 0.38.3
-      '@types/react-dom': 18.0.9
+      '@types/react-dom': 18.0.10
       eslint: 8.30.0
       eslint-config-ethang: link:../../packages/eslint-config-ethang
       eslint-config-next: 13.1.0_lzzuuodtsqwxnvqeq4g4likcqa
@@ -344,7 +344,7 @@ importers:
       '@sanity/client': ^3.4.1
       '@types/node': ^18.11.17
       '@types/react': 18.0.26
-      '@types/react-dom': ^18.0.9
+      '@types/react-dom': ^18.0.10
       eslint-config-ethang: workspace:*
       next: 13.1.0
       next-components: workspace:*
@@ -374,7 +374,7 @@ importers:
       '@portabletext/types': 2.0.0
       '@types/node': 18.11.17
       '@types/react': 18.0.26
-      '@types/react-dom': 18.0.9
+      '@types/react-dom': 18.0.10
       eslint-config-ethang: link:../../packages/eslint-config-ethang
       tsconfig: link:../../packages/tsconfig
       typescript: 4.9.4
@@ -975,6 +975,10 @@ packages:
     dependencies:
       '@babel/highlight': 7.18.6
 
+  /@babel/compat-data/7.20.10:
+    resolution: {integrity: sha512-sEnuDPpOJR/fcafHMjpcpGN5M2jbUGUHwmuWKM/YdPzeEDJg8bgmbcWQFUfE32MQjti1koACvoPVsDe8Uq+idg==}
+    engines: {node: '>=6.9.0'}
+
   /@babel/compat-data/7.20.5:
     resolution: {integrity: sha512-KZXo2t10+/jxmkhNXc7pZTqRvSOIvVv/+lJwHS+B2rErwOyjuVRh60yVpb7liQ1U5t7lLJ1bz+t8tSypUZdm0g==}
     engines: {node: '>=6.9.0'}
@@ -1013,7 +1017,7 @@ packages:
       '@babel/helpers': 7.20.7
       '@babel/parser': 7.20.7
       '@babel/template': 7.20.7
-      '@babel/traverse': 7.20.7
+      '@babel/traverse': 7.20.10
       '@babel/types': 7.20.7
       convert-source-map: 1.9.0
       debug: 4.3.4
@@ -1083,7 +1087,7 @@ packages:
     peerDependencies:
       '@babel/core': ^7.0.0
     dependencies:
-      '@babel/compat-data': 7.20.5
+      '@babel/compat-data': 7.20.10
       '@babel/core': 7.20.7
       '@babel/helper-validator-option': 7.18.6
       browserslist: 4.21.4
@@ -1192,7 +1196,7 @@ packages:
       '@babel/helper-split-export-declaration': 7.18.6
       '@babel/helper-validator-identifier': 7.19.1
       '@babel/template': 7.20.7
-      '@babel/traverse': 7.20.7
+      '@babel/traverse': 7.20.10
       '@babel/types': 7.20.7
     transitivePeerDependencies:
       - supports-color
@@ -1289,7 +1293,7 @@ packages:
     engines: {node: '>=6.9.0'}
     dependencies:
       '@babel/template': 7.20.7
-      '@babel/traverse': 7.20.7
+      '@babel/traverse': 7.20.10
       '@babel/types': 7.20.7
     transitivePeerDependencies:
       - supports-color
@@ -2346,6 +2350,23 @@ packages:
       '@babel/code-frame': 7.18.6
       '@babel/parser': 7.20.7
       '@babel/types': 7.20.7
+
+  /@babel/traverse/7.20.10:
+    resolution: {integrity: sha512-oSf1juCgymrSez8NI4A2sr4+uB/mFd9MXplYGPEBnfAuWmmyeVcHa6xLPiaRBcXkcb/28bgxmQLTVwFKE1yfsg==}
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      '@babel/code-frame': 7.18.6
+      '@babel/generator': 7.20.7
+      '@babel/helper-environment-visitor': 7.18.9
+      '@babel/helper-function-name': 7.19.0
+      '@babel/helper-hoist-variables': 7.18.6
+      '@babel/helper-split-export-declaration': 7.18.6
+      '@babel/parser': 7.20.7
+      '@babel/types': 7.20.7
+      debug: 4.3.4
+      globals: 11.12.0
+    transitivePeerDependencies:
+      - supports-color
 
   /@babel/traverse/7.20.5:
     resolution: {integrity: sha512-WM5ZNN3JITQIq9tFZaw1ojLU3WgWdtkxnhM1AegMS+PvHjkM5IXjmYEGY7yukz5XS4sJyEf2VzWjI8uAavhxBQ==}
@@ -4888,7 +4909,7 @@ packages:
     dependencies:
       immer: 9.0.16
       react: 18.2.0
-      react-redux: 8.0.5_6fpxtwwxc52cyvwzdgczt4jvpq
+      react-redux: 8.0.5_gm3gubmwja4o7q6fr6adx3fpz4
       redux: 4.2.0
       redux-thunk: 2.4.2_redux@4.2.0
       reselect: 4.1.7
@@ -5657,6 +5678,20 @@ packages:
       pretty-format: 27.5.1
     dev: true
 
+  /@testing-library/dom/8.19.1:
+    resolution: {integrity: sha512-P6iIPyYQ+qH8CvGauAqanhVnjrnRe0IZFSYCeGkSRW9q3u8bdVn2NPI+lasFyVsEQn1J/IFmp5Aax41+dAP9wg==}
+    engines: {node: '>=12'}
+    dependencies:
+      '@babel/code-frame': 7.18.6
+      '@babel/runtime': 7.20.7
+      '@types/aria-query': 5.0.1
+      aria-query: 5.1.3
+      chalk: 4.1.2
+      dom-accessibility-api: 0.5.14
+      lz-string: 1.4.4
+      pretty-format: 27.5.1
+    dev: true
+
   /@testing-library/jest-dom/5.16.5:
     resolution: {integrity: sha512-N5ixQ2qKpi5OLYfwQmUb/5mSV9LneAcaUfp32pn4yCnpb8r/Yz0pXFPck21dIicKmi+ta5WRAknkZCfA8refMA==}
     engines: {node: '>=8', npm: '>=6', yarn: '>=1'}
@@ -5681,18 +5716,18 @@ packages:
     dependencies:
       '@babel/runtime': 7.20.6
       '@testing-library/dom': 8.19.0
-      '@types/react-dom': 18.0.9
+      '@types/react-dom': 18.0.10
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
     dev: true
 
-  /@testing-library/user-event/14.4.3_aaq3sbffpfe3jnxzm2zngsddei:
+  /@testing-library/user-event/14.4.3_ua4wuun3fnehcjqtqj2e2ldgpe:
     resolution: {integrity: sha512-kCUc5MEwaEMakkO5x7aoD+DLi02ehmEM2QCGWvNqAS1dV/fAvORWEjnjsEIvml59M7Y5kCkWN6fCCyPOe8OL6Q==}
     engines: {node: '>=12', npm: '>=6'}
     peerDependencies:
       '@testing-library/dom': '>=7.21.4'
     dependencies:
-      '@testing-library/dom': 8.19.0
+      '@testing-library/dom': 8.19.1
     dev: true
 
   /@tootallnate/once/1.1.2:
@@ -5735,6 +5770,10 @@ packages:
 
   /@types/aria-query/4.2.2:
     resolution: {integrity: sha512-HnYpAE1Y6kRyKM/XkEuiRQhTHvkzMBurTHnpFLYLBGPIylZNPs9jJcuOOYWxPLJCSEtmZT0Y8rHDokKN7rRTig==}
+    dev: true
+
+  /@types/aria-query/5.0.1:
+    resolution: {integrity: sha512-XTIieEY+gvJ39ChLcB4If5zHtPxt3Syj5rgZR+e1ctpmK8NjPf0zFqsz4JpLJT0xla9GFDKjy8Cpu331nrmE1Q==}
     dev: true
 
   /@types/babel__core/7.1.20:
@@ -5982,8 +6021,8 @@ packages:
       '@types/react': 18.0.26
     dev: false
 
-  /@types/react-dom/18.0.9:
-    resolution: {integrity: sha512-qnVvHxASt/H7i+XG1U1xMiY5t+IHcPGUK7TDMDzom08xa7e86eCeKOiLZezwCKVxJn6NEiiy2ekgX8aQssjIKg==}
+  /@types/react-dom/18.0.10:
+    resolution: {integrity: sha512-E42GW/JA4Qv15wQdqJq8DL4JhNpB3prJgjgapN3qJT9K2zO5IIAQh4VXvCEDupoqAwnz0cY4RlXeC/ajX5SFHg==}
     dependencies:
       '@types/react': 18.0.26
 
@@ -15423,7 +15462,7 @@ packages:
       react-is: 17.0.2
     dev: false
 
-  /react-redux/8.0.5_6fpxtwwxc52cyvwzdgczt4jvpq:
+  /react-redux/8.0.5_gm3gubmwja4o7q6fr6adx3fpz4:
     resolution: {integrity: sha512-Q2f6fCKxPFpkXt1qNRZdEDLlScsDWyrgSj0mliK59qU6W5gvBiKkdMEG2lJzhd1rCctf0hb6EtePPLZ2e0m1uw==}
     peerDependencies:
       '@types/react': ^16.8 || ^17.0 || ^18.0
@@ -15447,7 +15486,7 @@ packages:
       '@babel/runtime': 7.20.6
       '@types/hoist-non-react-statics': 3.3.1
       '@types/react': 18.0.26
-      '@types/react-dom': 18.0.9
+      '@types/react-dom': 18.0.10
       '@types/use-sync-external-store': 0.0.3
       hoist-non-react-statics: 3.3.2
       react: 18.2.0
