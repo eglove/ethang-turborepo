@@ -1,5 +1,3 @@
-/* eslint-disable unicorn/no-abusive-eslint-disable */
-
 export const getRandomNumber = (
   from: number,
   to: number,
@@ -12,12 +10,13 @@ export const getRandomNumber = (
   };
 
   if (typeof window === 'undefined') {
-    /* eslint-disable */
-    const crypto = require('node:crypto');
+    // eslint-disable-next-line @typescript-eslint/consistent-type-imports
+    type CryptoType = typeof import('node:crypto');
+    // eslint-disable-next-line @typescript-eslint/no-require-imports,@typescript-eslint/no-var-requires,unicorn/prefer-module
+    const crypto = require('node:crypto') as CryptoType;
     const randomNumberBuffer = crypto.randomBytes(4);
     const randomNumber = randomNumberBuffer.readUint32BE(0);
     return finalNumber(randomNumber);
-    /* eslint-enable */
   }
 
   const array = new Uint32Array(1);

@@ -2,13 +2,13 @@ export function assertIsDefinedNotNull<Type>(
   value: Type,
   message = `Value not defined.`
 ): asserts value is NonNullable<Type> {
-  if (typeof value === 'undefined' || value === null) {
+  if (value === undefined || value === null) {
     throw new TypeError(message);
   }
 }
 
 export const isNullOrUndefined = <Type>(value?: Type): boolean => {
-  return value === null || typeof value === 'undefined';
+  return value === null || value === undefined;
 };
 
 export enum MIME_TYPE {
