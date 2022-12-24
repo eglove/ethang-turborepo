@@ -11,7 +11,7 @@
   "dependencies": {
     "lowdb": "^5.0.5",
     "ms": "^2.1.3",
-    "next": "13.1.0",
+    "next": "13.1.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "util-typescript": "workspace:*",
@@ -23,7 +23,7 @@
     "@types/react-dom": "^18.0.10",
     "eslint": "8.30.0",
     "eslint-config-ethang": "workspace:*",
-    "eslint-config-next": "^13.1.0",
+    "eslint-config-next": "^13.1.1",
     "tsconfig": "workspace:*",
     "typescript": "4.9.4"
   }
