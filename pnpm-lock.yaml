@@ -292,7 +292,6 @@ importers:
       eslint-config-next: ^13.1.1
       next: 13.1.1
       next-components: workspace:*
-      next-transpile-modules: ^10.0.0
       node-environment: workspace:*
       normalize.css: ^8.0.1
       nprogress: ^0.2.0
@@ -332,7 +331,6 @@ importers:
       eslint: 8.30.0
       eslint-config-ethang: link:../../packages/eslint-config-ethang
       eslint-config-next: 13.1.1_lzzuuodtsqwxnvqeq4g4likcqa
-      next-transpile-modules: 10.0.0
       tsconfig: link:../../packages/tsconfig
       typescript: 4.9.4
 
@@ -13545,13 +13543,6 @@ packages:
     resolution: {integrity: sha512-md4cGoxuT4T4d/HDOXbrUHkTKrp/vp+m3aOA7XXVYwNsUNMK49g3SQicTSeV5GIz/5QVGAeYRAOlyp9OvlgsYA==}
     engines: {node: '>=10'}
     dev: false
-
-  /next-transpile-modules/10.0.0:
-    resolution: {integrity: sha512-FyeJ++Lm2Fq31gbThiRCrJlYpIY9QaI7A3TjuhQLzOix8ChQrvn5ny4MhfIthS5cy6+uK1AhDRvxVdW17y3Xdw==}
-    deprecated: All features of next-transpile-modules are now natively built-in Next.js 13.1. Please use Next's transpilePackages option :)
-    dependencies:
-      enhanced-resolve: 5.12.0
-    dev: true
 
   /next/13.1.1_biqbaboplfbrettd7655fr4n2y:
     resolution: {integrity: sha512-R5eBAaIa3X7LJeYvv1bMdGnAVF4fVToEjim7MkflceFPuANY3YyvFxXee/A+acrSYwYPvOvf7f6v/BM/48ea5w==}
