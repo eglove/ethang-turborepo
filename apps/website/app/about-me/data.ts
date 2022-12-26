@@ -1,4 +1,5 @@
 import type { TypedObject } from '@portabletext/types';
+import { cache } from 'react';
 
 import { ethangSanityClient, NO_DRAFTS, SANITY_IMAGE } from '../../util/sanity';
 
@@ -7,7 +8,7 @@ type AboutMeReturn = {
   title: string;
 };
 
-export const getAboutMePage = async (): Promise<AboutMeReturn> => {
+export const getAboutMePage = cache(async (): Promise<AboutMeReturn> => {
   const where = `*[_type == "page" && slug.current == "about-me" && ${NO_DRAFTS}]`;
   const select = `{
     _id,
@@ -32,4 +33,4 @@ export const getAboutMePage = async (): Promise<AboutMeReturn> => {
   const aboutMe: AboutMeReturn[] = await ethangSanityClient.fetch(query);
 
   return aboutMe[0];
-};
+});

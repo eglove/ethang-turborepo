@@ -1,4 +1,5 @@
 import type { TypedObject } from '@portabletext/types';
+import { cache } from 'react';
 
 import {
   ethangSanityClient,
@@ -44,7 +45,7 @@ export type GetBlogReturn = {
 
 type GetBlogData = GetBlogReturn[];
 
-export const getBlog = async (slug: string): Promise<GetBlogReturn> => {
+export const getBlog = cache(async (slug: string): Promise<GetBlogReturn> => {
   const where = `*[_type == "blog" && slug.current == "${slug}" && ${NO_DRAFTS}]`;
   const select = `{
     _id,
@@ -93,4 +94,4 @@ export const getBlog = async (slug: string): Promise<GetBlogReturn> => {
   );
 
   return blog[0];
-};
+});

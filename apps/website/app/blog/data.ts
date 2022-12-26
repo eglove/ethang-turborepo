@@ -1,3 +1,5 @@
+import { cache } from 'react';
+
 import { ethangSanityClient, NO_DRAFTS } from '../../util/sanity';
 
 export type GetBlogsReturn = Array<{
@@ -27,7 +29,7 @@ export type GetBlogsReturn = Array<{
   updatedAt: string;
 }>;
 
-export const getBlogs = async (): Promise<GetBlogsReturn> => {
+export const getBlogs = cache(async (): Promise<GetBlogsReturn> => {
   const where = `*[_type == "blog" && ${NO_DRAFTS}]`;
   const order = `order(updatedAt desc)`;
   const select = `{
@@ -57,4 +59,4 @@ export const getBlogs = async (): Promise<GetBlogsReturn> => {
   const query = `${where} | ${order} ${select}`;
 
   return ethangSanityClient.fetch<GetBlogsReturn>(query);
-};
+});

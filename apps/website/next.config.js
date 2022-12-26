@@ -8,6 +8,11 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'cdn.sanity.io',
         port: ''
+      },
+      {
+        protocol: 'https',
+        hostname: 'ipn3uarr.api.sanity.io',
+        port: ''
       }
     ]
   },

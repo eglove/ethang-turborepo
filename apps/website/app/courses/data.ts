@@ -1,4 +1,5 @@
 import type { TypedObject } from '@portabletext/types';
+import { cache } from 'react';
 
 import { ethangSanityClient, NO_DRAFTS, SANITY_IMAGE } from '../../util/sanity';
 
@@ -17,7 +18,7 @@ export type CourseReturn = {
 
 export type GetCoursesReturn = CourseReturn[];
 
-export const getCourses = async (): Promise<GetCoursesReturn> => {
+export const getCourses = cache(async (): Promise<GetCoursesReturn> => {
   const where = `*[_type == "course" && isRecommended == true && ${NO_DRAFTS}]`;
   const orderBy = `order(orderRank asc)`;
   const select = `{
@@ -48,4 +49,4 @@ export const getCourses = async (): Promise<GetCoursesReturn> => {
   const coursesQuery = `${where} | ${orderBy} ${select}`;
 
   return ethangSanityClient.fetch<GetCoursesReturn>(coursesQuery);
-};
+});

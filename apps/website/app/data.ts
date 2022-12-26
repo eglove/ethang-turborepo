@@ -1,3 +1,4 @@
+import { cache } from 'react';
 import { shuffleArray } from 'util-typescript';
 
 import { ethangSanityClient, NO_DRAFTS, SANITY_IMAGE } from '../util/sanity';
@@ -19,7 +20,7 @@ export type GetHomeImagesReturn = Array<{
   };
 }>;
 
-export const getHomeImages = async (): Promise<GetHomeImagesReturn> => {
+export const getHomeImages = cache(async (): Promise<GetHomeImagesReturn> => {
   const where = `*[_type == "imageUpload" && category == "Home Image" && ${NO_DRAFTS}]`;
   const select = `{
     _id,
@@ -31,4 +32,4 @@ export const getHomeImages = async (): Promise<GetHomeImagesReturn> => {
   return shuffleArray(
     await ethangSanityClient.fetch<GetHomeImagesReturn>(homeImageQuery)
   );
-};
+});

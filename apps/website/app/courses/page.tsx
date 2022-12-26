@@ -5,6 +5,8 @@ import PortableTextWrapper from '../components/portable-text/portable-text-wrapp
 import { GetCourse } from './components/get-course';
 import { getCourses } from './data';
 
+export const revalidate = 60;
+
 export default async function Courses(): Promise<JSX.Element> {
   const courses = await getCourses();
 

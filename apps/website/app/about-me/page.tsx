@@ -2,6 +2,8 @@ import { Breadcrumbs, Container } from '../components';
 import PortableTextWrapper from '../components/portable-text/portable-text-wrapper';
 import { getAboutMePage } from './data';
 
+export const revalidate = 60;
+
 export default async function AboutMe(): Promise<JSX.Element> {
   const aboutMe = await getAboutMePage();
 

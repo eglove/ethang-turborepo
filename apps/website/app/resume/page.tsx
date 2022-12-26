@@ -20,6 +20,7 @@ export default function Resume(): JSX.Element | null {
         height="1125px"
         sandbox={undefined}
         src="/files/Ethan-Glover-Resume.pdf"
+        title="Ethan Grlover Resume"
         width="100%"
       />
     </Container>

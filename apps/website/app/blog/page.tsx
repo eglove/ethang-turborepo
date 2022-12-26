@@ -1,4 +1,5 @@
 import { NextLink } from 'next-components';
+import { cache } from 'react';
 import { formatList, humanReadableLocalDateTime } from 'util-typescript';
 
 import { Breadcrumbs, Container } from '../components';
@@ -6,6 +7,10 @@ import styles from './blogs-layout.module.css';
 import { getBlogs } from './data';
 
 export const revalidate = 60;
+
+export const getCachedBlogs = cache(async () => {
+  return getBlogs();
+});
 
 export default async function Blogs(): Promise<JSX.Element> {
   const blogs = await getBlogs();
