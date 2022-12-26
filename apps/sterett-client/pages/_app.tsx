@@ -31,7 +31,7 @@ function App({ Component, pageProps }: AppProps): JSX.Element {
     <QueryClientProvider client={queryClient}>
       <Hydrate state={pageProps?.dehydratedState as unknown}>
         <Head>
-          <title>Sterett Creek Village Trustee Admin</title>
+          <title>Sterett Creek Village Trustee</title>
         </Head>
         <main>
           <Component {...pageProps} />
