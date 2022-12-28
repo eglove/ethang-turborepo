@@ -18,7 +18,7 @@ export function NavigationMenu({
     <Navigation.Root {...navProperties}>
       <Navigation.List>
         {items.map(child => {
-          const castChild = child as JSX.Element & { key: string };
+          const castChild = child as typeof child & { key: string };
 
           return (
             <Navigation.Item key={castChild.key}>
