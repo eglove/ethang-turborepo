@@ -2,7 +2,6 @@ import './globals.css';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 import { Inter } from '@next/font/google';
-import Script from 'next/script';
 
 import { Header } from './components';
 import styles from './page.module.css';
@@ -41,7 +40,6 @@ export default function RootLayout({
         <link href="/site.webmanifest" rel="manifest" />
         <meta charSet="utf8" />
         <meta content="width=device-width" name="viewport" />
-        <Script defer src="https://app.embed.im/snow.js" />
       </head>
       <body className={styles.ContentContainer}>
         <Header />
