@@ -9,7 +9,7 @@ type Data = {
 
 export default async function handler(
   request: NextApiRequest,
-  response: NextApiResponse<Data>
+  response: NextApiResponse<Data>,
 ): Promise<void> {
   const database_ = await database();
 

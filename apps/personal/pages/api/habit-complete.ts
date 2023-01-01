@@ -9,7 +9,7 @@ type Data = {
 
 export default async function handler(
   request: NextApiRequest,
-  response: NextApiResponse<Data>
+  response: NextApiResponse<Data>,
 ): Promise<void> {
   const database_ = await database();
 
@@ -19,7 +19,7 @@ export default async function handler(
     if (database_?.data?.habit !== undefined) {
       const today = new Date();
       today.setMilliseconds(
-        today.getMilliseconds() + database_.data.habit[name].recurs
+        today.getMilliseconds() + database_.data.habit[name].recurs,
       );
       database_.data.habit[name].due = today;
 

@@ -10,13 +10,13 @@ type Data = {
 
 export default async function handler(
   request: NextApiRequest,
-  response: NextApiResponse<Data>
+  response: NextApiResponse<Data>,
 ): Promise<void> {
   const database_ = await database();
 
   if (request.method === 'POST') {
     const { age, height, weight } = healthRecordPostBody.parse(
-      JSON.parse(request.body)
+      JSON.parse(request.body),
     );
 
     const weightInKg = weight * 0.453_592;
