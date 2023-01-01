@@ -10,7 +10,7 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "@paljs/plugins": "^5.1.0",
+    "@paljs/plugins": "^5.2.0",
     "@prisma/generator-helper": "^4.8.0",
     "graphql": "^16.6.0",
     "util-typescript": "workspace:*"
