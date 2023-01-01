@@ -22,7 +22,7 @@ describe('Portable Text', () => {
             width: 100,
           },
         },
-        url: 'http://google.com/',
+        url: 'https://example.com/',
       },
     };
 
