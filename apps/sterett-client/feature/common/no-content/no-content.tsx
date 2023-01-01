@@ -1,4 +1,4 @@
-import { Container } from './container/container';
+import { Container } from '../container/container';
 
 export function NoContent(): JSX.Element {
   return (

@@ -1,7 +1,7 @@
 import { PortableText } from '@portabletext/react';
 import type { TypedObject } from '@portabletext/types';
 
-import type { ImageAsset } from '../../util/groq/page-groq';
+import type { ImageAsset } from '../../../util/groq/page-groq';
 import { SanityPortableImage } from './sanity-portable-image';
 
 export const portableTextComponents = {

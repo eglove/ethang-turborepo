@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import type { ImageAsset } from '../../util/groq/page-groq';
+import type { ImageAsset } from '../../../util/groq/page-groq';
 
 type SanityPortableImageProperties = {
   altText: string;

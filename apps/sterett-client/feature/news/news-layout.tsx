@@ -2,7 +2,7 @@ import { Icon } from '@trussworks/react-uswds';
 import { humanReadableLocalDateTime } from 'util-typescript';
 
 import { Container } from '../common/container/container';
-import { PortableTextWrapper } from '../common/portable-text';
+import { PortableTextWrapper } from '../common/sanity-portable/portable-text';
 import styles from './news.module.css';
 import type {
   CalendarEvent,
@@ -20,7 +20,7 @@ export function NewsLayout({
   return (
     <Container>
       {newsAndEvents?.map(datum => {
-        if (typeof (datum as NewsUpdate).date !== 'undefined') {
+        if ((datum as NewsUpdate).date !== undefined) {
           const newsUpdate = datum as NewsUpdate;
 
           return (

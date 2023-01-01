@@ -2,7 +2,7 @@ import { TrussNextLink } from 'trussworks-next-components';
 
 import type { GetAllPagesReturn } from '../../util/groq/page-groq';
 import { Container } from '../common/container/container';
-import { NoContent } from '../common/no-content';
+import { NoContent } from '../common/no-content/no-content';
 
 type PageIndexProperties = {
   pageData: GetAllPagesReturn;

@@ -20,7 +20,7 @@ import { Calendar, dateFnsLocalizer } from 'react-big-calendar';
 import { dayStartEnd } from 'util-typescript';
 
 import { Container } from '../common/container/container';
-import { PortableTextWrapper } from '../common/portable-text';
+import { PortableTextWrapper } from '../common/sanity-portable/portable-text';
 import { getCalendarEvents, getCalendarEventsKey } from './calendar-groq';
 
 type RangeDate = Date[] | { end: Date; start: Date };
@@ -73,10 +73,10 @@ export function CalendarLayout(): JSX.Element | null {
               start: new Date(event.startsAt),
               title: event.title,
             };
-          })
+          }),
         );
       },
-    }
+    },
   );
 
   const handleRangeChange = async (range: RangeDate): Promise<void> => {
@@ -84,11 +84,11 @@ export function CalendarLayout(): JSX.Element | null {
       const endDate = range[range.length - 1];
       const startDate = range[0];
 
-      if (typeof endDate !== 'undefined') {
+      if (endDate !== undefined) {
         setTo(dayStartEnd(endDate, 'end'));
       }
 
-      if (typeof startDate !== 'undefined') {
+      if (startDate !== undefined) {
         setFrom(dayStartEnd(startDate, 'start'));
       }
     } else {
@@ -115,7 +115,7 @@ export function CalendarLayout(): JSX.Element | null {
         setViews(defaultViews);
       }
     },
-    [view]
+    [view],
   );
 
   useEffect(() => {
