@@ -45,6 +45,7 @@ const isValidEmailLocalPart = (localPart: string): boolean => {
     cleanedLocalPart = cleanedLocalPart.replace(')', '');
   }
 
+  // eslint-disable-next-line unicorn/no-for-loop
   for (let index = 0; index < cleanedLocalPart.length; index++) {
     const char = cleanedLocalPart[index];
     const alphaNumeric = isAlphaNumeric(char);
