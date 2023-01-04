@@ -12,7 +12,7 @@ export const useEventListener = <Type extends keyof WindowEventMapPlus>(
   listener: Type extends keyof WindowEventMap
     ? (this: Window, event_: WindowEventMap[Type]) => unknown
     : EventListenerOrEventListenerObject,
-  options?: UseEventListenerOptions
+  options?: UseEventListenerOptions,
 ): void => {
   const savedHandler = useRef(listener);
 
@@ -26,14 +26,14 @@ export const useEventListener = <Type extends keyof WindowEventMapPlus>(
     window.addEventListener(
       type,
       eventListener,
-      options?.addEventListenerOptions
+      options?.addEventListenerOptions,
     );
 
     return (): void => {
       window.removeEventListener(
         type,
         eventListener,
-        options?.removeEventListenerOptions
+        options?.removeEventListenerOptions,
       );
     };
   }, [

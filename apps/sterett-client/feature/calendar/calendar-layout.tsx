@@ -17,6 +17,7 @@ import type { RefObject } from 'react';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import type { View, ViewsProps } from 'react-big-calendar';
 import { Calendar, dateFnsLocalizer } from 'react-big-calendar';
+import { useEventListener } from 'react-hooks';
 import { dayStartEnd } from 'util-typescript';
 
 import { Container } from '../common/container/container';
@@ -57,6 +58,7 @@ export function CalendarLayout(): JSX.Element | null {
   const [view, setView] = useState<View>('week');
   const [from, setFrom] = useState<Date>(startOfWeek(today));
   const [to, setTo] = useState<Date>(endOfWeek(today));
+  const [lastResizeMove, setLastResizeMove] = useState(0);
 
   useQuery(
     getCalendarEventsKey(from, to),
@@ -107,7 +109,7 @@ export function CalendarLayout(): JSX.Element | null {
 
   const handleViewChange = useCallback(
     (newView: View = view): void => {
-      if (innerWidth <= 768) {
+      if (typeof window !== 'undefined' && innerWidth <= 768) {
         if (!(mobileViews as string[]).includes(newView)) {
           setView('day');
         }
@@ -121,26 +123,12 @@ export function CalendarLayout(): JSX.Element | null {
     [view],
   );
 
-  useEffect(() => {
-    let lastMove = 0;
-    addEventListener('resize', () => {
-      if (Date.now() - lastMove > 300) {
-        lastMove = Date.now();
-        handleViewChange();
-      }
-    });
-
-    return (): void => {
-      removeEventListener('resize', () => {
-        handleViewChange();
-      });
-    };
-
-    // If this runs on every render, it will update too often if resize updates often
-    // Causing state to fall behind and visual lag
-    // This event listener MUST only be set once AND be able to update the Calendar component props
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  useEventListener('resize', () => {
+    if (Date.now() - lastResizeMove > 300) {
+      setLastResizeMove(Date.now());
+      handleViewChange();
+    }
+  });
 
   useEffect(() => {
     handleViewChange();

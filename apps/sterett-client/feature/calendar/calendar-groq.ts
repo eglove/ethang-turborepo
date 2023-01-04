@@ -19,7 +19,7 @@ export const getCalendarEventsKey = (from: Date, to: Date): string[] => {
 
 export const getCalendarEvents = async (
   from: Date,
-  to: Date
+  to: Date,
 ): Promise<GetCalendarEventsReturn> => {
   const eventQuery = `*[_type == "calendarEvent" && startsAt >= "${from.toISOString()}" && endsAt <= "${to.toISOString()}" && ${NO_DRAFTS}]{_id, title, startsAt, endsAt, description}`;
 
