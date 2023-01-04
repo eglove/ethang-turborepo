@@ -81,26 +81,23 @@ export function CalendarLayout(): JSX.Element | null {
     },
   );
 
-  const handleRangeChange = useCallback(
-    async (range: RangeDate): Promise<void> => {
-      if (Array.isArray(range)) {
-        const endDate = range[range.length - 1];
-        const startDate = range[0];
+  const handleRangeChange = useCallback((range: RangeDate): void => {
+    if (Array.isArray(range)) {
+      const endDate = range[range.length - 1];
+      const startDate = range[0];
 
-        if (endDate !== undefined) {
-          setTo(dayStartEnd(endDate, 'end'));
-        }
-
-        if (startDate !== undefined) {
-          setFrom(dayStartEnd(startDate, 'start'));
-        }
-      } else {
-        setTo(dayStartEnd(range.end, 'end'));
-        setFrom(dayStartEnd(range.start, 'start'));
+      if (endDate !== undefined) {
+        setTo(dayStartEnd(endDate, 'end'));
       }
-    },
-    [],
-  );
+
+      if (startDate !== undefined) {
+        setFrom(dayStartEnd(startDate, 'start'));
+      }
+    } else {
+      setTo(dayStartEnd(range.end, 'end'));
+      setFrom(dayStartEnd(range.start, 'start'));
+    }
+  }, []);
 
   const handleSelectEvent = useCallback((event: CalendarEvent): void => {
     setSelectedEvent(event);
@@ -158,14 +155,9 @@ export function CalendarLayout(): JSX.Element | null {
           height: '100vh',
           width: '80vw',
         }}
+        onRangeChange={handleRangeChange}
         onSelectEvent={handleSelectEvent}
         onView={setView}
-        onRangeChange={
-          handleRangeChange as unknown as (
-            range: Date[] | { end: Date; start: Date },
-            view?: View,
-          ) => void | undefined
-        }
       />
       <Modal id="selectedEvent" ref={selectedEventReference}>
         <ModalHeading>{selectedEvent?.title}</ModalHeading>
