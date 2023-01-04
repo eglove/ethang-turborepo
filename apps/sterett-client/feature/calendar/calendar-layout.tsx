@@ -15,7 +15,6 @@ import type { RefObject } from 'react';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import type { View, ViewsProps } from 'react-big-calendar';
 import { Calendar, dateFnsLocalizer } from 'react-big-calendar';
-import { useEventListener } from 'react-hooks';
 import { dayStartEnd } from 'util-typescript';
 
 import { Container } from '../common/container/container';
@@ -107,7 +106,7 @@ export function CalendarLayout(): JSX.Element | null {
 
   const handleViewChange = useCallback(
     (newView: View = view): void => {
-      if (typeof window !== 'undefined' && innerWidth <= 768) {
+      if (innerWidth <= 768) {
         if (!(mobileViews as string[]).includes(newView)) {
           setView('day');
         }
@@ -121,12 +120,21 @@ export function CalendarLayout(): JSX.Element | null {
     [view],
   );
 
-  useEventListener('resize', () => {
-    if (Date.now() - lastResizeMove > 300) {
-      setLastResizeMove(Date.now());
-      handleViewChange();
-    }
-  });
+  useEffect(() => {
+    let lastMove = 0;
+    const onResize = (): void => {
+      if (Date.now() - lastMove > 300) {
+        lastMove = Date.now();
+        handleViewChange();
+      }
+    };
+
+    addEventListener('resize', onResize);
+
+    return () => {
+      removeEventListener('resize', onResize);
+    };
+  }, [handleViewChange]);
 
   useEffect(() => {
     handleViewChange();
