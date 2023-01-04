@@ -48,14 +48,17 @@ const localizer = dateFnsLocalizer({
 
 export function CalendarLayout(): JSX.Element | null {
   const selectedEventReference = useRef() as RefObject<ModalRef>;
+  const isMobileView =
+    typeof window === 'undefined' ? false : innerWidth <= 768;
 
   const [events, setEvents] = useState<CalendarEvent[]>([]);
   const [selectedEvent, setSelectedEvent] = useState<CalendarEvent>();
-  const [views, setViews] = useState<ViewsProps>(defaultViews);
-  const [view, setView] = useState<View>('week');
+  const [views, setViews] = useState<ViewsProps>(
+    isMobileView ? mobileViews : defaultViews,
+  );
+  const [view, setView] = useState<View>(isMobileView ? 'day' : 'week');
   const [from, setFrom] = useState<Date>(startOfWeek(today));
   const [to, setTo] = useState<Date>(endOfWeek(today));
-  const [lastResizeMove, setLastResizeMove] = useState(0);
 
   useQuery(
     getCalendarEventsKey(from, to),
@@ -134,10 +137,6 @@ export function CalendarLayout(): JSX.Element | null {
     return () => {
       removeEventListener('resize', onResize);
     };
-  }, [handleViewChange]);
-
-  useEffect(() => {
-    handleViewChange();
   }, [handleViewChange]);
 
   if (typeof window === 'undefined') {
