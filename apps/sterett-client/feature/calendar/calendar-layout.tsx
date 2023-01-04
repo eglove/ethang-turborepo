@@ -1,5 +1,3 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-nocheck
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 
 import type { TypedObject } from '@portabletext/types';
@@ -153,9 +151,14 @@ export function CalendarLayout(): JSX.Element | null {
           height: '100vh',
           width: '80vw',
         }}
-        onRangeChange={handleRangeChange}
         onSelectEvent={handleSelectEvent}
         onView={setView}
+        onRangeChange={
+          handleRangeChange as unknown as (
+            range: Date[] | { end: Date; start: Date },
+            view?: View,
+          ) => void | undefined
+        }
       />
       <Modal id="selectedEvent" ref={selectedEventReference}>
         <ModalHeading>{selectedEvent?.title}</ModalHeading>
