@@ -1,5 +1,5 @@
 choco upgrade all
-npm i -g empty-trash-cli npm pnpm trash-cli turbo yarn nx
+npm i -g @sanity/cli empty-trash-cli jest npm nx pnpm trash-cli turbo yarn
 
 $commit = Read-Host "Update Repo? (y/n)"
 
