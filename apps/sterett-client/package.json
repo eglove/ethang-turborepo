@@ -41,7 +41,7 @@
     "@types/react-big-calendar": "^0.38.3",
     "@types/react-dom": "^18.0.10",
     "@types/testing-library__jest-dom": "^5.14.5",
-    "@vitejs/plugin-react": "^3.0.0",
+    "@vitejs/plugin-react": "^3.0.1",
     "eslint": "8.31.0",
     "eslint-config-ethang": "workspace:*",
     "eslint-config-next": "^13.1.1",
