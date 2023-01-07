@@ -10,7 +10,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@sanity/client": "^4.0.0",
+    "@sanity/client": "^4.0.1",
     "@sanity/orderable-document-list": "^1.0.2",
     "node-environment": "workspace:*",
     "sanity": "^3.1.4"
