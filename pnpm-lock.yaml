@@ -279,7 +279,7 @@ importers:
       '@portabletext/types': ^2.0.0
       '@sanity/client': ^4.0.1
       '@sanity/image-url': ^1.0.1
-      '@tanstack/react-query': ^4.20.9
+      '@tanstack/react-query': ^4.21.0
       '@testing-library/jest-dom': ^5.16.5
       '@testing-library/react': ^13.4.0
       '@testing-library/user-event': ^14.4.3
@@ -316,7 +316,7 @@ importers:
       '@portabletext/react': 2.0.0_react@18.2.0
       '@sanity/client': 4.0.1
       '@sanity/image-url': 1.0.1
-      '@tanstack/react-query': 4.20.9_biqbaboplfbrettd7655fr4n2y
+      '@tanstack/react-query': 4.21.0_biqbaboplfbrettd7655fr4n2y
       '@trussworks/react-uswds': 4.0.0_grxjd74kxvzn5pqe3iqg354tcm
       date-fns: 2.29.3
       next: 13.1.1_7xlrwlvvs7cv2obrs6a5y6oxxq
@@ -6074,12 +6074,12 @@ packages:
       tslib: 2.4.1
     dev: false
 
-  /@tanstack/query-core/4.20.9:
-    resolution: {integrity: sha512-XTEEvOGy7wlABPTYfmg7U287WYcf2PV8lH15oKWD2I09okqMOHrB23WxyikEVRwJCjYNKcCW0BuYaAY4S2g/jg==}
+  /@tanstack/query-core/4.21.0:
+    resolution: {integrity: sha512-4+yOhyNafzjCagOErF2u7AiBuOV8uDBgR+3AWBe/ZArm0X5scBtF8Dgj+YAXazdolsDcNGyDGT7Zvbs0hhTyJA==}
     dev: false
 
-  /@tanstack/react-query/4.20.9_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-OqwcmqkxOYgLbVjsMm4Cl8MMZ063VqdRw1GpSWqN8WgppftPiFJTDb6Q1TX5I/ciCbHmRWNPE/D0ayyTesAKug==}
+  /@tanstack/react-query/4.21.0_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-LF7jBfv98U429Wd8UEUR7VdeBAmft89FK8/Ovh1cMNpF5DM2y0TfYwuonaArdKgCpTtrkjXIwbX5mDoylTGvFQ==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
       react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
@@ -6090,7 +6090,7 @@ packages:
       react-native:
         optional: true
     dependencies:
-      '@tanstack/query-core': 4.20.9
+      '@tanstack/query-core': 4.21.0
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       use-sync-external-store: 1.2.0_react@18.2.0
@@ -10830,6 +10830,18 @@ packages:
     dependencies:
       debug: 2.6.9
 
+  /follow-redirects/1.15.2_debug@4.3.4:
+    resolution: {integrity: sha512-VQLG33o04KaQ8uYi2tVNbdrWp1QWxNNea+nmIB4EVM28v0hmP17z7aG1+wAkNzVq4KeXTq3221ye5qTJP91JwA==}
+    engines: {node: '>=4.0'}
+    peerDependencies:
+      debug: '*'
+    peerDependenciesMeta:
+      debug:
+        optional: true
+    dependencies:
+      debug: 4.3.4
+    dev: false
+
   /for-each/0.3.3:
     resolution: {integrity: sha512-jqYfLp7mo9vIyQf8ykW2v7A+2N4QjeCeI5+Dz9XraiO1ign81wjiH7Fb9vSOWvQfNtmSa4H2RoQTrrXivdUZmw==}
     dependencies:
@@ -11133,7 +11145,7 @@ packages:
       create-error-class: 3.0.2
       debug: 4.3.4
       decompress-response: 6.0.0
-      follow-redirects: 1.15.2_debug@2.6.9
+      follow-redirects: 1.15.2_debug@4.3.4
       form-urlencoded: 2.0.9
       into-stream: 3.1.0
       is-plain-object: 5.0.0
