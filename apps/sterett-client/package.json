@@ -14,7 +14,7 @@
     "@portabletext/react": "^2.0.0",
     "@sanity/client": "^4.0.1",
     "@sanity/image-url": "^1.0.1",
-    "@tanstack/react-query": "^4.21.0",
+    "@tanstack/react-query": "^4.22.0",
     "@trussworks/react-uswds": "^4.0.0",
     "date-fns": "^2.29.3",
     "next": "13.1.1",
@@ -49,6 +49,6 @@
     "jsdom": "^21.0.0",
     "tsconfig": "workspace:*",
     "typescript": "4.9.4",
-    "vitest": "^0.26.3"
+    "vitest": "^0.27.0"
   }
 }
