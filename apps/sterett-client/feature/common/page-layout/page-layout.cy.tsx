@@ -29,10 +29,36 @@ describe('<PageLayout />', () => {
       { href: '/page', name: 'More' },
     ];
 
+    cy.viewport('macbook-16');
+
     for (const link of links) {
       cy.findByRole('link', {
         name: link.name,
       }).should('have.attr', 'href', link.href);
     }
+  });
+
+  it('should show use a navigation menu when in mobile', () => {
+    cy.mount(
+      <PageLayout>
+        <div>Test</div>
+      </PageLayout>,
+    );
+
+    cy.viewport('samsung-s10');
+
+    const menuButton = cy.get('[data-testid="navMenuButton"]');
+    menuButton.should('exist');
+    menuButton.click();
+
+    cy.findByRole('link', {
+      name: 'Home',
+    }).should('exist');
+
+    cy.get('[data-testid="navCloseButton"]').click();
+
+    cy.findByRole('link', {
+      name: 'Home',
+    }).should('not.exist');
   });
 });

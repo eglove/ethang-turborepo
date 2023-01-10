@@ -13,6 +13,9 @@
 // https://on.cypress.io/configuration
 // ***********************************************************
 
+import 'normalize.css/normalize.css';
+import '@trussworks/react-uswds/lib/uswds.css';
+import '@trussworks/react-uswds/lib/index.css';
 // Import commands.js using ES2015 syntax:
 import './commands';
 
