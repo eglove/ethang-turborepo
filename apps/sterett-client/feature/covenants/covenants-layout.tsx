@@ -12,18 +12,19 @@ export function CovenantsLayout({
 }: CovenantsLayoutProperties): JSX.Element {
   return (
     <Container>
-      {/* eslint-disable-next-line react/jsx-no-useless-fragment */}
-      <>
-        {covenants?.map(covenant => {
-          return (
-            <div key={covenant._id} style={{ padding: '8px' }}>
-              <TrussNextLink isNewTab href={covenant.file.asset.url}>
-                {covenant.title}
-              </TrussNextLink>
-            </div>
-          );
-        })}
-      </>
+      {covenants?.map(covenant => {
+        return (
+          <div
+            data-testid="container"
+            key={covenant._id}
+            style={{ padding: '8px' }}
+          >
+            <TrussNextLink isNewTab href={covenant.file.asset.url}>
+              {covenant.title}
+            </TrussNextLink>
+          </div>
+        );
+      })}
     </Container>
   );
 }
