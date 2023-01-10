@@ -47,15 +47,13 @@ describe('<PageLayout />', () => {
 
     cy.viewport('samsung-s10');
 
-    const menuButton = cy.get('[data-testid="navMenuButton"]');
-    menuButton.should('exist');
-    menuButton.click();
+    cy.get('[data-testid="navMenuButton"]').should('exist').click();
 
     cy.findByRole('link', {
       name: 'Home',
     }).should('exist');
 
-    cy.get('[data-testid="navCloseButton"]').click();
+    cy.get('[data-testid="navCloseButton"]').should('exist').click();
 
     cy.findByRole('link', {
       name: 'Home',
