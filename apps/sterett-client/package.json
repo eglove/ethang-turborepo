@@ -7,8 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint --fix",
-    "test": "npx cypress run --component",
-    "test:watch": "npx cypress open"
+    "test": "cypress run --component",
+    "test:watch": "cypress open"
   },
   "dependencies": {
     "@portabletext/react": "^2.0.0",

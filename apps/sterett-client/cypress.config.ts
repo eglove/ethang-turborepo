@@ -7,5 +7,6 @@ export default defineConfig({
       framework: 'next',
     },
   },
+  projectId: 'djyb3s',
   video: false,
 });
