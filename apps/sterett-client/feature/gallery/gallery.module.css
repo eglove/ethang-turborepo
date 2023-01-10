@@ -1,15 +1,15 @@
 .Masonry {
   display: flex;
   width: auto;
-  margin-left: -30px;
+  margin-left: -8px;
 }
 
 .MasonryColumn {
-  padding-left: 30px; /* gutter size */
+  padding-left: 8px; /* gutter size */
   background-clip: padding-box;
 }
 
 .MasonryColumn > div {
-  margin-bottom: 30px;
+  margin-bottom: 8px;
   background: hsl(0deg 0% 50%);
 }
