@@ -90,7 +90,7 @@ export const getBlog = cache(async (slug: string): Promise<GetBlogReturn> => {
   }`;
 
   const blog = await ethangSanityClient.fetch<GetBlogData>(
-    `${where} ${select}`
+    `${where} ${select}`,
   );
 
   return blog[0];

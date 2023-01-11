@@ -47,11 +47,11 @@ export default async function Blogs(): Promise<JSX.Element> {
                     {formatList(
                       blog.authors.map(blogAuthor => {
                         return blogAuthor.name;
-                      })
+                      }),
                     )}
                   </div>
                   <div>{`Last Updated: ${humanReadableLocalDateTime(
-                    blog.updatedAt
+                    blog.updatedAt,
                   )}`}</div>
                 </div>
               </NextLink>

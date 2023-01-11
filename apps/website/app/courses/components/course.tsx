@@ -16,7 +16,7 @@ export function Course({
   course,
   instructors,
 }: CourseProperties): JSX.Element | null {
-  if (typeof course === 'undefined') {
+  if (course === undefined) {
     return null;
   }
 
@@ -49,7 +49,7 @@ export function Course({
       </div>
 
       <div className={styles.Summary}>
-        {typeof instructors !== 'undefined' && instructors !== '' && (
+        {instructors !== undefined && instructors !== '' && (
           <div>Instructors: {instructors}</div>
         )}
         {children}

@@ -72,7 +72,7 @@ export default async function Blog({
           <div>
             Last Updated:{' '}
             <time dateTime={blog.updatedAt}>{`${humanReadableLocalDateTime(
-              blog.updatedAt
+              blog.updatedAt,
             )}`}</time>
           </div>
         </div>

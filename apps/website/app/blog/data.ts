@@ -7,7 +7,7 @@ export type GetBlogsReturn = Array<{
   authors: [
     {
       name: string;
-    }
+    },
   ];
   featuredImage: {
     image: {

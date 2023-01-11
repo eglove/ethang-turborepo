@@ -12,7 +12,7 @@ export function GetCourse({
   children,
   course,
 }: GetCourseProperties): JSX.Element | null {
-  if (typeof course === 'undefined') {
+  if (course === undefined) {
     return null;
   }
 
@@ -21,7 +21,7 @@ export function GetCourse({
       return formatList(
         course.instructors.map(courseInstructor => {
           return courseInstructor.name;
-        })
+        }),
       );
     }
   };

@@ -19,7 +19,7 @@ export function CardStack(): JSX.Element {
         index++
       ) {
         const element = CardStackReference.current.children.item(
-          index
+          index,
         ) as HTMLDivElement;
         element.style.setProperty('transform-origin', value);
       }
@@ -27,7 +27,7 @@ export function CardStack(): JSX.Element {
   };
 
   const handleTransformChange = (
-    event: ChangeEvent<HTMLInputElement>
+    event: ChangeEvent<HTMLInputElement>,
   ): void => {
     if (event.target.checked) {
       switch (event.target.value) {
@@ -79,7 +79,7 @@ export function CardStack(): JSX.Element {
     if (CardStackReference.current !== null) {
       CardStackReference.current.style.setProperty(
         '--scalar',
-        event.target.value
+        event.target.value,
       );
     }
 
